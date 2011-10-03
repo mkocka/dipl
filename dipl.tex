@@ -28,8 +28,20 @@
  \ChRuleWidth{0.05pt}
  \ChNameUpperCase
 
+\usepackage{hyperref}
+\newcommand\araa{ARA\&A}%
+\newcommand\aaps{A\&AS}%
+
+\usepackage{natbib}
+% The astroads bibtex style formats the references according
+% to the well-estabilished syntax in use in astronomy and
+% creates a link if URLs are specified for a given record.
+
+\bibliographystyle{astroads}
+
+
 %\title{Štúdium premenných hviezd vo vysokoenergetickej části spektra}
-\title{Study of variable stars in high energies }
+\title{On stars in high energy }
 
 \author{Matúš Kocka}
 
@@ -57,18 +69,27 @@ start thinking about the universe. You are looking at heck of a different kinds 
 objects, but suddenly you see almost only the stars. Almost all the shiny dots on the sky are 
 stars and these stars are only the closest ones from our Galaxy. Yes, you can see few other 
 galaxies by naked eye, but none of the exotic cosmic objects you are imaging about. 
-They are too faint to be observed easily, because they are far away. 
+They are too faint to be observed easily, because they are far, far away. 
 
 Think about distances in the universe. One of the most accurate explanation is that from 
 Douglas (1979):  "Space," it says, "is big. Really big. You just won't believe how vastly, 
 hugely, mindbogglingly big it is. I mean, you may think it's a long way down the road to the 
-chemist's, but that's just peanuts to space..."
+chemist's, but that's just peanuts to space..." \cite{hitch:1}
 
 Consider this, sometimes you want to study processes in these extreme, very faint objects, 
 but they are too faint, too far in the universe. You are looking for “laboratory” which similar
  processes, but closer. The X-ray binary stars are this kind of laboratories. In this work are
  several types of X-ray binaries disused, but closer look is taken to intermediate polars. 
 \section{Motivation}
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=8.5cm]{microblazars}
+\caption{AAA \citet{mirabel:1}}
+\label{microblazar} 
+\end{figure}
+
+
 \section{Observations}
 
 
@@ -104,15 +125,23 @@ but they are too faint, too far in the universe. You are looking for “laborato
 
 
 
+\bibliography{koci}
 
-\begin{thebibliography}{99}
-\addcontentsline{toc}{chapter}{\hspace*{6mm}Literatúra}
-\bibitem {(Warner 1995)} B. Warner, 1995, Cataclysmic Variables, (Cambridge: Cambridge Univ. Press)
-\bibitem {(Rosswog 2007)} S. Rosswog, \& M. Br\"{u}ggen, 2007, Introduction to High-Energy Astrophysics,
-(Cambridge: Cambridge Univ. Press)
-\bibitem{(Douglas 1979)} A. Douglas, 1979, The Hitchhiker's Guide to the Galaxy, Pan Books,
-ISBN\,0330-25864-8 
-\end{thebibliography}
+
+
+%\begin{thebibliography}{99}
+%\addcontentsline{toc}{chapter}{\hspace*{6mm}Literatúra}
+%\bibitem {(Warner 1995)} B. Warner, 1995, Cataclysmic Variables, (Cambridge: Cambridge Univ. Press)
+%\bibitem {(Rosswog 2007)} S. Rosswog, \& M. Br\"{u}ggen, 2007, Introduction to High-Energy Astrophysics,
+%(Cambridge: Cambridge Univ. Press)
+%\bibitem{(Douglas 1979)} A. Douglas, 1979, The Hitchhiker's Guide to the Galaxy, Pan Books,
+%ISBN\,0330-25864-8 
+%\bibitem[(Mirabel 2002)]{mirabel1} I. F. Mirabel, 2002, Microquasars as sources of high energy phenomena,
+%arXiv:astro-ph/02110855 v1
+%\end{thebibliography}
+
+
+
 \clearpage
 
 \appendix
