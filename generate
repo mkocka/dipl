@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pdflatex dipl
+bibtex dipl
+pdflatex dipl
+pdflatex dipl
