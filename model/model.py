@@ -34,8 +34,6 @@ def brem(Rwd,Mwd):
 	t0 = 3*((u*mH)/k)*(v0**2)
 	rho0 = a/v0
 	
-	print v0,t0,rho0
-	
 	z = 1.00000001
 	dist = []
 	Ta = []
@@ -47,23 +45,65 @@ def brem(Rwd,Mwd):
 		Rho = rho0*(((z-1)/(z0-1))**-0.4)
 		dist.append(z-1)
 		Ta.append(T)
-		Rhoa.append(Rhoa)
+		Rhoa.append(Rho)
 		z = z + zstep	
-		
+	
+	print (max(Ta)/11604505),"keV"
 	F = []	
 	X= []
 	Y = []
-	for i in range(100,100000):
+	i = 100
+	while i < 100000:
 		E = i*e
+	#	print i
 		jz = []
 		for ii in range(0,len(Ta)):
-			j = 9.52e-38 * ((Rhoa[ii]/(u*mH))**2)*(Ta[ii]**-0.5)*((E/(k*Ta[ii]))**-0.4)*exp(-E/(k*Ta[ii]))
-			jz.appned(j) 		
+			j = 9.52e-38 * ( (Rhoa[ii]/(u*mH))**2 ) * (Ta[ii]**-0.5) * ( (E/(k*Ta[ii]))**-0.4) * exp(-E/(k*Ta[ii]))
+			jz.append(j) 		
 		X.append(E)
 		Y.append(sum(jz))		
-
+		i = i + 500
 		
 	return(Ta,Rhoa,dist,X,Y)
+
+def plot_temp_dens(T,Rho,D,X,Y):
+	T_max = max(T)
+	Rho_max = max(Rho)
+	for i in range(0,len(T)):
+		T[i] = T[i] / T_max
+		Rho[i]= Rho[i] / Rho_max
+	XX = []
+	for i in range(0,len(X)):
+		XX.append(X[i]/(1000*1.60217646e-19))
+	
+	fig = plt.figure()
+	ax=fig.add_subplot(211)
+	ax.plot(D,T,'-')
+	ax.plot(D,Rho,'-')
+	ax.grid(True)
+	ax.set_yscale('log')
+        ax.set_xlabel("(z-Rwd)/Rwd")
+        ax.set_ylabel("T/T_max , Ro/Ro_max")
+        ax.legend(("T/T_max","R/R_max"),'upper right')
+        ax.set_xlim((-0.002,0.017))
+        ax.set_ylim((0,1.1))
+	
+	bx = fig.add_subplot(212)
+	bx.plot(XX,Y,'-')
+        bx.grid(True)
+        bx.set_yscale('log')
+        bx.set_xscale('log')
+        bx.set_xlabel("Energy (keV)")
+        bx.set_ylabel("Flux")
+
+
+	plt.show()
+	plt.close()
+
+	return()
+	
+	
+
 
 if __name__ == "__main__":
 	if (len(sys.argv) == 2):
@@ -72,11 +112,10 @@ if __name__ == "__main__":
 		
 	Rwd = Rwd_calc(Mwd)
 	print Mwd,"Msun",Rwd,"m"
-
 	ress = brem(Rwd,Mwd)
 	#Ta,Rhoa,dist,X,Y
+	plot_temp_dens(ress[0],ress[1],ress[2],ress[3],ress[4])	
 	
-
 
 
 
