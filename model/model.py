@@ -10,8 +10,8 @@ import stat
 
 def Rwd_calc(Mwd):
 	#Msun = 1.9891e30
-	Rwd = 7.8e8 * ((((1.44/Mwd)**2/3) - ((Mwd/1.44)**2/3))**1/2) 	
-	Rwd = Rwd / 10   # returning in meters 
+	Rwd = 7.8e8 * ((((1.44/Mwd)**(2.0/3)) - ((Mwd/1.44)**(2.0/3)))**(1.0/2)) 	
+	Rwd = Rwd / 100   # returning in meters 
 	return Rwd
 
 
@@ -23,7 +23,7 @@ def brem(Rwd,Mwd):
         k = 1.3806488e-23     # JK^-1 Boltzman const
 	e = 1.60217646e-19
 ############################# magic constants #############
-        a = 0.00001               # local mass acreation rate per area g cm^-2 s^-1 free param of model!!!
+        a = 1               # local mass acreation rate per area g cm^-2 s^-1 free param of model!!!
         z0 = 1.013          # Rwd units !!!! 
 	zstep = 0.00001     # Rwd units !!!!
 	Msun = 1.9891e30    # Sun mass kg 
@@ -47,18 +47,31 @@ def brem(Rwd,Mwd):
 		Ta.append(T)
 		Rhoa.append(Rho)
 		z = z + zstep	
-	
-	print (max(Ta)/11604505),"keV"
+
+	print (max(Ta)/11604505),"keV", t0
+#	plt.plot(dist,Ta)
+#	plt.plot(dist,Rhoa)
+#	plt.show()	
+
+#	print (max(Ta)/11604505),"keV"
 	F = []	
 	X= []
 	Y = []
+	MM = 11604505 # keV magic const
 	i = 100
-	while i < 100000:
-		E = i*e
+	while i < 1000000:
+		E = i/1000.0
 	#	print i
 		jz = []
 		for ii in range(0,len(Ta)):
-			j = 9.52e-38 * ( (Rhoa[ii]/(u*mH))**2 ) * (Ta[ii]**-0.5) * ( (E/(k*Ta[ii]))**-0.4) * exp(-E/(k*Ta[ii]))
+			j = 9.52e-38 * ( (Rhoa[ii]/(u*mH))**(2) ) * (Ta[ii]**(-0.5)) * ( (E/(k*Ta[ii]/e))**(-0.4)) * exp(-E/(k*Ta[ii]/e))
+
+	#		c1 =  (Rhoa[ii]/(u*mH))**(2)  
+	#		c2 = Ta[ii]**(-0.5)  
+	#		c3 =  (E/(k*Ta[ii]/e))**(-0.4) 
+	#		c4 =  exp(-E/(k*Ta[ii]/e))
+
+	#		print c1,c2,c3,c4
 			jz.append(j) 		
 		X.append(E)
 		Y.append(sum(jz))		
@@ -72,9 +85,6 @@ def plot_temp_dens(T,Rho,D,X,Y):
 	for i in range(0,len(T)):
 		T[i] = T[i] / T_max
 		Rho[i]= Rho[i] / Rho_max
-	XX = []
-	for i in range(0,len(X)):
-		XX.append(X[i]/(1000*1.60217646e-19))
 	
 	fig = plt.figure()
 	ax=fig.add_subplot(211)
@@ -89,7 +99,7 @@ def plot_temp_dens(T,Rho,D,X,Y):
         ax.set_ylim((0,1.1))
 	
 	bx = fig.add_subplot(212)
-	bx.plot(XX,Y,'-')
+	bx.plot(X,Y,'-')
         bx.grid(True)
         bx.set_yscale('log')
         bx.set_xscale('log')
