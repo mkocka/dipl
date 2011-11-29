@@ -1,0 +1,19 @@
+import pyfits
+import matplotlib.pyplot as plt
+from math import *
+path ="/home/mkocka/diplomka/work/obs/ny_lup/isgri_mosa_ima.fits"
+hdulist = pyfits.open(path)
+hdulist.info()
+scidata = hdulist[4].data
+
+D = 10
+X = 242
+Y = 433
+
+for i in range(0,D*2):
+    a.append(scidata[Y-D+i][X-D:X+D])
+
+
+for i in range(0,D):
+    a.append(scidata[Y-D/2+i][X-D/2:X+D/2])
+
