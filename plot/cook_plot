@@ -7,8 +7,8 @@ hdulist.info()
 scidata = hdulist[4].data
 
 D = 10
-X = 242
-Y = 433
+Y = 242
+X = 433
 
 for i in range(0,D*2):
     a.append(scidata[Y-D+i][X-D:X+D])
@@ -17,3 +17,18 @@ for i in range(0,D*2):
 for i in range(0,D):
     a.append(scidata[Y-D/2+i][X-D/2:X+D/2])
 
+
+plt.imshow(scidata, cmap=jet)
+plt.axis([X-D/2,X+D/2,Y-D/2,Y+D/2])
+plt.colorbar()
+plt.grid(True)
+plt.show()
+plt.close()
+
+plt.imshow(a, cmap=cm.jet)
+plt.colorbar()
+plt.grid(True)
+plt.ylabel('Y')
+plt.xlabel('X')
+plt.show()
+plt.close()
