@@ -269,7 +269,7 @@ WDs support themselves against gravity by the pressure of electron degenerate ga
 equilibrium, except very thin atmosphere.  
  
 
-\begin{figure}[!hbt]
+\begin{figure}[!]
 \centering
 \includegraphics[totalheight=10cm]{hrdiagram}
 \caption{WD lies in right bottom corner of HD diagram, under main 
@@ -280,10 +280,11 @@ sequence, which exactly means, they are very small (dwarf) stars with high surfa
 \section{Inside of white dwarfs}
 WDs are a class of the less compact objects among the possible endpoints of the stellar evolution. 
 The mass of the star is the main factor determining whether the star ends up as a WD, neutron star or a black hole.
-The medium mass stars with masses $M \lesssim  4M_{Sun}$ in some point of late state of their evolution gently spreads mass
+The medium mass stars with masses $M \lesssim  4M_{\odot}$\footnote{Also $M \lesssim  8M_{\odot}$ can be find in 
+some literature \citet{padm_vII}.} in some point of late state of their evolution gently spreads mass
  forming planetary nebulae. The rest of the star become the white dwarf.  
 
-\begin{table}[ht!]
+\begin{table}[hbt!]
 \caption{Basic statisticks of the compact objects}
 \centering
 \begin{tabular}{lllll}
@@ -304,6 +305,31 @@ $^b R_{\odot}=6.9599 \times 10^{10} cm$ &&&& \\
 \end{tabular}
 \label{comobj1}
 \end{table}
+
+Let's use data from the table \ref{comobj1} and try to assume the pressure inside of WD.For very 
+rough estimation, we can use equation of mechanic equilibrium to compare WD with the Sun.
+
+\begin{equation}
+ dP = -G\frac{M \varrho  dr}{r^2}
+\end{equation}
+
+The ratio between variables $P, M, \rho$ and $r$ in the Sun case and $P', M', \rho', r'$ in the WD's 
+case can be written as follows:
+
+\begin{center}
+ $M' = M ,$  \\
+ $r' = 10^{-2}r,$ \\
+ $\rho' = 10^7 \rho,$ \\
+\end{center}
+
+From easy calculation we get: 
+\begin{equation}
+ dP' = -G\frac{M' \rho' dr'}{r'^2} = -G\frac{M \cdot 10^7 \rho \cdot 10^{-2} dr}{r^2 (10^{-2})^2} = 10^{10} dP
+\end{equation}
+
+
+
+ 
 
 \section{The Chandrasekhar limit}
 
@@ -388,6 +414,7 @@ $^b R_{\odot}=6.9599 \times 10^{10} cm$ &&&& \\
 \nocite{astrop_techniques_5th}
 \nocite{xray_hanbook}
 \nocite{1972ApJ...175..417N}
+\nocite{kleczek}
 \bibliography{koci}
 \addcontentsline{toc}{chapter}{\hspace*{6mm}Bibliography}
 
