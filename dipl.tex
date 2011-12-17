@@ -15,11 +15,9 @@
 \usepackage{appendix}
 \usepackage{rotating}
 \usepackage{hyperref}
-\pagestyle{fancy}
-\fancyhead{}
-\fancyhead[C]{\leftmark}
-\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 
 \usepackage[Sonny]{fncychap}
 \makeatletter
@@ -28,6 +26,12 @@
  \ChTitleVar{\LARGE\centering}
  \ChRuleWidth{0.05pt}
  \ChNameUpperCase
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead{}
+\fancyhead[L]{\footnotesize \leftmark}
+\fancyhead[R]{\footnotesize PAGE \thepage\ }
 
 \usepackage{hyperref}
 \newcommand\araa{ARA\&A}
@@ -57,7 +61,6 @@
 %\end{center}
 %\end{figure}
 
-\fancyhf{}
 \newpage
 \textit{"Per aspera ad astra..."}
 
@@ -351,14 +354,65 @@ is the mass per electron. The fermi momentum will be equal to $m_e c$ at the cri
 
 If the density is higher than $\rho \gtrsim 10^9 gm.cm^{-3} $, the electrons are combined with protons inside of nuclei and 
 create different matter called neutron degenerated gas. This is how neutron stars are made.    
-   
-\section{Degenerate electrons pressure}
+ 
+\section{Fermi energy}
+Now we can imagine interior of WDs as an area full of atoms nuclei very close to each other 
+with free electrons around them. But electrons are fermions, which means that they must 
+behave according to Pauli exclusion principle and it allows only at most one fermion 
+per each quantum state. 
+
+If we imagine a normal, everyday gas at standard temperature and pressure, only one 
+of every $10^7$ quantum states is occupied by gas particles, so Pauli exclusion 
+principle limitation is very insignificant. When energy is removed from the gas and 
+it's temperature falls down, an increasingly large fraction of  the particles been 
+forced into the lower energy states.
+
+For fermions gas only one particle can take the lowest energy state and others must 
+take another, higher and higher states, thus only one particle per state is allowed. 
+Even in limit $T\rightarrow0$ pressure is produced by motions of electrons on excited positions.       
+
+At the zero temperature all of the lowest states and none of the higher states are 
+occupied, this kind of fermion gas is called completely degenerate. 
+The max energy of electron in completely degenerate gas at $T=0 K$ is known as Fermi energy. 
+
+For determining the limiting energy we can imagine 3D box where length of each of its sides will be \textit{L}.  
+The wavelengths of electrons trapped in the box in each dimension will be
+\begin{equation}
+\lambda_{xyz} = \frac{2L}{N_{xyz}}
+\end{equation}
+where Nxyz are integer quantum numbers for each dimension. The momentum can be written 
+through de Broglie wavelength
+\begin{equation}
+p_{xyz} = \frac{hN_{xyz}}{2L}
+\end{equation}
+We can now write the total kinetic energy of the electron when $p^2 = p_x^2 + p_y^2 + p_z^2$ as follows
+\begin{equation}
+\label{ferm1}
+ \varepsilon =  \frac{p^2}{2m} \Rightarrow \frac{h^2N^2}{8mL^2}
+\end{equation}
+Total number of electrons is same as total number of unique quantum numbers $N_x, N_y, N_z,$ multiply by 
+factor two. The two factor comes from the fact that electrons are particles with spin, which can be $\pm 1/2$. 
+This means that two electrons are allowed to have the same tree quantum numbers but different spin. 
+The total number of electrons out to radius $N = \sqrt{N_x^2 + N_y^2 + N_z^2}$ will be
+\begin{equation}
+ N_e = 2\left ( \frac{1}{8} \right )\left ( \frac{4}{3} a\pi N^3\right ) \Rightarrow N = \left ( \frac{3N_e}{\pi} \right )^{1/3} .
+\end{equation}
+
+By using Eq. \eqref{ferm1} and simplifying it, we will get the Fermi energy as follows
+\begin{equation}
+\varepsilon_F = \frac{\hbar^2}{2m}\left ( 3\pi^2n \right )^{2/3}
+\end{equation}
+where $m$ is the mas of the electron or any other fermion\footnote{Can by applies for any fermion, not only electrons} 
+and $n\equiv N_e/L^3$ is the electron count per volume. 
+The average energy per electron at $T = 0K$ is $\frac{3}{5}\varepsilon_F$.    
+  
+\section{Degenerate electrons \& pressure}
 
  
 
 \section{The Chandrasekhar limit}
 
-
+\section{White dwarfs classes}
 
 \chapter{Cataclysmic variable stars}
 \section{Non magnetic cataclysmic variables} 
