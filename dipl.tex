@@ -407,7 +407,8 @@ and $n\equiv N_e/L^3$ is the electron count per volume.
 The average energy per electron at $T = 0K$ is $\frac{3}{5}\varepsilon_F$.    
   
 \section{Degeneracy}
-Matter inside of WD has very symmetric spherical distribution, we can calculate the mass interior to radius $r$ like\footnote{More elaborate and precises approach can by find ... TBS}
+Matter inside of WD has very symmetric spherical distribution, we can calculate the mass interior to radius $r$ like\footnote{More elaborate and precises approach can by find 
+\citet{2004bhwd.book.....S}, \cite{padm_vII}, \citet{kleczek}, \citet{comp_obj1}, \citet{1972ApJ...175..417N}}
 \begin{equation}
  \frac{dm_{(r)}}{dr} = 4 \pi r^2 \rho
 \end{equation}
@@ -423,7 +424,32 @@ $r$ and $r+dr$ with an area $dA$ imagine}
 \end{figure}
 
 The gravitation attraction between mass $dm = \rho dA dr$ and $m_{(r)}$ is the same as if $m_{(r)}$ were only point at the center with the same mass. While the outside mass exerts no force on $dm$.
-Then the net outward pressure forced on $dm$ is $- \left [ P\left ( r + dr \right ) - p(r)  \right ]dA$
+Then the net outward pressure forced on $dm$ is $- \left [ P\left ( r + dr \right ) - p(r)  \right ]dA$. In equilibrium 
+\begin{equation}
+\label{eq1}
+ \frac{dP}{dr} = - \frac{Gm_{(r)}\rho}{r^2}
+\end{equation}
+In such equilibrium, the gradient of degeneracy pressure is balanced by gravitation: $\nabla P = -\rho \nabla \Phi$ where $\Phi$ means gravitation potential.  
+Consequence of the Eq.\eqref{eq1} is the viral theorem. The gravitation potential energy of the star is then 
+\begin{equation}
+\label{pot_e_star1}
+W = -\int_{0}^{R} \frac{Gm_{(r)}}{r}\rho 4 \pi r^2 dr = \int_{0}^{R} \frac{dP}{dr}4\pi r^3 dr = -3\int_{0}^{R} P4 \pi r^2 dr
+\end{equation}
+We can characterize the gas by an adiabatic equation of state, where $K$ and $\Gamma$ are constants
+\begin{equation}
+ \label{adiab_1}
+P = K\rho_0^\Gamma
+\end{equation}
+Then Eq.\eqref{pot_e_star1} can be rewritten as follows
+\begin{equation}
+ W = -3 (\Gamma - 1) U,
+\end{equation}
+Where $U$ is the total star's internal energy 
+\begin{equation}
+U = \int_{0}^{R}\varepsilon' 4\pi r^2 dr 
+\end{equation}
+and $\varepsilon'$   
+
 \section{The Chandrasekhar limit}
 
 \section{White dwarfs classes}
