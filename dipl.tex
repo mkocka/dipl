@@ -263,13 +263,13 @@ masses in IPs \citet{2009A&A...496..121B}, \citet{2010A&A...520A..25Y}.
 
 
 \chapter{White Dwarfs}
-White dwarfs borns when normall mass stars die. WDs are degenerated, late type stars with typical mass $\sim1$ solar mass. Their typical radius is about
+White dwarfs born when normall mass stars die. WDs are degenerated, late type stars with typical mass $\sim 1 M_{\odot}$. Their typical radius is about
  5000 km and mean density around $10^6 g.cm^{-3}$ \citet{2004bhwd.book.....S}. They no longer burn nuclear fuel and
-if they don't have any other mather influx e.g. like accretion from close star, they slowly cools as they radiate
+if they don't have any other mather influx e.g. by accretion from close star, they slowly cools as they radiate
 away residual thermal enegy.
 
-WDs support themselves against gravity by the pressure of electron degenerate gas. The whole star is then in thermal 
-equilibrium, except very thin atmosphere.  
+WDs support themselves against gravity by the pressure of electron degenerate gas and theyr interior is in the local thermal 
+equilibrium, except the thin atmosphere.  
  
 
 %\begin{figure}[hbt!]
@@ -288,7 +288,7 @@ some literature \citet{padm_vII}.} in some point of late state of their evolutio
  forming planetary nebulae. The rest of the star become the white dwarf.  
 
 \begin{table}[hbt!]
-\caption{Basic statisticks of the compact objects}
+\caption{Basic statisticks of the compact objects \citet{2004bhwd.book.....S}}
 \centering
 \begin{tabular}{lllll}
 \hline
@@ -309,7 +309,7 @@ $^b R_{\odot}=6.9599 \times 10^{10} cm$ &&&& \\
 \label{comobj1}
 \end{table}
 
-Let's use data from the table \ref{comobj1} and try to assume the pressure inside of WD.For very 
+Let's use data from the table \ref{comobj1} and try to assume the pressure inside of WD. For very 
 rough estimation, we can use equation of mechanic equilibrium to compare WD with the Sun.
 
 \begin{equation}
@@ -330,8 +330,8 @@ From easy calculation we get:
  dP' = -G\frac{M' \rho' dr'}{r'^2} = -G\frac{M \cdot 10^6 \rho \cdot 10^{-2} dr}{r^2 (10^{-2})^2} = 10^{8} dP
 \end{equation}
 
-From such results is eminent that there is something wrong with the WDs interior. As the ionization 
-is increasing by higher temperatures, the bigger pressure otherwise helps recombination. However 
+From such results is eminent that there is something wrong with the WDs interior in comparation with central reion of the 
+normal star. As the ionization is increasing by higher temperatures, the bigger pressure otherwise helps recombination. However 
 very big pressure actually increase ionization up to totally ionized atoms. Atoms without their 
 electrons shells are closer to each others which explains very high density.
 
@@ -372,7 +372,7 @@ take another, higher and higher states, thus only one particle per state is allo
 Even in limit $T\rightarrow0$ pressure is produced by motions of electrons on excited positions.       
 
 At the zero temperature all of the lowest states and none of the higher states are 
-occupied, this kind of fermion gas is called completely degenerate. 
+occupied, this kind of fermion gas is called completely degenerated. 
 The max energy of electron in completely degenerate gas at $T=0 K$ is known as Fermi energy. 
 
 For determining the limiting energy we can imagine 3D box where length of each of its sides will be \textit{L}.  
@@ -380,7 +380,7 @@ The wavelengths of electrons trapped in the box in each dimension will be
 \begin{equation}
 \lambda_{xyz} = \frac{2L}{N_{xyz}}
 \end{equation}
-where Nxyz are integer quantum numbers for each dimension. The momentum can be written 
+where $N_{xyz}$ are integer quantum numbers for each dimension. The momentum can be written 
 through de Broglie wavelength
 \begin{equation}
 p_{xyz} = \frac{hN_{xyz}}{2L}
@@ -395,7 +395,7 @@ factor two. The two factor comes from the fact that electrons are particles with
 This means that two electrons are allowed to have the same tree quantum numbers but different spin. 
 The total number of electrons out to radius $N = \sqrt{N_x^2 + N_y^2 + N_z^2}$ will be
 \begin{equation}
- N_e = 2\left ( \frac{1}{8} \right )\left ( \frac{4}{3} a\pi N^3\right ) \Rightarrow N = \left ( \frac{3N_e}{\pi} \right )^{1/3} .
+ N_e = 2\left ( \frac{1}{8} \right )\left ( \frac{4}{3} \pi N^3\right ) \Rightarrow N = \left ( \frac{3N_e}{\pi} \right )^{1/3} .
 \end{equation}
 
 By using Eq. \eqref{ferm1} and simplifying it, we will get the Fermi energy as follows
@@ -406,10 +406,24 @@ where $m$ is the mas of the electron or any other fermion\footnote{Can by applie
 and $n\equiv N_e/L^3$ is the electron count per volume. 
 The average energy per electron at $T = 0K$ is $\frac{3}{5}\varepsilon_F$.    
   
-\section{Degenerate electrons \& pressure}
+\section{Degeneracy}
+Matter inside of WD has very symmetric spherical distribution, we can calculate the mass interior to radius $r$ like\footnote{More elaborate and precises approach can by find ... TBS}
+\begin{equation}
+ \frac{dm_{(r)}}{dr} = 4 \pi r^2 \rho
+\end{equation}
+In normal case the WD is in steady state and gravitation force is balanced by the pressure at every point.  
+For deriving the hydrostatic equilibrium equation we need to consider an infinitesimal element laying between 
+$r$ and $r+dr$ with an area $dA$. The element is lying perpendicular to the radial direction, should looks like fig.(\ref{wd1}).
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=4cm]{plot/wd1}
+\caption{How could be infinitesimal fluid element laying between 
+$r$ and $r+dr$ with an area $dA$ imagine}
+\label{wd1} 
+\end{figure}
 
- 
-
+The gravitation attraction between mass $dm = \rho dA dr$ and $m_{(r)}$ is the same as if $m_{(r)}$ were only point at the center with the same mass. While the outside mass exerts no force on $dm$.
+Then the net outward pressure forced on $dm$ is $- \left [ P\left ( r + dr \right ) - p(r)  \right ]dA$
 \section{The Chandrasekhar limit}
 
 \section{White dwarfs classes}
@@ -494,6 +508,7 @@ The average energy per electron at $T = 0K$ is $\frac{3}{5}\varepsilon_F$.
 \nocite{xray_hanbook}
 \nocite{1972ApJ...175..417N}
 \nocite{kleczek}
+\nocite{comp_obj1}
 \bibliography{koci}
 \addcontentsline{toc}{chapter}{\hspace*{6mm}Bibliography}
 
