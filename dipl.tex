@@ -270,15 +270,6 @@ away residual thermal enegy.
 
 WDs support themselves against gravity by the pressure of electron degenerate gas and theyr interior is in the local thermal 
 equilibrium, except the thin atmosphere.  
- 
-
-%\begin{figure}[hbt!]
-%\centering
-%\includegraphics[totalheight=10cm]{hrdiagram}
-%\caption{WD lies in right bottom corner of HD diagram, under main 
-%sequence, which exactly means, they are very small (dwarf) stars with high surface temperature.  }
-%\label{hrd1} 
-%\end{figure}
 
 \section{First look of white dwarfs interior}
 WDs are a class of the less compact objects among the possible endpoints of the stellar evolution. 
@@ -408,7 +399,8 @@ The average energy per electron at $T = 0K$ is $\frac{3}{5}\varepsilon_F$.
   
 \section{Degeneracy}
 Matter inside of WD has very symmetric spherical distribution, we can calculate the mass interior to radius $r$ like\footnote{More elaborate and precises approach can by find 
-\citet{2004bhwd.book.....S}, \cite{padm_vII}, \citet{kleczek}, \citet{comp_obj1}, \citet{1972ApJ...175..417N}}
+\citet{2004bhwd.book.....S}, \cite{padm_vII}, \citet{kleczek}, \citet{comp_obj1}, \citet{1972ApJ...175..417N} and simpler explanation with
+less math in \citet{2007ima..book.....C}}
 \begin{equation}
  \frac{dm_{(r)}}{dr} = 4 \pi r^2 \rho
 \end{equation}
@@ -448,11 +440,53 @@ Where $U$ is the total star's internal energy
 \begin{equation}
 U = \int_{0}^{R}\varepsilon' 4\pi r^2 dr 
 \end{equation}
-and $\varepsilon'$   
+and $\varepsilon'$ comes from:
+\begin{equation}
+\label{eps1}
+ \varepsilon' \equiv \varepsilon - \rho_0 c^2
+\end{equation}
+where
+\begin{equation}
+ \varepsilon = \rho_0c^2+\frac{P}{\Gamma -1}
+\end{equation}
+Now we can see that the energy density, of the gas (excluding the rest mass energy) can be also written as
+\begin{equation}
+ \label{eps2}
+ \varepsilon'=\frac{P}{\Gamma - 1}
+\end{equation}
+Assuming adiabatic changes, the Eq.\eqref{eps2} follows from the first law of thermodynamics
+\begin{equation}
+ d\left ( \frac{\varepsilon }{\rho_0} \right ) = -Pd\left ( \frac{1}{\rho_0} \right ) .
+\end{equation}
+
+The equation of state for ideal Fermi gas reduce to the simple polytropic form Eq.\eqref{adiab_1} in
+the two limiting cases \citet{2004bhwd.book.....S}, \citet{padm_vII}:
+\begin{itemize}
+\item Nonrelativistic electrons, $\rho_0 \ll 10^6 g.cm^{-3}, x\ll 1, \Phi_{(x)}\rightarrow x^5/15\pi^5 $
+\begin{equation}
+\Gamma = \frac{5}{3} \Longrightarrow  K = \frac{3^{\frac{2}{3}}\pi^{\frac{4}{3}}}{5}\frac{\hbar^2}{m_em_u^{\frac{5}{3}}u_e^{\frac{5}{3}}} = \frac{1.0036\times 10^{13}}{u_e^{\frac{5}{3}}} cgs.
+\end{equation}
+\item Extremly relativistic electrons, $\rho_0 \gg 10^6 g.cm^{-3}, x\gg 1, \Phi_{(x)}\rightarrow x^4/12\pi^2 $
+\begin{equation}
+\Gamma = \frac{4}{3} \Longrightarrow K = \frac{3^{\frac{1}{3}}\pi^{\frac{2}{3}}}{4}\frac{\hbar c}{m_u^{\frac{4}{3}}u_e^{\frac{4}{3}}} = \frac{1.2435\times 10^{15}}{u_e^{\frac{4}{3}}} cgs.
+\end{equation}
+\end{itemize}
+
+
+  
 
 \section{The Chandrasekhar limit}
 
 \section{White dwarfs classes}
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[totalheight=10cm]{hrdiagram}
+\caption{WD lies in right bottom corner of HD diagram, under main 
+sequence, which exactly means, they are very small (dwarf) stars with high surface temperature.  }
+\label{hrd1} 
+\end{figure}
+
 
 \chapter{Cataclysmic variable stars}
 \section{Non magnetic cataclysmic variables} 
