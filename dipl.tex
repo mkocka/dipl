@@ -421,7 +421,12 @@ Then the net outward pressure forced on $dm$ is $- \left [ P\left ( r + dr \righ
 \label{eq1}
  \frac{dP}{dr} = - \frac{Gm_{(r)}\rho}{r^2}
 \end{equation}
-In such equilibrium, the gradient of degeneracy pressure is balanced by gravitation: $\nabla P = -\rho \nabla \Phi$ where $\Phi$ means gravitation potential.  
+In such equilibrium, the gradient of degeneracy pressure is balanced by gravitation: 
+\begin{equation}
+\label{equ_1}
+\nabla P = -\rho \nabla \Phi, 
+\end{equation}
+where $\Phi$ means gravitation potential.  
 Consequence of the Eq.\eqref{eq1} is the viral theorem. The gravitation potential energy of the star is then 
 \begin{equation}
 \label{pot_e_star1}
@@ -472,7 +477,36 @@ the two limiting cases \citet{2004bhwd.book.....S}, \citet{padm_vII}:
 \end{equation}
 \end{itemize}
 
+This kind of the equilibrium configurations such these are called polytropes. We can use Eq.\eqref{equ_1}, take the divergence of it and by using $\nabla^2\Phi = 4\pi G \rho$ in spehrically 
+symmetric case we get  
+\begin{equation}
+\label{pol_1}
+ \frac{1}{r^2}\frac{d}{dr}\left ( \frac{r^2}{\rho}\frac{dP}{dr} \right ) = -4\pi G\rho .
+\end{equation}
+Using few trics, Eq.\eqref{pol_1} can be rewrite and reduce to dimension less form 
+\begin{equation}
+ \label{pol_2}
+\frac{1}{\xi^2 }\frac{d}{d\xi}\xi^2\frac{d\theta }{d\xi } = -\theta^n 
+\end{equation}
 
+
+\begin{itemize}
+ \item use Eq.\eqref{adiab_1} with $\Gamma \equiv 1 + \frac{1}{n}$ where $n$ is called the polytropic index
+ \item $\rho = \rho_c \theta^n$
+ \item $r = a\xi$
+ \item $a = \left [ \frac{\left ( n+1 \right ) K \rho_c^{\left ( 1/n-1 \right )} }{4\pi G} \right ]^{1/2}$
+\end{itemize}
+where $\rho_c$ is the central density, $\rho_c = \rho$ when $r = 0$. 
+
+The Eq.\eqref{pol_2} is called the \textit{Lane-Emden equation} for the structure of $n$ index, the boundary 
+conditions at the center such polytropic white dwarf are
+\begin{equation}
+ \theta(0) = 1, 
+\end{equation}
+\begin{equation}
+ \theta'(0)= 0.
+\end{equation}
+ 
   
 
 \section{The Chandrasekhar limit}
@@ -569,6 +603,7 @@ sequence, which exactly means, they are very small (dwarf) stars with high surfa
 \nocite{1972ApJ...175..417N}
 \nocite{kleczek}
 \nocite{comp_obj1}
+\nocite{1939MNRAS..99..673C}
 \bibliography{koci}
 \addcontentsline{toc}{chapter}{\hspace*{6mm}Bibliography}
 
