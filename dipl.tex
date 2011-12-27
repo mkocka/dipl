@@ -490,23 +490,62 @@ Using few trics, Eq.\eqref{pol_1} can be rewrite and reduce to dimension less fo
 \end{equation}
 
 
-\begin{itemize}
- \item use Eq.\eqref{adiab_1} with $\Gamma \equiv 1 + \frac{1}{n}$ where $n$ is called the polytropic index
- \item $\rho = \rho_c \theta^n$
- \item $r = a\xi$
- \item $a = \left [ \frac{\left ( n+1 \right ) K \rho_c^{\left ( 1/n-1 \right )} }{4\pi G} \right ]^{1/2}$
-\end{itemize}
+
+use Eq.\eqref{adiab_1} with $\Gamma \equiv 1 + \frac{1}{n}$ where $n$ is called the polytropic index
+\begin{equation}
+\label{pol_3}
+\rho = \rho_c \theta^n  
+\end{equation}
+\begin{equation}
+\label{pol_4}
+r = a\xi
+\end{equation}
+\begin{equation}
+\label{pol_5} 
+a = \left [ \frac{\left ( n+1 \right ) K \rho_c^{\left ( 1/n-1 \right )} }{4\pi G} \right ]^{1/2}
+\end{equation}
 where $\rho_c$ is the central density, $\rho_c = \rho$ when $r = 0$. 
 
 The Eq.\eqref{pol_2} is called the \textit{Lane-Emden equation} for the structure of $n$ index, the boundary 
 conditions at the center such polytropic white dwarf are
 \begin{equation}
+\label{le1}
  \theta(0) = 1, 
 \end{equation}
 \begin{equation}
+\label{le0}
  \theta'(0)= 0.
 \end{equation}
+The condition \eqref{le1} come dirrectly from Eq.\eqref{pol_3} and condition \eqref{le0} is derived from the fact 
+that near the center of the star is $m_{(r)} \approx 4\pi \rho_c \frac{r^3}{3}$. If we use Eq.\eqref{eq1}, we get
+\begin{equation}
+ \frac{dP_{(\rho)}}{dr} = \frac{d\rho}{dr} = 0 .
+\end{equation}
+
+If we numerically integrate Eq.\eqref{pol_2} using Eq.\eqref{le1} and Eq. \eqref{le0} as the boundary conditions, 
+starting at $\xi=0$. We will find that for $n<5$ $(Gamma>\frac{6}{5})$ this solution decrease monotonically with a zero 
+at finite value $\theta(\xi_1) = 0$, which corresponds to the star's surface where $P=\rho = 0$ and we get the 
+equation for white dwarf radius 
+\begin{equation}
+ \label{radius1}
+R = a\xi_1 = \left[ \frac{(n+1)K}{4\pi G} \right]^{1/2}\rho_c^{\frac{1-n}{2n}}\xi_1
+\end{equation}
+
+\begin{equation}
+ \label{wdmass}
+\begin{split}
+M &= \int_{0}^{R} 4\pi r^2 \rho dr \\
+  &= 4 \pi a^3 \rho_c \int_{0}^{\xi_1} \xi^2 \theta^n d\xi \\
+  &= -4 \pi a^3 \rho_c \int_{0}^{\xi_1}\frac{d}{d\xi}\left( \xi^2 \frac{d\theta}{d\xi}\right)d\xi \\
+  &= 4 \pi a^3 \rho_c \xi_1^2 \lvert \theta' (\xi_1) \lvert \\
+  & = 4 \pi \left[ \frac{(n+1)K}{4 \pi G}\right]^{3/2} \rho_c^{\frac{(3-n)}{2\pi}}\xi_1^2 \lvert \theta' (\xi_1)\lvert
+\end{split}
+\end{equation}
  
+\begin{equation}
+ M = 4 \pi R^{\frac{3-n}{t-n}}\left[ \frac{(n+1)K}{4 \pi G}\right]^{\frac{n}{n-1}}
+\xi_1^{\frac{3-n}{1-n}}\xi_1^2\lvert\theta' (\xi_1) \lvert
+\end{equation}
   
 
 \section{The Chandrasekhar limit}
