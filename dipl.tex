@@ -528,9 +528,10 @@ at finite value $\theta(\xi_1) = 0$, which corresponds to the star's surface whe
 equation for white dwarf radius 
 \begin{equation}
  \label{radius1}
-R = a\xi_1 = \left[ \frac{(n+1)K}{4\pi G} \right]^{1/2}\rho_c^{\frac{1-n}{2n}}\xi_1
+R = a\xi_1 = \left[ \frac{(n+1)K}{4\pi G} \right]^{1/2}\rho_c^{\frac{1-n}{2n}}\xi_1.
 \end{equation}
 
+The mass o thef WD can be find as follows
 \begin{equation}
  \label{wdmass}
 \begin{split}
@@ -538,17 +539,29 @@ M &= \int_{0}^{R} 4\pi r^2 \rho dr \\
   &= 4 \pi a^3 \rho_c \int_{0}^{\xi_1} \xi^2 \theta^n d\xi \\
   &= -4 \pi a^3 \rho_c \int_{0}^{\xi_1}\frac{d}{d\xi}\left( \xi^2 \frac{d\theta}{d\xi}\right)d\xi \\
   &= 4 \pi a^3 \rho_c \xi_1^2 \lvert \theta' (\xi_1) \lvert \\
-  & = 4 \pi \left[ \frac{(n+1)K}{4 \pi G}\right]^{3/2} \rho_c^{\frac{(3-n)}{2\pi}}\xi_1^2 \lvert \theta' (\xi_1)\lvert
+  & = 4 \pi \left[ \frac{(n+1)K}{4 \pi G}\right]^{3/2} \rho_c^{\frac{(3-n)}{2\pi}}\xi_1^2 \lvert \theta' (\xi_1)\lvert ,
 \end{split}
 \end{equation}
- 
+then $\rho_c$ can by eliminated between Eq.\eqref{radius1} and Eq.\eqref{wdmass}, which gives the mass-radius relations 
+for polytropes \citet{2004bhwd.book.....S}:  
 \begin{equation}
+\label{mr_eq}
  M = 4 \pi R^{\frac{3-n}{t-n}}\left[ \frac{(n+1)K}{4 \pi G}\right]^{\frac{n}{n-1}}
 \xi_1^{\frac{3-n}{1-n}}\xi_1^2\lvert\theta' (\xi_1) \lvert
 \end{equation}
   
 
 \section{The Chandrasekhar limit}
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[totalheight=8cm]{plot/chlimit}
+\caption{Ch \citet{2000ApJ...530..949S} }
+\label{Chlimit1} 
+\end{figure}
+
+
+
 
 \section{White dwarfs classes}
 
