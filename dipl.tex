@@ -31,7 +31,7 @@
 \fancyhf{}
 \fancyhead{}
 \fancyhead[L]{\footnotesize \leftmark}
-\fancyhead[R]{\footnotesize PAGE \thepage\ }
+\fancyhead[R]{\footnotesize PAGE \thepage\ of XX }
 
 \usepackage{hyperref}
 \newcommand\araa{ARA\&A}
@@ -549,21 +549,77 @@ for polytropes \citet{2004bhwd.book.....S}:
  M = 4 \pi R^{\frac{3-n}{t-n}}\left[ \frac{(n+1)K}{4 \pi G}\right]^{\frac{n}{n-1}}
 \xi_1^{\frac{3-n}{1-n}}\xi_1^2\lvert\theta' (\xi_1) \lvert
 \end{equation}
-  
 
 \section{The Chandrasekhar limit}
+What will happen if $\rho_c \rightarrow \infty$? This is one of the most important questions in the universe. 
+Because how central density of WD increases by increase of the WD mass, the electrons become more and more 
+relativistic throughout the star. As $R\rightarrow 0 $ also the space for free electrons moving between atoms nuclei become
+smaller and smaller. With increasing mass must also increase the speed of electrons to support the degeneracy pressure.  
+While the mass of WD is larger the radius become smaller, mass-volume relations implies that $\rho\propto M_{WD}^2$. 
+But the electrons can't have speed larger than speed of light and in some point where $\rho \sim 10^9 g cm ^{-3}$ there 
+will be no space left for moving electrons and they will be press into the nuclei. This will leads to explosion of such WD. 
 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[totalheight=8cm]{plot/chlimit}
-\caption{Ch \citet{2000ApJ...530..949S} }
+\caption{Relation between the mass $M$ and radius $R$ of a $^{12}C$ magnetic white dwarf for the indicated magnetic field strengths. 
+The solid line denotes the \citet{1961ApJ...134..683H} model for nonmagnetic white dwarfs $(\gamma = 0)$. The dashed lines are magnetic 
+white dwarfs. \citet{2000ApJ...530..949S} }
 \label{Chlimit1} 
 \end{figure}
 
+This all means, that there is a maximum mass for WDs. This mass is called \textit{Chandrasekhar limit}
+\footnote{Named after Indian physicist Subrahmanyan Chandrasekhar who received the Nobel Price in Physics in 1983 for his 
+work on stellar structure and evolution. Chandrasekhar made his great discovery at the age of 21 in the 1931.   } $M_{ch}$.  
 
+The classical theory of type 1A supernovae assumes explosions of such WDs reaching the $M_{ch}$, the very same 
+mass of the WDs when they explode makes Type 1A supernovae perfectly suitable objects for measuring the long range 
+space distances. That's why they are so important objects for cosmology and astronomers called 
+them standard candles.
+
+The Chandrasekhar limit for relativistic electron case is
+\begin{equation}
+ \label{chlim}
+M=1.457\left ( \frac{2}{\mu_e} \right )^2 M_{\odot},
+\end{equation}
+where $\mu_e$ is the average molecular weight per electron, which depends on the chemical comsposition of the star and is typically sets 
+to $\mu_e = 2$. 
+
+The Eq.\eqref{chlim} can be obtained by solving Eq.\eqref{mr_eq} with parameters\footnote{Extensive list of polytropic parameters can be find in
+\citet{1939MNRAS..99..673C}}:
+\begin{equation}
+\Gamma = \frac{4}{3}, n =3,{   }\xi_1 = 6.89685, \xi_1^2 \lvert \theta' (\xi_1) \lvert = 2.01824. 
+\end{equation}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+Another, ilustrativ aproach to estimating the Chandrasekhar limit is mention in \citet{2007ima..book.....C}. An approximate value for $M_{ch}$ may by 
+obtain by setting the estimate of the central pressure
+\begin{equation}
+ P_c \approx \frac{2}{3} \pi G \rho^2 R_{wd}^2 \qquad \text{with} \qquad \rho=M_{wd} / \frac{4}{3} \pi R_{wd}^3  
+\end{equation}
+equal to electron degeneracy pressure equation
+\begin{equation}
+ \label{edegP}
+P = \frac{(3\pi^2)^{2/3}}{4} \hbar c \left[ \left( \frac{Z}{A}\right) \frac{\rho}{m_H}\right]^{4/3},
+\end{equation}
+with $\frac{Z}{A}=0.5$, the $R$ cancels from the equation leving for the greatest possible mass:
+\begin{equation}
+ \label{chlim2}
+M_{ch} \sim \frac{3\sqrt{2\pi}}{8}\left ( \frac{\hbar c}{G} \right )^{3/2}\left [ \left ( \frac{Z}{A} \right ) \frac{1}{m_H} \right ]^2 M_\odot.  
+\end{equation}
+It is important to notice that Eq.\eqref{chlim2} contains three fundamental constants $\hbar, c$ and $G$ representing the combined effects of quantum mechanics, 
+relativity and Newtonian gravitation on the WD structure. 
+
+The Chandrasekhar limit slightly depends upon the chemical composition \eqref{chlim}, but in the literature is well known as $M_{ch} = 1.44M_\odot$.    
+  
+The similar limit exists for neutron stars, where pressure of degenerate neutron gas support the stars against it own gravity. 
+This limit is called Tolman - Oppenheimer - Volkoff limit (or TOV limit).But it is not so easy in neutron stars case. Their limit 
+mass depends strongly on type of matter in star center. The limit varies from $0.7 M_\odot$ up to $\sim 3M_\odot$ in extreme case, when inner section of 
+neutron star is partialy filled up by quark - gluon meatter.     
 
 
 \section{White dwarfs classes}
+Previous sections describe interior and fundamental parameters of white dwarfs, but it also important to tell something about their classes.   
+WDs occupy narrow sliver line in the left bottom corner of H-R diagram fig.(\ref{hrd1}), slightly parallel with the main sequence.  
 
 \begin{figure}[hbt!]
 \centering
