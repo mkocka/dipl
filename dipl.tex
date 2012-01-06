@@ -893,7 +893,7 @@ of the X-ray sky enabling long exposures covering multiple objects in this band.
 
 
 
-\section{Bremsstrahlung}
+\subsection{Bremsstrahlung}
 Bremsstrahlung is a German word for breaking radiations, which is a radiations due to the acceleration 
 of a charge in the Coulomb field of another charge also called as free-free emission. A full 
 understanding of this process requires a quantum treatment, since photons of energies comparable 
@@ -966,21 +966,43 @@ $\upsilon \approx 1/ \tau = \gamma \upsilon / 2b$ and therefore to $\omega \appr
 Because $\omega \approx \gamma \upsilon / b$ there is only a little power emitted at grater frequencies 
 then $\omega$. 
 
-The low frequency spectrum: 
+The low frequency spectrum has the form: 
 \begin{equation}
  \label{low_f}
 I(\omega) = \frac{Z^2 e^6}{24 \pi^4 \varepsilon_0^3 c^3 m_e^2 \upsilon^2 } \frac{1}{b^2} \left [ 1 + \frac{1}{\gamma^2} \left ( \frac{\omega b}{\gamma \upsilon} \right )^2 \mathrm{ln}^2 \left ( \frac{\omega b}{\gamma \upsilon} \right ) \right ],
 \end{equation}
+In the limit case $\omega b / \gamma \upsilon \ll 1$, the second term in square brackets of Eq.\eqref{low_f} 
+is negligible and hence the good approximation for low frequency intensity spectrum is 
+\begin{equation}
+ \label{low_f2}
+I(\omega) = \frac{Z^2 e^6}{24 \pi^4 \varepsilon_0^3 c^3 m_e^2 \upsilon^2 } = K.
+\end{equation}
 
+We could guessed that the low frequency bremsstrahlung spectrum would be flat if we consider that the 
+momentum impulse is a delta function, thus the collision duration is much less then the waves period. 
+The Fourier transform of a delta function is the flat spectrum $I(\omega) = \mathrm{constant}$. 
+The spectrum will be flat approx. Up to the frequency $\omega = \gamma \upsilon /b$, above this, 
+it will falls of exponentially. 
+Note also that $\gamma$ disappeared from Eq.\eqref{low_f2}, even in the relativistic case. 
+This means that the momentum impulse is the same in the relativistic and non-relativistic cases, 
+for detailed derivation see \citet{longair:1}, \citet{jackson}. 
 
 \begin{figure}[hbt]
 \centering
 \includegraphics[totalheight=5cm]{plot/brem_jackson}
 \caption{The bremsstrahlung spectrum from the acceleration of the electron parallel and perpendicular
-to its initial direction of motion as was displayed in \citet{jackson}.}
+to its initial direction of motion as was displayed in \citet{jackson}, or \citet{rybicki:1}.}
 \label{jackson_brem} 
 \end{figure}
 
+Now we can integrate over all the collision parameters which contribute to the radiation at frequency 
+$\omega$: 
+\begin{equation}
+ \label{brems_final}
+I(\omega') = \int_{b'_{min}}^{b'_{max}} 2 \pi b' \gamma N \upsilon K \mathrm{d}b' = \frac{Z^6 e^6 \gamma N}{12\pi^3 \varepsilon_0^3 c^3 m_e^2} \frac{1}{\upsilon} \mathrm{ln}\left ( \frac{b'_{max}}{b'_{min}} \right ),
+\end{equation}
+note that if the electron is moving by relativistic speed, because of the relativistic length contractions,
+it observed more nuclei enhanced by a factor $\gamma$. $N' = \gamma N$, where $N$ is nuclear density .   
 
 \subsection{Thermal bremsstrahlung}
 
