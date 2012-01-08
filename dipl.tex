@@ -849,9 +849,9 @@ observations. The most notable example is XY Ari, which is an eclipsing IP with 
 the inclination (\citet{1998MNRAS.297.1269R}).          
 \begin{itemize}
  \item RXTE spectrum yields 1.22 M$_\odot$
- \item ASCA data yields 1.27 - 1.4 M$_\odot$
+ \item ASCA data yields 1.27 -- 1.4 M$_\odot$
  \item Ginga results 1.3 M$_\odot$
- \item the optical methods yields 0.78 - 1.03 M$_\odot$ 
+ \item the optical methods yields 0.78 -- 1.03 M$_\odot$ 
 \end{itemize}
 Observations in hard X-rays over 20 KeV are crucial as they provide a clean signal, not contaminated 
 by other system components such as the accretion disc or the main-sequence star and they avoid 
@@ -883,12 +883,56 @@ for observations in this band. The large FOV allows a good coverage
 of the X-ray sky enabling long exposures covering multiple objects in this band.  
 
 \section{Post shock region}
+Reason why IPs are the most suitable for measurements of the mass of their WD companion then others CVs 
+is their magnetic field, which is not as low as in non-magnetic CVs $B<10^6$ but still weaker then in 
+polars $B\gtrsim10^7$. 
+As was mentioned before, in IPs is the accretion disk destroyed in some distance from WD and accretion 
+continues through accretion curtain, where the gas follows magnetic force lines. 
+The resulting configuration is often know as an accretion column. 
+From theory of spherical accretion (\citet{accpower:1}) we expect that accreting matter to be highly 
+supersonic and therefore in free-fall above the WD's pole-caps. 
+
+The in-falling matter must be somehow decelerated to subsonic velocities in order to accrete, 
+therefore we expect strong shock-wave in matter stream where the kinetic energy of infall 
+\begin{equation}
+\frac{1}{2}\upsilon_{ff}^2 = GM_{wd}/R_{wd}, 
+\end{equation}
+will be turned into thermal energy. Because that $m_p \gg m_e$ the ions are these who brings the most of this kinetic energy supply. 
+The kinetic energy of ions must by emitted, absorbed or re-emitted by WD. The luminosity corresponding 
+to the typical accretion rate $\dot{M} \gtrsim 10^{16} \mathrm{g\:s^{-1}}$ will be of order 
+$10^{33} \mathrm{erg\:s^{-1}}$ which greatly exceed any intrinsic luminosity (typically 
+$\ll 10^{31} \mathrm{erg\:s^{-1}}$) that the WD may have as a result of left-over thermal energy in its 
+degenerated core (\citet{accpower:1}).  
+
+The accretion luminosity is according to \citet{accpower:1}:
+\begin{equation}
+\label{lacc}
+L_{acc} \lesssim 2 \times 10^{29}f_{-2}m_1^{18/7}R^{-1/7} \: \mathrm{erg \: s^{-1}},
+\end{equation}
+where $f_{-2} = 10^2 f$ and $f$ is a surface fraction.Which is much lower then the bolometric luminosities 
+of observed CVs. Therefore, we must conclude that the infaling matter goes through strong shock which 
+slows it down before reaching the WD surface.    
+
+Now we know that the shock gas is hot with characteristic (shock) temperature
+\begin{equation}
+ T_s = \frac{3}{8}\frac{G M \mu m_H}{k R_{wd}}=3.7 \times 10^8 m_1 R^{-1} \mathrm{K}. 
+\end{equation}
+
 
 \begin{figure}[hbt]
 \centering
-\includegraphics[totalheight=5cm]{plot/psr}
-\caption{PSR, Krivonos }
+\includegraphics[totalheight=5cm]{plot/psr2}
+\caption{PSR, Krivonos \citet{krivonos_pres}}
 \label{psr1} 
+\end{figure}
+
+\begin{figure}[hbt]
+\centering
+\includegraphics[totalheight=8cm]{plot/bb_spec_cv_krivonos}
+\caption{Typical broadband spectra of different CVs' classes, indicating that INTEGRAL observations in 
+the hard X-ray energy band (17–60 keV) are biased toward detecting the hardest CVs – intermediate polars, 
+\citet{2008A&A...489.1121R}.}
+\label{kriv_1} 
 \end{figure}
 
 
@@ -943,19 +987,19 @@ where $b$ is the collision parameter.
 
 The radiation spectrum showing both parallel and perpendicular accelerations to the motion 
 direction of the electron is shown in fig.\ref{jackson_brem}. The perpendicular impulse 
-has higher contribution , even in non-relativistic case, where $\gamma = 1$.  In addition, 
+has higher contribution, even in non-relativistic case, where $\gamma = 1$.  In addition, 
 this component cause significant radiation at low frequencies.   
 
 It is very useful to examine the behavior of the asymptotic limits of $K_0(y)$ and $K_1(y)$: 
 \begin{equation}
  \label{examine_k}
 \begin{split}
-&y \ll 1 \qquad K_0(y) = -\mathrm{ln} y \qquad K_1(y) = 1/y , \\
+&y \ll 1 \qquad K_0(y) = -\mathrm{ln} \: y \qquad K_1(y) = 1/y , \\
 &y \gg 1 \qquad  K_0(y) =  K_1(y) = (\pi/2y)^{1/2} \mathrm{exp}(-y).    
 \end{split}
 \end{equation}
 
-There is an exponential cat-off in high frequencies radiation spectrum
+There is an exponential cut-off in high frequencies radiation spectrum
 \begin{equation}
 \label{high_f}
 I(\omega) = \frac{Z^2 e^6}{48 \pi^3 \varepsilon_0^3 c^3 m_e^2 \upsilon^2 } \frac{\omega}{\gamma \upsilon b} \left [ \frac{1}{\gamma^2 +1} \right ] \mathrm{exp}\left ( - \frac{2 \omega b}{\gamma \upsilon} \right ), 
@@ -981,7 +1025,7 @@ I(\omega) = \frac{Z^2 e^6}{24 \pi^4 \varepsilon_0^3 c^3 m_e^2 \upsilon^2 } = K.
 We could guessed that the low frequency bremsstrahlung spectrum would be flat if we consider that the 
 momentum impulse is a delta function, thus the collision duration is much less then the waves period. 
 The Fourier transform of a delta function is the flat spectrum $I(\omega) = \mathrm{constant}$. 
-The spectrum will be flat approx. Up to the frequency $\omega = \gamma \upsilon /b$, above this, 
+The spectrum will be flat approximation up to the frequency $\omega = \gamma \upsilon /b$, above this, 
 it will falls of exponentially. 
 Note also that $\gamma$ disappeared from Eq.\eqref{low_f2}, even in the relativistic case. 
 This means that the momentum impulse is the same in the relativistic and non-relativistic cases, 
@@ -1005,9 +1049,66 @@ note that if the electron is moving by relativistic speed, because of the relati
 it observed more nuclei enhanced by a factor $\gamma$. $N' = \gamma N$, where $N$ is nuclear density .   
 
 \subsection{Thermal bremsstrahlung}
+In previous sub-section we derive the breaking radiation spectrum for one electron, but in real plasma 
+at temperature T is necessary to integrate single partition spectrum over the collision parameters 
+and over the Maxwell distribution of electron velocities 
+\begin{equation}
+\label{them_brems}
+N_e(\upsilon)\mathrm{d}\upsilon = 4 \pi N_e \left ( \frac{m_e}{2 \pi k T} \right )^{2/3}\upsilon^2 \mathrm{exp}\left ( -\frac{m_e \upsilon^2}{2kT} \right ) \mathrm{d}\upsilon . 
+\end{equation}
+The approximate expression for the spectral emissivity of a plasma of electron density $N_e$ in the low 
+frequency limit is 
+\begin{equation}
+ \label{low_f_tbrem}
+I(\omega)\approx \frac{Z^2e^6NN_e}{12\sqrt{3}\pi^3\varepsilon_0^3c^3m_e^2}\left ( \frac{m_e}{kT} \right )^{1/2} \: g(\omega,T),
+\end{equation}
+where $g(\omega , T)$ is known as Gaunt factor.
+It is important to realize that the low frequency thermal bremsstrahlung spectrum is almost independent of 
+frequency, the only dependence upon $\omega$ comes from the slightly varying function in the Gaunt factor. 
 
+At the high frequencies the spectrum of thermal bremsstrahlung exponentially cuts off according to 
+$\mathrm{exp}(-\hbar \omega / kT)$. This behavior is reflecting the exponential decrease in the 
+electrons population in hard energy tail of Maxwell distribution. 
 
+Finally, we can get the total energy loss by the plasma by integrating the spectral emissivity over 
+all possible frequencies, because of the exponential cut-off, the integration should be helds from $0$ to 
+$\omega = kT/ \hbar$ which leads to 
+\begin{equation}
+ \label{brem4}
+-\frac{\mathrm{d}E}{\mathrm{d}t} = \mathrm{(constant)} \: Z^2T^{1/2}\bar{g}N N_e .
+\end{equation}
 
+Detailed calculations give the following results, int terms of frequency $\upsilon$ rather then the angular
+frequency $\omega$. The spectral plasma emissivity according to \citet{longair:1} is
+\begin{equation}
+ \label{tbremss1}
+\begin{split}
+ K_\upsilon &= \frac{1}{3\pi^2}\left ( \frac{\pi}{6} \right )^{1/2} \frac{Z^2e^6}{\varepsilon^3_0c^3m_e^2} \left ( \frac{m_e}{kT} \right )^{1/2} \: g(\upsilon,T) N N_e \mathrm{exp}\left ( -\frac{h \upsilon}{kT} \right ), \\
+ & = 6.8 \times 10^{-51} Z^2 T^{-1/2} N N_e g(\upsilon, T) \mathrm{exp}\left ( - \frac{h \upsilon}{kT} \right ) \mathrm{W\,m^{-3}\,Hz^{-1}},     
+\end{split}
+\end{equation}
+where both: densities of electrons $N_e$ and of nuclei $N$ are in barticles per $\mathrm{m^3}$. At frequencies 
+$h \upsilon \ll kT$, the Gaunt factor has only a logarithmic dependence on the frequency.  
+Therefore for radio and X-ray wavelengths are suitable following forms:
+\begin{equation}
+ \label{approx_brem}
+\begin{split}
+ \mathrm{Radio:} & \: \:g(\upsilon, T) = \frac{\sqrt{3}}{2\pi}\left [ \mathrm{ln} \left ( \frac{128\varepsilon_0^2k^3T^3}{m_e e^4 \upsilon^2 Z^2} \right ) - \gamma^{1/2} \right ] ,\\
+ \mathrm{X-ray:} & \: \:g(\upsilon, T) = \frac{\sqrt{3}}{2\pi} \mathrm{ln} \left ( \frac{kT}{h\upsilon} \right ),
+\end{split}
+\end{equation}
+where $\gamma = 0.577$ is the Euler's constant. 
+
+The total loss rate of the plasma is
+\begin{equation}
+ \label{thermbrems_f}
+-\left ( \frac{\mathrm{d}E}{\mathrm{d}t} \right )_{brems} = 1.435 \times10^{-40}Z^2T^{1/2}\bar{g}N N_e \: \mathrm{W\:m^{-3}}.
+\end{equation}
+Detailed calculation show that the average value of the Gaunt factor $\bar{g}$ lies in the range 
+$1.1 - 1.5$, then $\bar{g} = 1.2$ will be a good approximation (\citet{longair:1}).  
+To apply a suitable Gaunt factors in the thermal bremsstrahlung formula is nontrivial and complex task.
+Several useful papers about suitable Gaunt factors were published. One of the more recent is that from 
+\citet{1998MNRAS.300..321S}.
 
 \section{WD mass estimations methods}
 
