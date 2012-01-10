@@ -1247,26 +1247,52 @@ the \citet{1972ApJ...175..417N} article:
  \label{rwd_mwd}
 R_{wd} = 7.8 \times 10^8 \left[ \left( \frac{1.44\mathrm{M_\odot}}{M_{wd}} \right)^{2/3} -\left( \frac{M_{wd}}{1.44\mathrm{M_\odot}} \right)^{2/3} \right]^{1/2}\:\mathrm{cm}\:.
 \end{equation}
-  
 
-
-
-
-
-
-
-
+The simple analytical model from the \citet{accpower:1}, based on assumption of the constant pressure 
+in the PSR region can by also used as follows:
+\begin{equation}
+ \label{king_ana}
+\begin{split}
+T(z) &= T_0 \left( \frac{z - R_{wd}}{z_0 - R_{wd}}\right)^{2/5}\:,\\
+\rho(z) &= \rho_0 \left( \frac{z - R_{wd}}{z_0 - R_{wd}}\right)^{-2/5}\:.
+\end{split}
+\end{equation}
 
 \begin{figure}[hbt]
 \centering
 \includegraphics[totalheight=10cm]{model/image}
-\caption{a}
+\caption{\textit{Top:} the temperature and density profiles for the analytical model from \citet{accpower:1}. The input 
+parameters for script was: $M_{wd} = 0.7\mathrm{M_\odot}$ and shock distance from WD 
+surface $0.013 R_{wd}$, $a = 1.0 \mathrm{cm^{-2}\:s^{-1}}$, The coresponding WD radius is $\sim$ 7797km, while the 
+resulting $kT_{max} = 29.71\mathrm{\:keV}$.
+\textit{Bottom:} the emergent model spectru calculated by suming of the local bremsstrahlung spectra.}
 \label{koc_mod} 
 \end{figure}
 
+The emergent model spectrum will be calculated by summing of the local bremsstrahlung spectra:
+\begin{equation}
+ \label{int_spec1}
+F_E = \int_{R_{wd}}^{z_0}j(z)\mathrm{d}z,
+\end{equation}
+where the local spectra were taken in form (\citet{zomb}, \citet{2005A&A...435..191S}): 
+\begin{equation}
+ \label{loc_spec_zom}
+j(z) = 9.52\times 10^{-38} \left( \frac{\rho (z)}{\mu m_H}\right)^2 T(z)^{-1/2} \left(\frac{E}{kT(z)} \right)^{-0.4} \mathrm{exp}\left(-\frac{E}{kT(z)} \right) \:.
+\end{equation}
 
 
-\section{WD mass estimations methods}
+
+\subsection{WD mass estimations methods}
+
+\begin{equation}
+ \label{aizu1}
+kT_s = 16 \times \left( \frac{M}{0.5\mathrm{M_{\odot}}}\right)\left( \frac{R}{10^9 \mathrm{cm}}\right)^{-1} \mathrm{keV}
+\end{equation}
+
+\begin{equation}
+ \label{MWD:1}
+\frac{M_{wd}}{\mathrm{M_{\odot}}} = 1.44\times \left[\frac{1}{2} \left( 1+ \sqrt{1+4\times\left(\frac{59}{kT_s}\right)^2} \right) \right]^{-3/4}
+\end{equation}
 
 
 
