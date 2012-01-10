@@ -1169,6 +1169,94 @@ Several useful papers about suitable Gaunt factors were published. One of the mo
 
 \section{PSR model}
 
+By using previous results and assumptions, we can now find an explicit column solution. We specified 
+that the cooling process in PSR is thermal bremsstrahlung and also that other mechanisms such Compton 
+and cyclotron cooling are negligible in IPs case. We know that the electron and ion temperature will 
+remain very stable. We also expect, that shock height (see fig. \ref{psr1} where $z_0 – R_{wd} = D$ 
+is shock distance from WD surface) is $D < R_{wd}$, therefore we can adopt one dimensional geometry 
+with vertical coordinate $z$ as is showed on the fig. \ref{psr1}.
+
+The structure of the stationary PSR in plane--parallel one--dimensional geometry is described
+(see e.g. \citet{2005A&A...435..191S}, \citet{1999MNRAS.306..684C} or \citet{accpower:1}) by the
+mass continuity equation:
+\begin{equation}
+ \label{mas_con}
+\frac{\mathrm{d}}{\mathrm{d}z}(\rho \upsilon) = 0   \:,
+\end{equation}
+the momentum equation
+\begin{equation}
+ \label{momentum_eq}
+\frac{\mathrm{d}}{\mathrm{d}z}(\rho \upsilon^2 + P) = -\frac{GM_{wd}}{z^2}\rho             \:,
+\end{equation}
+the energy equation 
+\begin{equation}
+ \label{ener_eq}
+\upsilon \frac{\mathrm{d}P}{\mathrm{d}z} + \gamma P \frac{\mathrm{d}\upsilon}{\mathrm{d}z} = -(\gamma -1)\Lambda    \:,
+\end{equation}
+and also by the ideal gas law:
+\begin{equation}
+ \label{ideal_gas_l}
+P = \frac{\rho k T}{\mu m_H}   \:.
+\end{equation}
+where $z$ is a spatial coordninate (see fig.\ref{psr1}), $\upsilon$ is the gas velocity, $\rho$ is the gas 
+density, $T$ is the temperature, $P$ is the gas pressure, $\mu=0.62$ is the mean molecular weight of the fully
+ionized solar composition matter and $\gamma = 5/3$ is the adiabatic index. $\Lambda$ is the cooling rate:
+\begin{equation}
+ \label{cool_rate_L}
+\Lambda = \left( \frac{\rho}{\mu m_H}\right)^2 \Lambda_N(T),
+\end{equation}
+where the cooling function $\Lambda_N(T)$ for low densities plasma with $\mu=0.62$ is 
+tabulated by \citet{1993ApJS...88..253S}.
+
+The Eq.\eqref{mas_con} can be interested with result:
+\begin{equation}
+ \label{res_int_mas_con}
+\rho \upsilon = a,
+\end{equation}
+where tha $a$ is local mass accretion rate of dimension $\mathrm{g\:cm^{-2}\:s^{-1}}$
+This is the free parameter of the model, but according to \citet{2005A&A...435..191S} the spectrum of 
+emergent radiation in PSR is rather insensitive to this parameter with reasonable limits.     
+
+By using the substitution $z' = z_0 - z$ where $z_0$ is the shock--wave coordinate (see fig. \ref{psr1}),
+and with $g(z') = (GM_{wd})/(z_0 - z')^2$ we should rewrite the Eq.\eqref{momentum_eq} and Eq.\eqref{ener_eq} 
+with knowledge of Eq.\eqref{res_int_mas_con}:
+\begin{equation}
+ \label{big_ass_eq1}
+\frac{\mathrm{d} \upsilon}{\mathrm{d} z'} = g(z')\frac{1}{\upsilon}-\frac{1}{a}\frac{\mathrm{d}P}{\mathrm{d}z'} \:,
+\end{equation}
+\begin{equation}
+ \label{big_ass_eq2}
+\frac{\mathrm{d}P}{\mathrm{d}z'} = \frac{(\gamma -1) \Lambda a + g(z')\gamma Pa / \upsilon}{\gamma P -a / \upsilon } \:.
+\end{equation}
+
+The equations \eqref{big_ass_eq1} and \eqref{big_ass_eq2} could be solved by using sufficient 
+numerical method, e.g \citet{2005A&A...435..191S} and  \citet{1999MNRAS.306..684C} used shooting 
+method from $z=z_0(z'=0)$ to $z = R_{wd}(z'=z_0-R_{wd})$ with boundary condition at $z=z_0$ with results:
+\begin{equation}
+ \label{res_shoot}
+\begin{split}
+\upsilon_0 &= 0.25\sqrt{2GM_{wd}/z_0}\:,\\
+\rho_0 &= a / \upsilon_0\:,\\
+P_0 &= 3a\upsilon_0\:,\\
+T_0 &= 3\frac{\mu m_H}{k}\upsilon_0^2\:. 
+\end{split}
+\end{equation}
+The equation which ties up the $R_{wd}$ and $M_{wd}$ is typically used that one from 
+the \citet{1972ApJ...175..417N} article:
+\begin{equation}
+ \label{rwd_mwd}
+R_{wd} = 7.8 \times 10^8 \left[ \left( \frac{1.44\mathrm{M_\odot}}{M_{wd}} \right)^{2/3} -\left( \frac{M_{wd}}{1.44\mathrm{M_\odot}} \right)^{2/3} \right]^{1/2}\:\mathrm{cm}\:.
+\end{equation}
+  
+
+
+
+
+
+
+
+
+
 \begin{figure}[hbt]
 \centering
 \includegraphics[totalheight=10cm]{model/image}
