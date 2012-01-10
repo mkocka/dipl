@@ -836,6 +836,16 @@ the surface of WD with small energy by emitting UV light \citet{1973PThPh..49.11
 This property makes from IPs very good targets for hard X-ray space missions. The closer look to PSR 
 will be taken in the next chapter.   
 
+\begin{figure}[hbt]
+\centering
+\includegraphics[totalheight=12cm]{plot/bb_spec_cv_krivonos}
+\caption{Typical broadband spectra of different CVs' classes, indicating that INTEGRAL observations in 
+the hard X-ray energy band (17--60 keV) are biased toward detecting the hardest CVs -- intermediate polars, 
+\citet{2008A&A...489.1121R}.}
+\label{kriv_1} 
+\end{figure}
+
+
 \chapter{Masses of white dwarfs in intermediate polars}
 As it was mentioned before, the mass of a WD is the most fundamental parameter in CVs. It is also the 
 main parameter characterizing the accretion flow, the emission from the accretion region and, most 
@@ -1159,15 +1169,19 @@ Several useful papers about suitable Gaunt factors were published. One of the mo
 
 \section{PSR model}
 
-\section{WD mass estimations methods}
 \begin{figure}[hbt]
 \centering
-\includegraphics[totalheight=8cm]{plot/bb_spec_cv_krivonos}
-\caption{Typical broadband spectra of different CVs' classes, indicating that INTEGRAL observations in 
-the hard X-ray energy band (17--60 keV) are biased toward detecting the hardest CVs -- intermediate polars, 
-\citet{2008A&A...489.1121R}.}
-\label{kriv_1} 
+\includegraphics[totalheight=10cm]{model/image}
+\caption{a}
+\label{koc_mod} 
 \end{figure}
+
+
+
+\section{WD mass estimations methods}
+
+
+
 
 
 
@@ -1367,6 +1381,20 @@ done
 \end{verbatim}
 \end{tiny}
 
+In the next step of the analysis thread was checked which of the 25 IPs observed by XMM has been also 
+observed by INTEGRAL and have enough exposures for necessary spectral extraction. The seven sources 
+was been selected for spectral extraction.   
+
+The spectra from all suitable MOS observations was taken by standard SAS data product extraction. The 
+following commands took place:
+\begin{enumerate}
+ \item \verb evselect   was used for extraction of the source and background spectrum.
+ \item \verb rmfgen   was used for creating a redistribution matrix for the previously extracted spectrum.
+ \item \verb arfgen  was used for genarate an ancillary file.
+ \item \verb specgroup  was used for rebinig  the spectrum and link associated files.
+\end{enumerate}
+
+
 
  
  
@@ -1376,6 +1404,28 @@ done
 \section{Data analysis}
 
 
+\begin{sidewaystable}
+\begin{center}
+\caption{Summary of the observations. Columns give the object name, coordinates of the source, XMM-Newton 
+observation ID, total exposures times for MOS1 and MOS2, total exposures for IBIS/ISGRI, and period of INTEGRAL observations, 
+the IPs are ordering according to their RA.}
+\begin{tabular}{lrrlllrr}
+\hline
+\hline
+     &     &     &XMM &\multicolumn{2}{c}{Exp. time [ks]}&Exp. time [ks]& Obs. period  \\
+obj. & Ra $\mathrm{[^{\circ}]}$ & Dec $\mathrm{[^{\circ}]}$&obs. ID  & MOS1&MOS2& IBIS/ISGRI & IBIS/ISGRI \\ 
+\hline
+IGR J15094-6649&  227.358  & -66.823 & 0551430301&31.61     & 31.62& 592.46      &   1999-12-31 --- 2008-07-24                 \\
+NY Lup         &  237.060  & -45.479 & 0105460301&21.40     & 21.40& 1589.29     &    1999-12-31 --- 2005-04-08                \\
+V2400 Oph      &  258.152  & -24.245 & 0105460101&10.07     &10.12& 1368.89     &     1999-12-31 --- 2009-03-07                \\
+IGR J17195-4100&  259.899  & -41.014 & 0601270201&33.62     &33.62&  878.12    &     1999-12-31 --- 2008-10-23              \\
+IGR J17303-0601&  262.589  &  -5.992 & 0302100201&13.28     &13.28&   248.62   &       1999-12-31 --- 2008-04-21              \\
+V1223 Sgr      &  283.759  & -31.163 & 0145050101&38.66     &38.67&   264.66  &     1999-12-31 --- 2006-11-09               \\
+IGR J21335+5105&  323.375  &  51.092 & 0302100101&16.59     &16.40 & 1589.68    & 1999-12-31 --- 2009-05-22                   \\
+\hline
+\end{tabular}
+\end{center}
+\end{sidewaystable}
 
 
 
