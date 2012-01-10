@@ -15,7 +15,7 @@
 \usepackage{appendix}
 \usepackage{rotating}
 \usepackage{hyperref}
-
+\usepackage{verbatim}
 
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 
@@ -524,13 +524,13 @@ conditions at the center such polytropic white dwarf are
  \theta'(0)= 0.
 \end{equation}
 The condition \eqref{le1} come dirrectly from Eq.\eqref{pol_3} and condition \eqref{le0} is derived from the fact 
-that near the center of the star is $m(r) \approx 4\pi \rho_c r^3 /3$. If we use Eq.\eqref{eq1}, we get
+that near the center of the star is $m(r) \approx 4\pi \rho_c (r^3/3)$. If we use Eq.\eqref{eq1}, we get
 \begin{equation}
  \frac{\mathrm{d}P_{(\rho)}}{\mathrm{d}r} = \frac{\mathrm{d}\rho}{\mathrm{d}r} = 0 .
 \end{equation}
 
 If we numerically integrate Eq.\eqref{pol_2} using Eq.\eqref{le1} and Eq. \eqref{le0} as the boundary conditions, 
-starting at $\xi=0$. We will find that for $n<5$ $(Gamma>\frac{6}{5})$ this solution decrease monotonically with a zero 
+starting at $\xi=0$. We will find that for $n<5$ $(\Gamma>6/5)$ this solution decrease monotonically with a zero 
 at finite value $\theta(\xi_1) = 0$, which corresponds to the star's surface where $P=\rho = 0$ and we get the 
 equation for white dwarf radius 
 \begin{equation}
@@ -538,13 +538,13 @@ equation for white dwarf radius
 R = a\xi_1 = \left[ \frac{(n+1)K}{4\pi G} \right]^{1/2}\rho_c^{\frac{1-n}{2n}}\xi_1.
 \end{equation}
 
-The mass o thef WD can be find as follows
+The mass of the WD can be find as follows
 \begin{equation}
  \label{wdmass}
 \begin{split}
-M &= \int_{0}^{R} 4\pi r^2 \rho dr \\
-  &= 4 \pi a^3 \rho_c \int_{0}^{\xi_1} \xi^2 \theta^n d\xi \\
-  &= -4 \pi a^3 \rho_c \int_{0}^{\xi_1}\frac{d}{d\xi}\left( \xi^2 \frac{d\theta}{d\xi}\right)d\xi \\
+M &= \int_{0}^{R} 4\pi r^2 \rho \mathrm{d}r \\
+  &= 4 \pi a^3 \rho_c \int_{0}^{\xi_1} \xi^2 \theta^n \mathrm{d}\xi \\
+  &= -4 \pi a^3 \rho_c \int_{0}^{\xi_1}\frac{\mathrm{d}}{\mathrm{d}\xi}\left( \xi^2 \frac{\mathrm{d}\theta}{\mathrm{d}\xi}\right)\mathrm{d}\xi \\
   &= 4 \pi a^3 \rho_c \xi_1^2 \lvert \theta' (\xi_1) \lvert \\
   & = 4 \pi \left[ \frac{(n+1)K}{4 \pi G}\right]^{3/2} \rho_c^{\frac{(3-n)}{2\pi}}\xi_1^2 \lvert \theta' (\xi_1)\lvert ,
 \end{split}
@@ -554,7 +554,7 @@ for polytropes \citet{2004bhwd.book.....S}:
 \begin{equation}
 \label{mr_eq}
  M = 4 \pi R^{\frac{3-n}{t-n}}\left[ \frac{(n+1)K}{4 \pi G}\right]^{\frac{n}{n-1}}
-\xi_1^{\frac{3-n}{1-n}}\xi_1^2\lvert\theta' (\xi_1) \lvert
+\xi_1^{\frac{3-n}{1-n}}\xi_1^2\lvert\theta' (\xi_1) \lvert \: .
 \end{equation}
 
 \section{The Chandrasekhar limit}
@@ -587,7 +587,7 @@ them standard candles.
 The Chandrasekhar limit for relativistic electron case is
 \begin{equation}
  \label{chlim}
-M=1.457\left ( \frac{2}{\mu_e} \right )^2 M_{\odot},
+M_{ch}=1.457\left ( \frac{2}{\mu_e} \right )^2 \mathrm{M_{\odot}} \:,
 \end{equation}
 where $\mu_e$ is the average molecular weight per electron, which depends on the chemical comsposition of the star and is typically sets 
 to $\mu_e = 2$. 
@@ -595,10 +595,10 @@ to $\mu_e = 2$.
 The Eq.\eqref{chlim} can be obtained by solving Eq.\eqref{mr_eq} with parameters\footnote{Extensive list of polytropic parameters can be find in
 \citet{1939MNRAS..99..673C}}:
 \begin{equation}
-\Gamma = \frac{4}{3}, n =3,{   }\xi_1 = 6.89685, \xi_1^2 \lvert \theta' (\xi_1) \lvert = 2.01824. 
+\Gamma = \frac{4}{3}\:,\:\: n =3 \:,\:\: \xi_1 = 6.89685 \:,\:\: \xi_1^2 \lvert \theta' (\xi_1) \lvert = 2.01824\:\:. 
 \end{equation}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-Another, ilustrativ aproach to estimating the Chandrasekhar limit is mention in \citet{2007ima..book.....C}. An approximate value for $M_{ch}$ may by 
+Another, ilustrativ aproach to estimating the Chandrasekhar limit is mention in \citet{2007ima..book.....C}. An approximate value for $\mathrm{M_{ch}}$ may by 
 obtain by setting the estimate of the central pressure
 \begin{equation}
  P_c \approx \frac{2}{3} \pi G \rho^2 R_{wd}^2 \qquad \text{with} \qquad \rho=M_{wd} / \frac{4}{3} \pi R_{wd}^3  
@@ -608,7 +608,7 @@ equal to electron degeneracy pressure equation
  \label{edegP}
 P = \frac{(3\pi^2)^{2/3}}{4} \hbar c \left[ \left( \frac{Z}{A}\right) \frac{\rho}{m_H}\right]^{4/3},
 \end{equation}
-with $\frac{Z}{A}=0.5$, the $R$ cancels from the equation leving for the greatest possible mass:
+with $Z/A=0.5$, the $R$ cancels from the equation leving for the greatest possible mass:
 \begin{equation}
  \label{chlim2}
 M_{ch} \sim \frac{3\sqrt{2\pi}}{8}\left ( \frac{\hbar c}{G} \right )^{3/2}\left [ \left ( \frac{Z}{A} \right ) \frac{1}{m_H} \right ]^2 M_\odot.  
@@ -619,9 +619,9 @@ relativity and Newtonian gravitation on the WD structure.
 The Chandrasekhar limit slightly depends upon the chemical composition \eqref{chlim}, but in the literature is well known as $M_{ch} = 1.44M_\odot$.    
   
 The similar limit exists for neutron stars, where pressure of degenerate neutron gas support the stars against it own gravity. 
-This limit is called Tolman - Oppenheimer - Volkoff limit (or TOV limit).But it is not so easy in neutron stars case. Their limit 
+This limit is called Tolman --- Oppenheimer --- Volkoff limit (or TOV limit).But it is not so easy in neutron stars case. Their limit 
 mass depends strongly on type of matter in star center. The limit varies from $0.7 M_\odot$ up to $\sim 3M_\odot$ in extreme case, when inner section of 
-neutron star is partialy filled up by quark - gluon meatter.     
+neutron star is partialy filled up by quark - gluon matter.     
 
 
 \section{White dwarfs classes}
@@ -642,7 +642,7 @@ Unfortunately it is located only $8”$ from his companion Sirius A, the brightn
 on the  night sky, their are not rare in our Galaxy. From hundred closes stars to our Sun, eight of them are WDs.
 
 WDs usually have very strong magnetic field which comes from weak surface magnetic field of progenitor's star which lagre surface are conserved to their very 
-small surfaces. The magnetic field intensities vary from about $1000 gauss$ up to $10^9 gauss$ in extreme cases.    
+small surfaces. The magnetic field intensities vary from about $1000 \:\mathrm{G}$ up to $10^9 \:\mathrm{G}$ in extreme cases.    
 
 WDs can by find alone in interstellar space, young ones can be find also in planetary nebulae, like one  in center of the Ring nebula 
 M57 or their can be find in cataclysmic variables.       
@@ -660,9 +660,9 @@ sequence, which exactly means, they are very small (dwarf) stars with high surfa
 
 Cataclysmic variable stars \textit{(CVs)} received their name for their cataclysmic events, like outbursts, novae and supernovae eruptions. 
 In this one name several very different mechanisms are used for creating the various cataclysmic events.         
-Dwarf novae are common for their increase of brightness by factor $10$, classical novae are increasing their 
+Dwarf novae are common for their increase of brightness by factor ten, classical novae are increasing their 
 brightness usually in factor $10^6$ and type 1A supernovae in factor $10^{12}$, typical visual absolute magnitude 
-for them is $M_v = -19.3$\footnote{About $5\times10^9$ times brighter than the Sun}.  
+for them is $M_V = -19.3$\footnote{About $5\times10^9$ times brighter than the Sun}.  
 
 What is common for all the CVs types is their binary star character with mass transfer through Roche lobe to primary 
 companion, which is white dwarf star. Several thousands of CVs with even more candidates are known up to date. 
@@ -677,15 +677,15 @@ in CVs periods in range from 1.5 to 3.25 hours. The cause of this gap is not wel
 The various classifications and approaches to study the CVs exists. They mostly depends on the different wavelength in which the CVs are 
 observed. The biggest and also the well observed is optical band where we can see these types: 
 \begin{itemize}
- \item \textbf{Classical novae} are characterize by large outbursts couses by thermonucler exlosion of acreated material on WD's surface
- \item \textbf{Recurrent novae} have small outbursts repeating every few 10 years, typical example is \textit{RS Oph}
+ \item \textbf{Classical novae} are characterize by large outbursts couses by thermonucler exlosion of accreted material on WD's surface
+ \item \textbf{Recurrent novae} have small outbursts repeating every few years, typical example is RS Oph
  \item \textbf{DN - dwarf novae} use to have several smaller outbursts, have several subclases \textit{(Z Cam, SU UMa, SS Cyg\footnote{SS Cygni had few 
 outbursts, but according to latest obervations, it seems to be more-likely intermediate polar})} 
  \item \textbf{AM Canum Venaticorum} are extremely interesting space objects where the secondary star is also a compact object and the accretion 
 disk is mostly composed from helium and they could by source of strong gravitation waves 
  \item \textbf{Novae like systems} are possible nova remnants or stars with outburst behavior similar to novae but maybe miss-classify
- \item \textbf{Polars} are magnetic CVs with $B \sim 10^7 - 10^9 Gauss$, they got the name because of strong polarization of their light in optical and IR bands 
- \item \textbf{IP intermediate polars} are magnetic CVs with $B$ less then polars $\sim10^6-10^7 Gauss$ 
+ \item \textbf{Polars} are magnetic CVs with $B \sim 10^7 - 10^9 \:\mathrm{G}$, they got the name because of strong polarization of their light in optical and IR bands 
+ \item \textbf{IP intermediate polars} are magnetic CVs with $B$ less then polars $\sim10^6-10^7\: \mathrm{G}$ 
  \item \textbf{Type 1A supernova} is sub-class of supernovae which become a result of thermonuclear explosion of whole WD when it reaches the $M_{ch}$ limit  
 \end{itemize}
 
@@ -698,7 +698,7 @@ The CVs are complex and complicated space objects, for this reason is hard to ma
 classification. If we look inside \citet{warner:1}, we will find several fact which are not 
 consider as correct now. With new huge sky surveys as GAIA\footnote{Is space mission
 to chart a three-dimensional map of our Galaxy, will observed $\sim$ one billion stars. Launch is planned for 2013.} 
-or LSST\footnote{The Large Synoptic Survey Telescope (LSST) will be wide-field survey $8.4m$ 
+or LSST\footnote{The Large Synoptic Survey Telescope (LSST) will be wide-field survey $8.4\: \mathrm{m}$ 
 telescope which will photograph the available sky every three nights from his place on the 
 El Peñón peak of Cerro Pachón, at 2682 m in Chile. } the new and even more 
 complex classification will need to take place.    
@@ -715,7 +715,7 @@ almost everyone of them will has its own class.
 \section{Non magnetic cataclysmic variables} 
 The magnetic field plays essential role in all the CVs, even in non-magnetic ones, at-least weak 
 magnetic field provides viscosity in accretion disk. We will called non-magnetic CVs when 
-$B\lesssim10^5 Gauss$. 
+$B\lesssim10^5 \: \mathrm{m}$. 
 In such system is movement of gas from the secondary companion to the WD determined predominantly 
 by dynamical and hydro-dynamical flows \citet{warner:1}.
 
@@ -738,15 +738,15 @@ CVs orbital periods are relatively short and to take enough data-sets to create 
 is then not that difficult task. $P_{orb}$ of the system reveals how big the CV systems are. The most of the 
 CVs with typical periods in range hours can fit inside Earth - Moon orbit. 
 
-Inspecting the Riter \& Kolb catalogue \citet{2003A&A...404..301R} within the orbital period range from 1 hour to 1 day 
-\textit{(without the AM CVn systems)} it is found that almost half of all CVs in catalogue are the dwarf novae.
+Inspecting the Riter \& Kolb catalogue \citet{2003A&A...404..301R} within the orbital period range from 1 hour to 1 day, without the AM CVn systems, 
+it is found that almost half of all CVs in catalogue are the dwarf novae.
 \begin{itemize}
  \item 166 DNs $63\%$ have $P_{orb} < 2h$
  \item 26 DNs $10\%$ are found in the 2-3 h gap 
  \item 70 DNs $27\%$ are behind the gap with $P_{orb} > 3h$  
 \end{itemize}
 The conventional idea about where the gap comes from points to internal structure changing in the secondaries.   
-In some point of secondary star evolution it has a radius \textit{(corresponds to its mass)} in excess of the equilibrium value. 
+In some point of secondary star evolution it has a radius corresponds to its mass in excess of the equilibrium value. 
 This force secondary to detaches  from Roche lobe foe a while. The stellar wind is also very low during this period which cause disappearance of accretion disk.
 The period gap and the orbital period distribution per all the CVs and between the different CVs types is well shown on fig.\ref{cv_orb1}.  
 
@@ -764,8 +764,8 @@ Z Cam (ZC), SU UMa (SU), WZ Sge (WZ), ER UMa (ER), and unclassified subtype (XX)
 Magnetic CVs are these where the strong magnetic field significantly affects the accretion process. These systems are divided 
 according to strength of their magnetic field to two categories: 
 \begin{itemize}
- \item Polars, also called AM Herculis stars, $B_{wd} \sim 10^7 - 10^9 G$  
- \item Intermediate polars $B_{wd} \sim 10^6 - 10^7 G$
+ \item Polars, also called AM Herculis stars, $B_{wd} \sim 10^7 - 10^9\: \mathrm{G}$  
+ \item Intermediate polars $B_{wd} \sim 10^6 - 10^7 \: \mathrm{G}$
 \end{itemize}
 
 
@@ -813,24 +813,24 @@ The \textit{(C)} part of fig.\ref{all_typescv} illustrates how can be intermedia
 They are CVs with not as strong magnetized WDs as in polars. This is causing a several important 
 differences between polars and IPs. In IPs the other part of accretion disk exists, but at some 
 distance of WD the kinetic energy density $\rho v^2$ of gas in accretion disk is locally exceeded by the
- magnetic energy density $\frac{B^2}{8\pi} $ and within this radius the in-falling gas will be guided along magnetic 
+ magnetic energy density $B^2/8\pi$ and within this radius the in-falling gas will be guided along magnetic 
 field lines to accrete radially onto the WD creating kind of accretion curtain.  
 For the spherical accretion is easy to calculate transition radius, because $v$ is simply the 
-free-fall velocity $\left( \frac{2GM}{r}\right)^{\frac{1}{2}}$, the radius is according \citet{1994PASP..106..209P}:
+free-fall velocity: $\sqrt{2MG/r}$, the radius is according \citet{1994PASP..106..209P}:
 \begin{equation}
 \label{ipra}
-R_A = 3.7 \times 10^9 cm  \dot{M}_{17}^{-\frac{2}{7}}M_{wd}^{-\frac{1}{7}}\mu_{32}^{\frac{4}{7}},
+R_A = 3.7 \times 10^9 \dot{M}_{1}^{-2/7}M_{wd}^{-1/7}\mu_{32}^{4/7} \mathrm{cm},
 \end{equation}
-where $R_A$ is the \textit{Alfven radius}, $\dot{M}_{17}$ is the accretion rate in 
-units of $10^{17}g.s^{-1}$, $M_{wd}$ is the mass of WD in units $M_\odot$ and $\mu_{32}$ is the magnetic moment 
-of the WD in units of $10^{32} G.cm^3$. For disk accretion, the magnetospheric radius should be slightly 
+where $R_A$ is the \textit{Alfven radius}, $\dot{M}_{1}$ is the accretion rate in 
+units of $10^{17}\:\mathrm{g\:s^{-1}}$, $M_{wd}$ is the mass of WD in units $\mathrm{M_\odot}$ and $\mu_{32}$ is the magnetic moment 
+of the WD in units of $10^{32}\:\mathrm{G\:cm^3}$. For disk accretion, the magnetospheric radius should be slightly 
 smaller, theoretical estimates suggest $R_{mag} \approx 0.5R_A$ \citet{1994PASP..106..209P}.  
 
 As the gas almost freely fals onto WD channeled along magnetic field lines, in some distance near the 
 WD surface a stationary shock stands to convert the kinetic energy of the gas into thermal energy, 
 \citet{2010A&A...520A..25Y}.
 The temperature of such shock heated gas is typically over 10keV and the density is low. The hard X-rays 
-are emitted via optically thin thermal emission. Then the heated gas forms a post shock region \textit{(PSR)} 
+are emitted via optically thin thermal emission. Then the heated gas forms a post shock region (PSR) 
 with a temperature gradient. The gas descends while it is cooled via X-ray emission and finally hits 
 the surface of WD with small energy by emitting UV light \citet{1973PThPh..49.1184A_aizu}. 
 This property makes from IPs very good targets for hard X-ray space missions. The closer look to PSR 
@@ -1171,7 +1171,7 @@ the hard X-ray energy band (17--60 keV) are biased toward detecting the hardest 
 
 
 
-\chapter{Data analysis}
+\chapter{Data reduction and analysis}
 In this chapter we describe the results and data analyze threads for both XMM--Newton and INTEGRAL data. 
 All data, software and online utilities necessary to finding the data, download and analyze are free 
 and runs under \textit{Linux}.  
@@ -1183,63 +1183,199 @@ period 72 hours where the large fraction of its orbit is behind radiation belts.
 module is clone of the XMM-Newton one which significantly reduced construction costs. 
 INTEGRAL has four scientific instruments on-board, the IBIS/ISGRI is used in this work. 
 \begin{itemize}
- \item \textbf{IBIS} (Imager on-Board the INTEGRAL Satellite) observes in broad band $15\mathrm{keV} -
-10\mathrm{MeV}$.
-\item \textbf{SPI} (SPectrometer for INTEGRAL) observes in $20\mathrm{keV}-8\mathrm{MeV}$, part of the SPI is
+ \item \textbf{IBIS} (Imager on-Board the INTEGRAL Satellite) observes in broad band $15\:\mathrm{keV} -
+10\:\mathrm{MeV}$.
+\item \textbf{SPI} (SPectrometer for INTEGRAL) observes in $20\:\mathrm{keV}-8\:\mathrm{MeV}$, part of the SPI is
 also ACS (AntiCoincidence Shield).
-\item \textbf{JEM-X} observed in $3 - 35\mathrm{keV}$.
-\item \textbf{OMC} is an optical monitor sensitive in $500-580\mathrm{nm}$.
+\item \textbf{JEM-X} observed in $3 - 35\:\mathrm{keV}$.
+\item \textbf{OMC} is an optical monitor sensitive in $500-580\:\mathrm{nm}$.
 \end{itemize}
 
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=4cm]{integral}
-\caption{ESA/INTEGRAL spacecraft with four scientific instrument and $4$ ton launch mass is one of the largest European satellites. }
+\caption{ESA/INTEGRAL spacecraft with four scientific instrument and 4 ton launch mass is one of the largest European satellites. }
 \label{integral1} 
 \end{figure}
 
 \subsection{IBIS/ISGRI}
+IBIS is a coded mask gamma ray telescope operating in very broad energy range, from the hard X-rays to 
+gamma-rays, however its sensitivity strongly decreases with the increasing energy bands. It is an 
+imaging detector which uses coded mask. The mask itself its a special coded pattern, that chosen for 
+the IBIS detector is based of a cyclic replication of MURA (Modified Uniform Redundant Array) of order 
+53, this detection technology is describes in \citet{mask1}.
 
+\begin{table}[hbt!]\footnotesize
+\begin{center}
+\caption{Scientific parameters of the IBIS instrument on-board INTEGRAL space mission}
+\begin{tabular}{|l|l|}
+\hline
+Operating energy range     & 15 keV -- 10 MeV\\
+\hline
+Energy resolution (FWHM)   & 7\% at 100 keV\\
+                           & 9\% at 1MeV  \\
+\hline
+Effective area             & ISGRI: 960 $\mathrm{cm^2}$ at 50 keV \\
+                           & PICsIT: 870 $\mathrm{cm^2}$ at 300 keV (single events)\\
+                           & PICsIT: 275 $\mathrm{cm^2}$ at 1 MeV (multiple events)\\
+\hline
+FOW                        &$8.3\,^{\circ} \times 8.0\,^{\circ}$ (fully coded) \\
+                           &$19\,^{\circ} \times 19\,^{\circ}$ (partially coded, 50\%)\\
+\hline
+Angular resolution (FWHM)  & 12' \\
+\hline
+Point source location accuracy & $30''$ at 100 keV \\
+$90\%$ error radius      & $<5'$ at 1 MeV \\
+\hline
+Continum sensitivity, & $3.8 \times 10^{-7}$ at 100 keV \\
+photons $\mathrm{cm^{-2}\: s^{-1}\: keV^{-1}}$ & $1 - 2 \times 10^{-7}$ at 1 MeV \\
+($3 \sigma$ detection, $\Delta E = E/2$, $10^6$ s integration) &  \\
+\hline
+Narrow line sensitivity, & $1.3 \times 10^{-5}$ at 100 keV \\
+photons $\mathrm{cm^{-2}\: s^{-1}}$ & $4 \times 10^{-5}$ at 1 MeV \\
+($3\sigma,\:10^6$ s integration)&  \\
+\hline
+Absolute timing accuracy $(3 \sigma)$& ISGRI: $61 \:\mathrm{\mu s}$\\
+ & PICsIT: 0.976 -- 500 ms (selected from the ground)\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
+The IBIS is two layers detector, where the first layer is called ISGRI and second PICsIT. ISGRI is based 
+on the cadmium telluride (CdTe), which is semiconductor operating at normal temperatures. The detector 
+layer is made of 8 MDUs /footnote{Modular Detector Unit} each having $32\times64$ pixels. The lower 
+detector, PICsIT is based on cesium iodide (CsI) crystals. 
+
+The coded mask produced a shadowgram, the photon from the image are distributed across the entire detector, 
+but cross-correlation techniques are used for taking a full reconstructed image in fully coded FOV. 
+For reconstruct the image in partially coded FOV is necessary to use special cleaning techniques.
 
 \subsection{Data reduction}
+For the IBIS/ISGRI data reduction we used the 64-bit version of the Off-line Science Analysis (OSA 9.0) 
+software which can be downloaded from INTEGRAL Science Data Center web-pages\footnote{http://www.isdc.unige.ch/integral/}. 
+It is necessary to download also the instrument calibration and response data and the latest 
+objects reference catalogue.
+For suitable data analysis in high energy astrophysics is necessary to use also several 
+typical software packages as: ds9, fv, FTOOLS\footnote{See http://heasarc.nasa.gov/lheasoft/}.       
+For the reduction itself we used following set of commands in the sequence:
 
+\begin{enumerate}
+ \item \verb rbnrmf  was used for creating a rebinning responce matrix for 10 spectral bins in 20--100 keV
+ \item \verb og_create  was used for creating observation groups
+ \item \verb ibis_science_analysis  package was used for image reconstruction and creating mosaics
+ \item \verb mosaic_spec  was used for the spectral extraction from the final mosaics
+\end{enumerate}
 
 
 \section{XMM-Newton}
+The European Space Agency's (ESA) X-ray Multi-Mirror Mission (XMM-Newton) was launched by an Ariane 504 
+on December 10th 1999. The XMM weighs 3.8 tons and caries three X-ray telescopes each contains 58 Wolter I 
+grazing -- incidence mirrors. The instruments on-board are three European Photon Imaging Cameras (EPIC) 
+and two Reflection Grating Spectrometers (RGS).
 
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=6cm]{XMM}
-\caption{XMM-Newton }
+\caption{The XMM-Newton (X-ray Multi-Mirror Mission) is one off the most successful space mission of all time.}
 \label{xmmn1} 
 \end{figure}
 
+Two of the cameras are Metal Oxide Semi-conductor (MOS) CCD arrays. Third camera is pn CCD camera. 
+There is also an optical telescope on-board, the 30 cm diameter Ritchey---Chretien observing in the
+UV/optical band.  
+
+In each MOS there area seven EEV type 22 front illuminated CCDs. The six surrounding CCDs are 
+stepped towards because of the focal plane curvature while the middle one is at the focal point of 
+the X-ray telescope. The MOS cameras are sensitive in the energy range 0.2 to 10 keV.All the EPIC CCDs 
+operate in photon counting mode. In the case of MOS cameras, the central CCD can be operated separately. 
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=4cm]{plot/epic}
+\caption{EPIC -- European Photon Imaging Camera consists of \textit{(left image)} pn ccd and 
+\textit{(right image)} two MOS CCDs.}
+\label{xmmn1_epic} 
+\end{figure}
+
+
+\subsection{Data reduction}
+For the data acquisition was used XMM-Newton Science Archive (XSA)\footnote{http://xmm.esac.esa.int/xsa/} and
+candidates was selected from the Koji Mukai online catalog of IPs and IP candidates\footnote{http://asd.gsfc.nasa.gov/Koji.Mukai/iphome/catalog/alpha.html}.
+From the catalogue of 92 IPs/IP candidates and 33 others systems was selected only strongly confirmed 
+(in catalogue marked as $^{\bigstar \bigstar \bigstar \bigstar \bigstar}$) 
+and confirmed (marked as $^{\bigstar \bigstar \bigstar \bigstar}$) systems. 
+
+This leads to selection of 25 sources:
+
+\begin{footnotesize} 
+\begin{tabular}{l l l }\footnotesize
+1RXS J005528.0+461143 & 1RXS J070407.9+262501 & 1RXS J180340.0+401214 \\
+AO Psc & BY Cam & EI UMa \\
+EX Hya & FO Aqr & GK Per\\
+HT Cam & IGR J00234+6141 & IGR J15094-6649 \\
+IGR J17195-4100 & IGR J17303-0601 & IGR J21335+5105\\
+MU Cam & NY Lup& PQ Gem\\
+SDSS J233325 & UU Col& V1223 Sgr\\
+V2069 Cyg & V2400 Oph &V405 Aur \\
+XY Ari & &  \\
+\end{tabular}
+\end{footnotesize}
+
+For all the public available pointings for all the 25 sources the following data reduction procedures 
+took place. The XMM-Newton Science Analysis System (SAS) version 11.0.0 for Feora 32-bit Linux 
+was used and executed by simple bash skript: 
+\begin{tiny}
+\begin{verbatim}
+#!/bin/bash
+#this script should run simple xmm MOS spectral analysis for future spectral extraction
+alias ldir="ls -l | egrep '^d'"
+alias xmm32='. /home/mkocka/diplomka/soft/sas32/xmmsas_20110223_1801/setsas.sh'
+export HEADAS=/home/mkocka/diplomka/soft/heasoft-6.11/x86_64-unknown-linux-gnu-libc2.14
+export SAS_CCFPATH=/home/mkocka/diplomka/soft/sas/xmmsas_20110223_1801/ccf
+alias heainit=". $HEADAS/headas-init.sh"
+cd /home/mkocka/diplomka/work/xmm1
+export LDR=`pwd`
+heainit
+xmm32
+cd $SAS_DIR
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:`pwd`/libextra
+export PATH=$PATH:/home/koci/XMM/xmmsas_20100423_1801/bin
+cd $LDR
+for i in * 
+        do cd $i 
+        for j in `ldir | awk '{print $9}'`
+                do cd $j/odf
+                export SAS_ODF=`pwd`
+                if [ -f *.SAS ]; then rm *.SAS; fi
+                cifbuild	
+                export SAS_CCF=`pwd`/ccf.cif 
+                odfingest
+                cd ..
+                mkdir MOS
+                cd MOS
+                emchain
+                mos-filter 
+                for k in `ls *clean*` 
+                        do evselect table=$k imagebinning=binSize imageset=image_$k \
+                        withimageset=yes xcolumn=X ycolumn=Y ximagebinsize=64 yimagebinsize=64
+                        done 
+                        cd ../..
+        done
+        cd ..
+done 
+\end{verbatim}
+\end{tiny}
+
+
+ 
+ 
+
+
+
 \section{Data analysis}
 
-\begin{sidewaystable}
-\begin{center}
-\caption{Data}
-\begin{tabular}{llllllll}
-\hline
-\hline
-%\multicolumn{2}{c}{Item} \\
-System & Suzaku & Swift & RXTE & RXTE & Ginga & ASCA& This work  \\
-       & XIS+HXD & BAT& PCA+HEXTE & PCA & LAC & SIS & XMM \& Integral                     \\
-       & $M_{WD}$ &$M_{WD}$ &$M_{WD} $&$M_{WD}$ &$M_{WD}$ &$M_{WD}$ &$M_{WD}$ \\
-\hline
- NY Lup&         &        &          &     &      &         &           \\
- V2400 Oph&         &        &          &     &      &         &           \\
- V1223 Sgr&         &        &          &     &      &         &           \\
- IGR J17195-4100&         &        &          &     &      &         &           \\
- IGR J21335+5105&         &        &          &     &      &         &           \\
- IGR J15094-6649&         &        &          &     &      &         &           \\
- IGR J17303-0601&         &        &          &     &      &         &           \\
 
-\hline
-\end{tabular}
-\end{center}
-\end{sidewaystable}
 
 
 
@@ -1249,18 +1385,6 @@ System & Suzaku & Swift & RXTE & RXTE & Ginga & ASCA& This work  \\
 \chapter{Conclusions}
 
 
-
-%\section{Hmotnosť bieleho trpaslík}
-%\subsection{Pomocou kontinua}
-%\subsection{Pomocou K železných čiar}
-%\chapter{Spracovanie dát}
-%\section{INTEGRAL}
-%\section{XMM-Newton}
-%\chapter{Určenie hmotností vybraných IP}
-
-
-
-%\chapter{Intermedialne polary}   
 
 \nocite{2004bhwd.book.....S}
 \nocite{2009A&A...496..121B}
