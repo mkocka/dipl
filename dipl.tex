@@ -1283,19 +1283,17 @@ j(z) = 9.52\times 10^{-38} \left( \frac{\rho (z)}{\mu m_H}\right)^2 T(z)^{-1/2} 
 
 
 \subsection{WD mass estimations methods}
-
+\citet{1973PThPh..49.1184A_aizu} gives the formula relating the gravitation potential of the WD to the mass and radius:
 \begin{equation}
  \label{aizu1}
-kT_s = 16 \times \left( \frac{M}{0.5\mathrm{M_{\odot}}}\right)\left( \frac{R}{10^9 \mathrm{cm}}\right)^{-1} \mathrm{keV}
+kT_s = 16 \times \left( \frac{M}{0.5\mathrm{M_{\odot}}}\right)\left( \frac{R}{10^9 \mathrm{cm}}\right)^{-1} \mathrm{keV},
 \end{equation}
-
+which can be combined with the Eq.\eqref{rwd_mwd} from the work of \citet{1972ApJ...175..417N}, allowing
+us to calculate the mass of the WD from the PSR temperature:   
 \begin{equation}
  \label{MWD:1}
-\frac{M_{wd}}{\mathrm{M_{\odot}}} = 1.44\times \left[\frac{1}{2} \left( 1+ \sqrt{1+4\times\left(\frac{59}{kT_s}\right)^2} \right) \right]^{-3/4}
+\frac{M_{wd}}{\mathrm{M_{\odot}}} = 1.44\times \left[\frac{1}{2} \left( 1+ \sqrt{1+4\times\left(\frac{59}{kT_s}\right)^2} \right) \right]^{-3/4}.
 \end{equation}
-
-
-
 
 
 
@@ -1335,7 +1333,7 @@ the IBIS detector is based of a cyclic replication of MURA (Modified Uniform Red
 
 \begin{table}[hbt!]\footnotesize
 \begin{center}
-\caption{Scientific parameters of the IBIS instrument on-board INTEGRAL space mission}
+\caption{Scientific parameters of the IBIS instrument on-board INTEGRAL space mission, \citet{osam}.}
 \begin{tabular}{|l|l|}
 \hline
 Operating energy range     & 15 keV -- 10 MeV\\
@@ -1508,14 +1506,10 @@ following commands took place:
  \item \verb specgroup  was used for rebinig  the spectrum and link associated files.
 \end{enumerate}
 
-
-
- 
- 
+\section{Spectras analysis and results}
 
 
 
-\section{Data analysis}
 
 
 \begin{sidewaystable}
@@ -1526,26 +1520,99 @@ the IPs are ordering according to their RA.}
 \begin{tabular}{lrrlllrr}
 \hline
 \hline
-     &     &     &XMM &\multicolumn{2}{c}{Exp. time [ks]}&Exp. time [ks]& Obs. period  \\
+     &     &     &XMM &\multicolumn{2}{c}{Exp. time [ks]}&Exp. time [ks]& Last obs.  \\
 obj. & Ra $\mathrm{[^{\circ}]}$ & Dec $\mathrm{[^{\circ}]}$&obs. ID  & MOS1&MOS2& IBIS/ISGRI & IBIS/ISGRI \\ 
 \hline
-IGR J15094-6649&  227.358  & -66.823 & 0551430301&31.61     & 31.62& 592.46      &   1999-12-31 --- 2008-07-24                 \\
-NY Lup         &  237.060  & -45.479 & 0105460301&21.40     & 21.40& 1589.29     &    1999-12-31 --- 2005-04-08                \\
-V2400 Oph      &  258.152  & -24.245 & 0105460101&10.07     &10.12& 1368.89     &     1999-12-31 --- 2009-03-07                \\
-IGR J17195-4100&  259.899  & -41.014 & 0601270201&33.62     &33.62&  878.12    &     1999-12-31 --- 2008-10-23              \\
-IGR J17303-0601&  262.589  &  -5.992 & 0302100201&13.28     &13.28&   248.62   &       1999-12-31 --- 2008-04-21              \\
-V1223 Sgr      &  283.759  & -31.163 & 0145050101&38.66     &38.67&   264.66  &     1999-12-31 --- 2006-11-09               \\
-IGR J21335+5105&  323.375  &  51.092 & 0302100101&16.59     &16.40 & 1589.68    & 1999-12-31 --- 2009-05-22                   \\
+IGR J15094-6649&  227.358  & -66.823 & 0551430301&31.61     & 31.62& 592.46      &    2008-07-24                 \\
+NY Lup         &  237.060  & -45.479 & 0105460301&21.40     & 21.40& 1589.29     &    2005-04-08                \\
+V2400 Oph      &  258.152  & -24.245 & 0105460101&10.07     &10.12& 1368.89     &      2009-03-07                \\
+IGR J17195-4100&  259.899  & -41.014 & 0601270201&33.62     &33.62&  878.12    &     2008-10-23              \\
+IGR J17303-0601&  262.589  &  -5.992 & 0302100201&13.28     &13.28&   248.62   &       2008-04-21              \\
+V1223 Sgr      &  283.759  & -31.163 & 0145050101&38.66     &38.67&   264.66  &     2006-11-09               \\
+IGR J21335+5105&  323.375  &  51.092 & 0302100101&16.59     &16.40 & 1589.68    &  2009-05-22                   \\
 \hline
 \end{tabular}
 \end{center}
 \end{sidewaystable}
 
 
+\begin{sidewaystable}
+\begin{center}
+\caption{A}
+\begin{tabular}{lcrrrrrr}
+\hline
+\hline
+     & Xspec & $\mathrm{kT_s}$& $\mathrm{M_{wd}}$   & Flux 1--10 keV                      & Flux 20--100 keV                      &         \\
+obj. & model & (keV)          & $\mathrm{M_{\odot}}$& $\mathrm{photons\:cm^{-2}\:s^{-1}}$ & $\mathrm{photons\:cm^{-2}\:s^{-1}}$& $\mathrm{\chi}^2$         \\ 
+\hline
+IGR J15094-6649   &  wabs(bremss+bb+ga)& 18.7 $\pm$ 10.1  & 0.40  $\pm$ 0.23 &0.0022639&0.0018200&1.297 \\
+NY Lup       & wabs(bremss+bb+ga) & 53.8 $\pm$ 15.4  & 0.84 $\pm$ 0.32&0.0042067 &0.0012044&4.036      \\
+V2400 Oph      & wabs(bremss+bb+ga) &31.3 $\pm$ 16.0      &0.59 $\pm$ 0.34&0.0057836&0.0021225&      1.122      \\
+IGR J17195-4100& wabs(bremss+bb+ga) &13.6 $\pm$ 4.4       & 0.30 $\pm$ 0.11&0.0053613&0.0001013& 1.297 \\
+IGR J17303-0601& wabs(bremss+bb+ga) &68.7 $\pm$ 35.5      & 0.97 $\pm$ 0.64&0.0026358& ---$^a$&  0.754        \\
+V1223 Sgr      & wabs(bremss+bb+ga) &41.1 $\pm$ 17.7      &0.71 $\pm$ 0.37&0.0031016&0.0018271&  1.959           \\
+IGR J21335+5105&  wabs(bremss+bb+ga)&40.6 $\pm$ 32.3      &0.71$\pm$ 0.60&0.0031016& 0.0018271&        1.297        \\
+\hline
+\footnotesize
+$^a$ not calculated& &&&&& \\
+\hline
+\end{tabular}
+\end{center}
+\end{sidewaystable}
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=8cm]{spec/1}
+\caption{a}
+\label{sp1} 
+\end{figure}
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=8cm]{spec/2}
+\caption{a}
+\label{sp1} 
+\end{figure}
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=8cm]{spec/3}
+\caption{a}
+\label{sp1} 
+\end{figure}
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=8cm]{spec/4}
+\caption{a}
+\label{sp1} 
+\end{figure}
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=8cm]{spec/5}
+\caption{a}
+\label{sp1} 
+\end{figure}
+
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=8cm]{spec/6}
+\caption{a}
+\label{sp1} 
+\end{figure}
 
 
-\section{Results}
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=8cm]{spec/7}
+\caption{a}
+\label{sp1} 
+\end{figure}
+
+
 \section{Discussion}
+
 \chapter{Conclusions}
 
 
@@ -1602,8 +1669,8 @@ System & Suzaku & Swift & RXTE & RXTE & Ginga & ASCA& This work  \\
  IGR J21335+5105&         &        &          &     &      &         &           \\
  IGR J15094-6649&         &        &          &     &      &         &           \\
  IGR J17303-0601&         &        &          &     &      &         &           \\
-
 \hline
+
 \end{tabular}
 
 \end{center}
