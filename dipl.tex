@@ -57,6 +57,31 @@
 
 
 \begin{document}
+\thispagestyle{empty}
+\begin{figure}
+\begin{center}
+\includegraphics[width=8cm]{plot/logo}
+\end{center}
+\end{figure}
+\begin{center}
+%\Large \textsc{MASARYKOVA UNIVERZITA} \\
+%Přírodovědecká Fakulta
+
+\vspace{2cm}
+\Large 
+
+\Huge On Stars in High Energies \\
+\vspace{1cm}
+\Large Matúš Kocka \\
+\Large January 2012 \\
+\vspace{2cm}
+\LARGE Department of Theoretical Physics and Astrophysics \\
+Masaryk University
+\end{center}
+\pagebreak
+
+
+
 %\begin{figure}
 %\begin{center}
 %\includegraphics[width=6cm]{the-white-dwarf}
@@ -973,7 +998,7 @@ N_e &= 5.9 \times 10^{14} \dot{M} f_{-2}^{-1}m_1^{-1/2}R^{-3/2} \: \mathrm{cm^{-
 \end{equation}
 assuming a fully ionized gas with standard cosmic abundance. 
 With characteristic PSR gas temperature $T_s$ is electron scattering only possible source of opacity. 
-The shock distance from WD surface is lower the $R_wd$. The results of this is that the horizontal optical 
+The shock distance from WD surface is lower the $R_{wd}$. The results of this is that the horizontal optical 
 depth is relatively low, therefore the radiative cooling will be optically thin (unless the accretion 
 rate per unit area will be extremely high).   
   
@@ -989,8 +1014,8 @@ close to the WD surface. The falling gas is cooled by optically thin bremsstrahl
 it hits WD surface, with much lower than free-fall speed, where black-body emission will take place 
 with maximum in UV band.   
 
-We may briefly consider some of the extreme cases. If the WD is extremely massive close to the $M_ch$ 
-therefore with very low $R_wd$ and the accretion stream will be low, the Compton scattering will 
+We may briefly consider some of the extreme cases. If the WD is extremely massive close to the $M_{ch}$ 
+therefore with very low $R_{wd}$ and the accretion stream will be low, the Compton scattering will 
 become important as radiative cooling process. Also the cyclotron cooling, which is negligible in 
 IPs, will take place in case of low accretion stream and higher $B_{wd}$.   
 
@@ -1506,115 +1531,274 @@ following commands took place:
  \item \verb specgroup  was used for rebinig  the spectrum and link associated files.
 \end{enumerate}
 
-\section{Spectras analysis and results}
+\section{Spectral analysis and results}
+The spectra for the selected seven IPs from XMM-Newton/MOS and INTEGRAL/ISGRI were analyzed by the X-ray 
+spectral fitting package Xspec 12.7.0 \citet{1996ASPC..101...17A}. Xspec is a part of the NASA HEASOFT 
+6.0 software dedicated mostly for the data reduction and analysis of the data the from various high energy space 
+missions.
 
+Xspec is a powerful tool enabling fitting the high energy spectra by various models. That is exactly 
+what was necessary for the PSR temperature determination. Because of a poor quality of the INTEGRAL/IBIS 
+data, we decided to fit the simple combined model \verb wabs(bremss+bb+ga) and \verb wabs(bremss) for the
+ISGRI data only.   
 
+\subsection{Xspec models}
+The spectra were fitted by the combined model. In the joint MOS and ISGRI spectral fitting, three additive and one
+multiplicative model was used. 
+The \textbf{wabs} multiplicative module is a photo-electric absorption
+\begin{equation}
+\label{wabs}
+ M(E)= \mathrm{exp}\left[ -n_H \sigma (E)\right]\:,
+\end{equation}
+where $s(E)$ is the photo-electric cross-section, $n_H$ is the equivalent hydrogen column.
+The \textbf{bremss} is a thermal bremsstrahlung spectrum with one parameter, which is the plasma
+temperature $T_s$ in keV.
+\begin{equation}
+ \label{brems}
+\frac{3.02\times10^{-15}}{4\pi D} \int n_e n_I \mathrm{d}V\:,
+\end{equation}
+where $D$ is the distance to the source in cm nad $n_e$, $n_I$ are the electron and ion densities.    
+The \textbf{bb} is the black body spectrum:
+\begin{equation}
+ \label{bb}
+A(E) = \frac{K\times8.0525E^2 \mathrm{d} E }{(kT)^4 [\mathrm{exp}(E/kT)-1 ]}\:.
+\end{equation}
+The \textbf{ga} is a simple gaussian line profile. If the width is $\leq 0$, then it is treated as the 
+delta function. The gaussian was used for elimination of iron 6.4 keV lines, as can be seen in all MOS spectra e.g. Fig.\ref{sp4}. 
+\begin{equation}
+ \label{gaus}
+A(E) = K \frac{1}{\sigma \sqrt{2\pi}}\: \mathrm{exp}\left( \frac{-(E-E_x)^2}{2\sigma^2} \right)\:.
+\end{equation}
+ 
+\section{Results}
+Data for the 25 IPs from the XMM-Newton science archive was downloaded and pre-analyzed. After the cross-correlation with INTEGRAL/IBIS observations, the 7 IPs 
+were selected for the closer analysis. The EPIC/MOS and INTEGRAL/ISGRI spectra were created by the dedicated software: OSA 9.0 for the IBIS/ISGRI data 
+processing and XMM/SAS 11.0.0 for EPIC cameras.
 
+The nine spectra were analyzed using Xspec software package. There were two spectra obtained solely from INTEGRAL/IBIS: for NY Lup and IGR J21335+5105, and seven 
+spectra for the selected IPs from the both detectors. The results of the spectral preparation are in Table \ref{RES1} and the results from Xspec 
+spectral fitting are in the Table \ref{RES2}. The spectra figures follows.   
+
+The WDs masses were determined using $T_s$ results from the fitting in Table \ref{RES2} together with the Eq.\eqref{MWD:1}
+
+\section{Discussion}
+The methods described in Chap. 4 are the best way to determine the WDs masses in the binary systems with 
+column accretion by the other means than the optical spectroscopy. However, the observations in X-rays bands are very 
+finicky. While the soft X-rays data obtained by XMM-Newton are of a very good quality, the hard X-rays 
+data are not. The INTEGRAL/ISGRI is a very sensitive space telescope, but the long time exposures needed 
+for good spectra of faint objects are very hard to reduce. The main problem is the calibration, mostly 
+because of the radiation self response of the detector. This could be the reason why the over 1Msec ISGRI 
+exposures in this work provide spectra of a such poor quality. 
+
+On the other hand, even with poor quality spectra and several threats in the processing, these 
+simple methods were able to determine the WD masses with a reasonable precision in the comparison with the previous
+ observations, as we can see in the result table \ref{RES2} and in the comparison table \ref{pmass}.
 
 
 \begin{sidewaystable}
 \begin{center}
-\caption{Summary of the observations. Columns give the object name, coordinates of the source, XMM-Newton 
+\caption{Summary of the observations. Columns give the object name, coordinates of the source, its orbital period and distance, XMM-Newton 
 observation ID, total exposures times for MOS1 and MOS2, total exposures for IBIS/ISGRI, and period of INTEGRAL observations, 
 the IPs are ordering according to their RA.}
-\begin{tabular}{lrrlllrr}
+\begin{tabular}{lrrlllllrr}
 \hline
 \hline
-     &     &     &XMM &\multicolumn{2}{c}{Exp. time [ks]}&Exp. time [ks]& Last obs.  \\
-obj. & Ra $\mathrm{[^{\circ}]}$ & Dec $\mathrm{[^{\circ}]}$&obs. ID  & MOS1&MOS2& IBIS/ISGRI & IBIS/ISGRI \\ 
+     &                         &                          &$\mathrm{P_{orb}}$ & Dist &XMM      & \multicolumn{2}{c}{Exp. time [ks]}&Exp. time [ks] & Last obs.  \\
+obj. & Ra $\mathrm{[^{\circ}]}$& Dec $\mathrm{[^{\circ}]}$&(min)            &(pc)  &obs. ID  & MOS1&MOS2                         & IBIS/ISGRI    & IBIS/ISGRI \\ 
 \hline
-IGR J15094-6649&  227.358  & -66.823 & 0551430301&31.61     & 31.62& 592.46      &    2008-07-24                 \\
-NY Lup         &  237.060  & -45.479 & 0105460301&21.40     & 21.40& 1589.29     &    2005-04-08                \\
-V2400 Oph      &  258.152  & -24.245 & 0105460101&10.07     &10.12& 1368.89     &      2009-03-07                \\
-IGR J17195-4100&  259.899  & -41.014 & 0601270201&33.62     &33.62&  878.12    &     2008-10-23              \\
-IGR J17303-0601&  262.589  &  -5.992 & 0302100201&13.28     &13.28&   248.62   &       2008-04-21              \\
-V1223 Sgr      &  283.759  & -31.163 & 0145050101&38.66     &38.67&   264.66  &     2006-11-09               \\
-IGR J21335+5105&  323.375  &  51.092 & 0302100101&16.59     &16.40 & 1589.68    &  2009-05-22                   \\
+IGR J15094-6649&  227.358  & -66.823 &353.4&--& 0551430301&31.61     & 31.62& 592.46      &    2008-07-24                 \\
+NY Lup         &  237.060  & -45.479 &574.2&540-840& 0105460301&21.40     & 21.40& 1589.29     &    2005-04-08                \\
+V2400 Oph      &  258.152  & -24.245 &205.8&300& 0105460101&10.07     &10.12& 1368.89     &      2009-03-07                \\
+IGR J17195-4100&  259.899  & -41.014 &240.3&110& 0601270201&33.62     &33.62&  878.12    &     2008-10-23              \\
+IGR J17303-0601&  262.589  &  -5.992 &924&--& 0302100201&13.28     &13.28&   248.62   &       2008-04-21              \\
+V1223 Sgr      &  283.759  & -31.163 &201.9&527& 0145050101&38.66     &38.67&   264.66  &     2006-11-09               \\
+IGR J21335+5105&  323.375  &  51.092 &431.6&1400& 0302100101&16.59     &16.40 & 1589.68    &  2009-05-22                   \\
 \hline
 \end{tabular}
+\label{RES1}
 \end{center}
 \end{sidewaystable}
 
 
 \begin{sidewaystable}
 \begin{center}
-\caption{Summary of the spectral analysis. For each IP the same spectral model was used fitted in by Xspec (X-ray spectral fitting package). Columns gives the IP name, used model, determined shock temperature, calculated mass, and fluxes from model in MOS and ISGRI bands. The last column is chi-squared from the fit.}
+\caption{Summary of the spectral analysis. For the each IP the same spectral model was used fitted in by Xspec (X-ray spectral fitting package). Columns gives the IP name, used model, determined shock temperature, calculated mass, and fluxes from model in MOS and ISGRI bands. The last column is chi-squared from the fit.}
 \begin{tabular}{lcrrrrrr}
 \hline
 \hline
      & Xspec & $\mathrm{kT_s}$& $\mathrm{M_{wd}}$   & Flux 1--10 keV                      & Flux 20--100 keV                      &         \\
 obj. & model & (keV)          & $\mathrm{M_{\odot}}$& $\mathrm{photons\:cm^{-2}\:s^{-1}}$ & $\mathrm{photons\:cm^{-2}\:s^{-1}}$& $\mathrm{\chi}^2$         \\ 
 \hline
-IGR J15094-6649   &  wabs(bremss+bb+ga)& 18.7 $\pm$ 10.1  & 0.40  $\pm$ 0.23 &0.0022639&0.0018200&1.297 \\
-NY Lup       & wabs(bremss+bb+ga) & 53.8 $\pm$ 15.4  & 0.84 $\pm$ 0.32&0.0042067 &0.0012044&4.036      \\
-V2400 Oph      & wabs(bremss+bb+ga) &31.3 $\pm$ 16.0      &0.59 $\pm$ 0.34&0.0057836&0.0021225&      1.122      \\
-IGR J17195-4100& wabs(bremss+bb+ga) &13.6 $\pm$ 4.4       & 0.30 $\pm$ 0.11&0.0053613&0.0001013& 1.297 \\
-IGR J17303-0601& wabs(bremss+bb+ga) &68.7 $\pm$ 35.5      & 0.97 $\pm$ 0.64&0.0026358& ---$^a$&  0.754        \\
-V1223 Sgr      & wabs(bremss+bb+ga) &41.1 $\pm$ 17.7      &0.71 $\pm$ 0.37&0.0031016&0.0018271&  1.959           \\
-IGR J21335+5105&  wabs(bremss+bb+ga)&40.6 $\pm$ 32.3      &0.71$\pm$ 0.60&0.0031016& 0.0018271&        1.297        \\
+IGR J15094-6649    & wabs(bremss+bb+ga) & 18.7 $\pm$ 53  & 0.40  $\pm$ 0.83  &0.0022639&0.0018200&1.297 \\
+NY Lup             & wabs(bremss+bb+ga) & 150 $\pm$ 200  & 1.26 $\pm$ 1.33 &0.0042067 &0.0012044&4.036      \\
+NY Lup $^b$	   & wabs*bremss        & 53.7 $\pm$ 15.5 &  0.84  $\pm$ 0.33  & ---&0.0013193 & 1.7\\
+V2400 Oph          & wabs(bremss+bb+ga) & 31.3 $\pm$ 16.0      &0.59 $\pm$ 0.34&0.0057836&0.0021225&      1.122      \\
+IGR J17195-4100    & wabs(bremss+bb+ga) & 13.6 $\pm$ 4.4       & 0.30 $\pm$ 0.11&0.0053613&0.0001013& 1.297 \\
+IGR J17303-0601    & wabs(bremss+bb+ga) & 68.7 $\pm$ 74.5     & 0.97 $\pm$ 1.0 &0.0026358& ---$^a$&  0.754        \\
+V1223 Sgr          & wabs(bremss+bb+ga) & 41.1 $\pm$ 37.7      &0.71 $\pm$ 0.67&0.0031016&0.0018271&  1.959           \\
+IGR J21335+5105    & wabs(bremss+bb+ga) & 40.6 $\pm$ 32.3      &0.71$\pm$ 0.60&0.0031016& 0.0018271&        1.297        \\
+IGR J21335+5105$^b$& wabs(bremss+ga)    & 54.7 $\pm$ 7.5      &0.85 $\pm$ 0.17 &---& 0.0019385&        2.0        \\
 \hline
 \footnotesize
 $^a$ not calculated& &&&&& \\
+\footnotesize
+$^b$ only INTEGRAL/ISGRI data \\
 \hline
 \end{tabular}
+\label{RES2}
 \end{center}
 \end{sidewaystable}
 
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=8cm]{spec/1}
-\caption{a}
+\caption{The combined spectrum of IGR J15094-6649 from XMM-Newton EPIC/MOS1 camera and INTEGRAL/ISGRI, unfortunately the INTEGRAL data have a poor quality due to the high X-ray background counts. 
+The results of the fit: $T_s = 18.7 \pm 53\:\mathrm{K}$ and $M_{wd} = 0.4 \pm 0.83 \:\mathrm{M_{\odot}}$.}
 \label{sp1} 
 \end{figure}
 
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=8cm]{spec/2}
-\caption{a}
-\label{sp1} 
+\caption{The combined spectrum of NY Lup from EPIC/MOS1 and ISGRI, results of the fit are in table \ref{RES2}.}
+\label{sp2} 
 \end{figure}
 
 \begin{figure}[!hbt]
 \centering
+\includegraphics[totalheight=8cm]{spec/2I}
+\caption{The ISGRI spectrum of NY Lup, from wabs(bremss) model fit was established: $T_s=53.7 \pm 15.5 \: \mathrm{K}$ and $M_{wd} = 0.84 \pm 0.33 \: \mathrm{M_{\odot}}$ (see table \ref{RES2}).} 
+\label{sp2I} 
+\end{figure}
+
+
+\begin{figure}[!hbt]
+\centering
 \includegraphics[totalheight=8cm]{spec/3}
-\caption{a}
-\label{sp1} 
+\caption{V2400 Oph spectra from EPIC/MOS1 and ISGRI (see table \ref{RES2} for details).}
+\label{sp3} 
 \end{figure}
 
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=8cm]{spec/4}
-\caption{a}
-\label{sp1} 
+\caption{IGR J17195-4100 spectra, unfornately the ISGRI data have a poor quality, for details see table \ref{RES2}. }
+\label{sp4} 
 \end{figure}
 
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=8cm]{spec/5}
-\caption{a}
-\label{sp1} 
+\caption{Spectra of IGR J17303-0601, for for details see table \ref{RES2}. }
+\label{sp5} 
 \end{figure}
 
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=8cm]{spec/6}
-\caption{a}
-\label{sp1} 
+\caption{Spectra of V1223 Sgr, for details see table \ref{RES2}. }
+\label{sp6} 
 \end{figure}
 
 
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=8cm]{spec/7}
-\caption{a}
-\label{sp1} 
+\caption{Spectra of IGR J21335+5105, for for details see table \ref{RES2}. }
+\label{sp7} 
 \end{figure}
 
+\begin{figure}[!hbt]
+\centering
+\includegraphics[totalheight=8cm]{spec/7I}
+\caption{ISGRI spectra of IP IGR J21335+5105, while the combined spectra show a poor quality of the fit, this is the only ISGRI spectrum fited by simple Xspec wabs(bremss+ga) model
+showing good results: $T_s = 54.7 \pm 7.5 \mathrm{K}$ and therefore $M_{wd} = 0.85 \pm 0.17 \mathrm{M_{\odot}}$ . }
+\label{sp7I} 
+\end{figure}
 
-\section{Discussion}
+\begin{sidewaystable}
+\begin{center}
+\caption{Estimations of the WD masses for the 7 IPs studied in this work from previous reports.}
+\begin{tabular}{lllllll}
+\hline
+\hline
+%\multicolumn{2}{c}{Item} \\
+System & Suzaku$^a$ & Swift$^b$ & RXTE$^c$ & RXTE$^d$ &  ASCA$^e$& This work  \\
+       & XIS+HXD & BAT& PCA+HEXTE & PCA &  SIS & XMM \& Integral                     \\
+       & $M_{WD}$ &$M_{WD}$ &$M_{WD} $&$M_{WD}$ &$M_{WD}$ &$M_{WD}$ \\
+\hline
+ NY Lup        & 1.15$^{+0.08}_{-0.07}$  & 1.09 $\pm$ 0.07      &          &     &               &  0.84 $\pm$ 0.17         \\
+ V2400 Oph     & 0.62$^{+0.06}_{-0.05}$   &  0.81 $\pm$ 0.10      &  0.59 $\pm$ 0.05       &  0.71$^{+0.07}_{-0.03}$          &  0.68$^{+0.42}_{-0.24}$       &        0.59 $\pm$ 0.34   \\
+ V1223 Sgr&     0.75$^{+0.05}_{-0.05}$    &0.65 $\pm$ 0.04        & 0.95 $\pm$ 0.05         & 1.07$^{+0.08}_{-0.09}$          &    1.28($>$0.84)      &         0.71 $\pm$ 0.67  \\
+ IGR J17195-4100&  0.38$^{+0.05}_{-0.05}$       &        &          &     &               &     0.30 $\pm$ 0.11      \\
+ IGR J21335+5105& 0.91$^{+0.19}_{-0.17}$  &    0.91 $\pm$ 0.06     &          &           &         &      0.71 $\pm$ 0.60     \\
+ IGR J15094-6649&         &        &          &     &      &                0.40 $\pm$ 0.83   \\
+ IGR J17303-0601&   1.06$^{+0.19}_{-0.14}$   & 1.08 $\pm$ 0.07       &          &     &      &                  0.97 $\pm$ 1.0  \\
+\hline
+\footnotesize
+$^a$ Yuasa et al. (2010) &&&&&&\\
+\footnotesize
+$^b$ Brunschweiger et al. (2009) &&&&&&\\
+\footnotesize
+$^c$ Suleimnaov et al. (2004)&&&&&&\\
+\footnotesize
+$^d$ Ramsay (2000)&&&&&&\\
+\footnotesize
+$^e$ Ezuka \& Ishida (1999) &&&&&&\\
+\hline
+\end{tabular}
+\label{p_mass}
+\end{center}
+\end{sidewaystable}
 
 \chapter{Conclusions}
+In this thesis we dealt with the various aspects of the accretion processes in magnetic white dwarf 
+located in binary systems called cataclysmic variable stars. We were particularly interested in 
+intermediate polars. In Chap. 1 we described the main motivations behind this work and we briefly 
+summarized the history of observations these objects in the various wavelengths. In Chap. 2 we 
+provided a primer on physics of white dwarfs including the concepts of Fermi energy, degeneracy, 
+the Chandrasekhar limit. Further on we classify white dwarfs in distinct sub-classes. 
 
+Chap. 3 focuses on cataclysmic variable stars. We briefly discussed various physics processes 
+taking places in cataclysmic variables. We are especially focused on magnetic CVs and discussed 
+their characteristic X-ray spectra, as we can see on Fig. \ref{kriv_1}.
+
+Chap 4. is an extensive treatise on WD masses in intermediate polars. We also discuss the 
+existence of the shock region close to the WD surface and the cooling mechanism in the so 
+called post-shock region (PSR). We found out that the radiative cooling of the PSR gas is 
+dominated by the bremsstrahlung (free-free) emission. The chapter concludes with a brief 
+discussion of several WDs mass estimation methods.
+
+The data acquisition, reduction and analysis is the subject of Chap. 5. Which is the main 
+practical part of the thesis. We provide the specification of  instruments on-board 
+XMM-Newton and INTEGRAL space missions we used. We used the XMM data from EPIC/MOS 
+cameras in 1 – 10 keV and INTEGRAL data from IBIS/ISGRI gamma-ray telescope in 20 – 100 keV 
+hard X-rays, discussing the relevant data reduction techniques as well. For the XMM data 
+reduction and spectral extraction we used SAS ver. 11.0.0 and for the IBIS/ISGRI data we 
+used OSA ver. 9.0. The spectral model parameters were obtained and fitted by Xspec ver. 
+12.7.0 software package.
+
+From all known IPs (125 including candidates), seven sources were selected for the spectral 
+extraction and analysis. For all selected sources the joint spectra were created (EPIC/MOS
+ data plus IBIS/ISGRI data), for NY Lup and IGR J21335+5105 were also only ISGRI spectra 
+created and analyzed. 
+
+We obtained spectral fits by Xspec models as described in Table \ref{RES2}. From the temperature 
+$T_s$ of plasma obtained we calculated the masses of the WDs in the selected IPs systems. 
+The calculated masses, as well as the masses obtained by previous space based missions, are 
+listed in Table \ref{p_mass}.
+
+Despite of the fact that we used the data from the newer space missions our results are not 
+as satisfactory as we expected as they are of similar precision as those obtained by the 
+previous analyses conducted. 
+
+One of the main reasons is that the long exposures from INTEGRAL/IBIS are hard to 
+calibrate for the high background levels. 
+
+The study of PSR region as well as the column accretion on compact objects is an potent 
+method to determine the mass not only of white dwarfs but may be used on neutron stars as 
+well. The methods mentioned in this work will be useful for the upcoming X-ray space 
+missions Nu-STAR and ASTRO-H.   
 
 
 \nocite{2004bhwd.book.....S}
@@ -1639,42 +1823,12 @@ $^a$ not calculated& &&&&& \\
 
 
 
-\clearpage
-
-\appendix
-\section*{Appendix}
-\addcontentsline{toc}{chapter}{\hspace*{6mm}Apendix}
-this will be the appendix
+%\clearpage
+%\appendix
+%\section*{Appendix}
+%\addcontentsline{toc}{chapter}{\hspace*{6mm}Apendix}
+%this will be the appendix
 %\pagebreak
-
-
-
-\begin{sidewaystable}
-\begin{center}
- 
-
-\caption{Estimated WD masses from previous reports ...}
-\begin{tabular}{llllllll}
-\hline
-\hline
-%\multicolumn{2}{c}{Item} \\
-System & Suzaku & Swift & RXTE & RXTE & Ginga & ASCA& This work  \\
-       & XIS+HXD & BAT& PCA+HEXTE & PCA & LAC & SIS & XMM \& Integral                     \\
-       & $M_{WD}$ &$M_{WD}$ &$M_{WD} $&$M_{WD}$ &$M_{WD}$ &$M_{WD}$ &$M_{WD}$ \\
-\hline
- NY Lup&         &        &          &     &      &         &           \\
- V2400 Oph&         &        &          &     &      &         &           \\
- V1223 Sgr&         &        &          &     &      &         &           \\
- IGR J17195-4100&         &        &          &     &      &         &           \\
- IGR J21335+5105&         &        &          &     &      &         &           \\
- IGR J15094-6649&         &        &          &     &      &         &           \\
- IGR J17303-0601&         &        &          &     &      &         &           \\
-\hline
-
-\end{tabular}
-
-\end{center}
-\end{sidewaystable}
 %\thispagestyle{empty}
 %\LaTeX{}
 \end{document}
