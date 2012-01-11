@@ -31,7 +31,7 @@
 \fancyhf{}
 \fancyhead{}
 \fancyhead[L]{\footnotesize \leftmark}
-\fancyhead[R]{\footnotesize PAGE \thepage\ of XX }
+\fancyhead[R]{\footnotesize PAGE \thepage\ of 60 }
 
 \usepackage{hyperref}
 \newcommand\araa{ARA\&A}
@@ -70,7 +70,8 @@
 \vspace{2cm}
 \Large 
 
-\Huge On Stars in High Energies \\
+\Huge Multiwavelength study \\ 
+of variable stars \\
 \vspace{1cm}
 \Large Matúš Kocka \\
 \Large January 2012 \\
@@ -79,17 +80,62 @@
 Masaryk University
 \end{center}
 \pagebreak
+\thispagestyle{empty}
 
 
 
-%\begin{figure}
-%\begin{center}
-%\includegraphics[width=6cm]{the-white-dwarf}
-%\end{center}
-%\end{figure}
-
-\newpage
+%\newpage
 \textit{"Per aspera ad astra..."}
+
+\vfill
+I declere that I have written my diploma thesis on my own and using exclusively the cited resources. I agree with lending of the thesis and
+making it public. \\
+\\
+
+ Brno, $\mathrm{11^{th}}$ January 2012 \\
+\\
+\\
+ Matus Kocka
+
+ 
+
+\pagebreak
+\thispagestyle{empty}
+\vspace{4cm}
+
+
+
+\vspace{\stretch{2}}
+\noindent
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=8cm]{the-white-dwarf}
+\end{figure}
+\vfill
+To Filip who never lost hope that this thesis will see the light of day  ...  
+
+
+\pagebreak
+\thispagestyle{empty}
+\begin{center}
+\Large Abstrakt
+\end{center}
+\begin{itemize}
+\item This thesis examines simple and advanced methods of determining the 
+mass of white dwarf companion in intermediate polars by using X-ray spectra 
+from XMM-Newton and INTEGRAL/IBIS. In IPs are accretion disks in some 
+distances from WD destroyed by strong magnetic field and accretion 
+continues through accretion curtain where the accreting matter follows 
+the magnetic force lines. As matter free falls to WDs polars capes the 
+shock region is created close to the WD surface, where the plasma 
+temperature reaches more than 10 keV and the main cooling mechanism 
+is thermal bremhsstrahlung.
+\end{itemize}
+
+
+
+
+
 
 \pagebreak
 \tableofcontents
@@ -191,7 +237,7 @@ we are also able to establish the WD's mass.
 The accreting WDs are very important for cosmology, because some of such objects probably cause Type Ia supernovae, 
 when the WD mass reaches Chandrasekhar limit. 
 
-As is showed in fig.(\ref{nylup1}), IPs as NY Lup are well observed by INTEGRAL/IBIS detector which makes them 
+As is showed in Fig.(\ref{nylup1}), IPs as NY Lup are well observed by INTEGRAL/IBIS detector which makes them 
 interesting space laboratories to investigate the basic parameters of WDs. Similarly, the accretion stream can also be studied if it is strong enough.
     
 
@@ -378,26 +424,26 @@ If the density is higher than $\rho \gtrsim 10^9 \mathrm{g\:cm^{-3}} $, the elec
 create a different matter called neutron degenerated gas. This is how neutron stars are made.    
  
 \section{Fermi energy}
-Now we can imagine interior of WDs as an area full of atoms nuclei very close to each other 
-with free electrons around them. But electrons are fermions, which means that they must 
-behave according to Pauli exclusion principle and it allows only at most one fermion 
+Now we can imagine the interior of WDs as a region full of atomic nuclei very close to each other 
+with free electrons around them. But the electrons are fermions, which means that they must 
+behave according to Pauli exclusion principle which allows only at most one fermion 
 per each quantum state. 
 
-If we imagine a normal, everyday gas at standard temperature and pressure, only one 
+If we imagine a normal, everyday gas at a standard temperature and pressure, only one 
 of every $10^7$ quantum states is occupied by gas particles, so Pauli exclusion 
 principle limitation is very insignificant. When energy is removed from the gas and 
-it's temperature falls down, an increasingly large fraction of  the particles been 
+its temperature falls down, an increasingly large fraction of  the particles been 
 forced into the lower energy states.
 
-For fermions gas only one particle can take the lowest energy state and others must 
+For the fermion gas only one particle can take the lowest energy state and others must 
 take another, higher and higher states, thus only one particle per state is allowed. 
-Even in limit $T\rightarrow0$ pressure is produced by motions of electrons on excited positions.       
+Even in limit $T\rightarrow0$ pressure is produced by motions of electrons on the excited positions.       
 
 At the zero temperature all of the lowest states and none of the higher states are 
 occupied, this kind of fermion gas is called completely degenerated. 
-The max energy of electron in completely degenerate gas at $T=0 \mathrm{K}$ is known as Fermi energy. 
+The max energy of electron in a completely degenerate gas at $T=0 \mathrm{K}$ is known as Fermi energy. 
 
-For determining the limiting energy we can imagine 3D box where length of each of its sides will be \textit{L}.  
+For determining the limiting energy we can imagine a 3D box where the length of each of its sides will be \textit{L}.  
 The wavelengths of electrons trapped in the box in each dimension will be
 \begin{equation}
 \lambda (xyz) = \frac{2L}{N{(xyz)}}
@@ -412,9 +458,9 @@ We can now write the total kinetic energy of the electron when $p^2 = p_x^2 + p_
 \label{ferm1}
  \varepsilon =  \frac{p^2}{2m} \Rightarrow \frac{h^2N^2}{8mL^2}
 \end{equation}
-Total number of electrons is same as total number of unique quantum numbers $N_x, N_y, N_z,$ multiply by 
-factor two. The two factor comes from the fact that electrons are particles with spin, which can be $\pm 1/2$. 
-This means that two electrons are allowed to have the same tree quantum numbers but different spin. 
+Total number of electrons is same as the total number of unique quantum numbers $N_x, N_y, N_z,$ multiplied by 
+two. The two factor comes from the fact that electrons are particles with spin, which can be $\pm 1/2$. 
+This means that two electrons are allowed to have the same tree quantum numbers but a different spin. 
 The total number of electrons out to radius $N = \sqrt{N_x^2 + N_y^2 + N_z^2}$ will be
 \begin{equation}
  N_e = 2\left ( \frac{1}{8} \right )\left ( \frac{4}{3} \pi N^3\right ) \Rightarrow N = \left ( \frac{3N_e}{\pi} \right )^{1/3} .
@@ -424,29 +470,29 @@ By using Eq. \eqref{ferm1} and simplifying it, we will get the Fermi energy as f
 \begin{equation}
 \varepsilon_F = \frac{\hbar^2}{2m}\left ( 3\pi^2n \right )^{2/3}
 \end{equation}
-where $m$ is the mas of the electron or any other fermion\footnote{Can by applies for any fermion, not only electrons} 
+where $m$ is the mas of the electron or any other fermion\footnote{Applies for any fermion, not only electrons} 
 and $n\equiv N_e/L^3$ is the electron count per volume. 
 The average energy per electron at $T = 0\mathrm{K}$ is $3/5\varepsilon_F$.    
   
 \section{Degeneracy}
-Matter inside of WD has very symmetric spherical distribution, we can calculate the mass interior to radius $r$ like\footnote{More elaborate and precises approach can by find 
-\citet{2004bhwd.book.....S}, \cite{padm_vII}, \citet{kleczek}, \citet{comp_obj1}, \citet{1972ApJ...175..417N} and simpler explanation with
+The matter inside of a WD has a very symmetric spherical distribution. We can calculate the mass of the interior to radius $r$ as\footnote{More elaborate and precise approach can be found in
+\citet{2004bhwd.book.....S}, \cite{padm_vII}, \citet{kleczek}, \citet{comp_obj1}, \citet{1972ApJ...175..417N} and a simpler explanation with
 less math in \citet{2007ima..book.....C}}
 \begin{equation}
  \frac{\mathrm{d}m(r)}{\mathrm{d}r} = 4 \pi r^2 \rho
 \end{equation}
-In normal case the WD is in steady state and gravitation force is balanced by the pressure at every point.  
+In the normal case, the WD is in a steady state and the gravitational force is balanced by the pressure at every point.  
 For deriving the hydrostatic equilibrium equation we need to consider an infinitesimal element laying between 
-$r$ and $r+\mathrm{d}r$ with an area $\mathrm{d}A$. The element is lying perpendicular to the radial direction, should looks like fig.(\ref{wd1}).
+$r$ and $r+\mathrm{d}r$ with an area $\mathrm{d}A$. The element is lying perpendicular to the radial direction, should look like Fig.(\ref{wd1}).
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=4cm]{plot/wd1}
-\caption{How could be infinitesimal fluid element laying between 
-$r$ and $r+\mathrm{d}r$ with an area $\mathrm{d}A$ imagine}
+\caption{Defiction of an infinitesimal fluid element laying between 
+$r$ and $r+\mathrm{d}r$ with an area $\mathrm{d}A$.}
 \label{wd1} 
 \end{figure}
 
-The gravitation attraction between mass $\mathrm{d}m = \rho \mathrm{d}A \mathrm{d}r$ and $m(r)$ is the same as if $m(r)$ were only point at the center with the same mass. While the outside mass exerts no force on $dm$.
+The gravitational attraction between mass $\mathrm{d}m = \rho \mathrm{d}A \mathrm{d}r$ and $m(r)$ is the same as if $m(r)$ were only point at the center with the same mass, while the outside mass exerts no force on $dm$.
 Then the net outward pressure forced on $\mathrm{d}m$ is $- \left [ P\left ( r + \mathrm{d}r \right ) - p(r)  \right ]\mathrm{d}A$. In equilibrium 
 \begin{equation}
 \label{eq1}
@@ -458,12 +504,12 @@ In such equilibrium, the gradient of degeneracy pressure is balanced by gravitat
 \nabla P = -\rho \nabla \Phi, 
 \end{equation}
 where $\Phi$ means gravitation potential.  
-Consequence of the Eq.\eqref{eq1} is the viral theorem. The gravitation potential energy of the star is then 
+The consequence of the Eq.\eqref{eq1} is the viral theorem. The gravitation potential energy of the star is then 
 \begin{equation}
 \label{pot_e_star1}
 W = -\int_{0}^{R} \frac{Gm(r)}{r}\rho 4 \pi r^2 \mathrm{d}r = \int_{0}^{R} \frac{\mathrm{d}P}{\mathrm{d}r}4\pi r^3 \mathrm{d}r = -3\int_{0}^{R} P4 \pi r^2 \mathrm{d}r
 \end{equation}
-We can characterize the gas by an adiabatic equation of state, where $K$ and $\Gamma$ are constants
+We can characterize the gas by the adiabatic equation of state, where $K$ and $\Gamma$ are constants
 \begin{equation}
  \label{adiab_1}
 P = K\rho_0^\Gamma
@@ -472,7 +518,7 @@ Then Eq.\eqref{pot_e_star1} can be rewritten as follows
 \begin{equation}
  W = -3 (\Gamma - 1) U,
 \end{equation}
-Where $U$ is the total star's internal energy 
+Where $U$ is the star's total internal energy 
 \begin{equation}
 U = \int_{0}^{R}\varepsilon' 4\pi r^2 \mathrm{d}r 
 \end{equation}
@@ -485,7 +531,7 @@ where
 \begin{equation}
  \varepsilon = \rho_0c^2+\frac{P}{\Gamma -1}
 \end{equation}
-Now we can see that the energy density, of the gas (excluding the rest mass energy) can be also written as
+Now we can see that the energy density of the gas (excluding the rest mass energy) can be also written as
 \begin{equation}
  \label{eps2}
  \varepsilon'=\frac{P}{\Gamma - 1}
@@ -495,8 +541,8 @@ Assuming adiabatic changes, the Eq.\eqref{eps2} follows from the first law of th
  \mathrm{d}\left ( \frac{\varepsilon }{\rho_0} \right ) = -P\mathrm{d}\left ( \frac{1}{\rho_0} \right ) .
 \end{equation}
 
-The equation of state for ideal Fermi gas reduce to the simple polytropic form Eq.\eqref{adiab_1} in
-the two limiting cases \citet{2004bhwd.book.....S}, \citet{padm_vII}:
+The equation of state for ideal Fermi gas is reduced to the simple polytropic form Eq.\eqref{adiab_1} in
+the two limiting cases (\citet{2004bhwd.book.....S}, \citet{padm_vII}):
 \begin{itemize}
 \item Nonrelativistic electrons, $\rho_0 \ll 10^6 g.cm^{-3}, x\ll 1, \Phi_{(x)}\rightarrow x^5/15\pi^5 $
 \begin{equation}
@@ -508,21 +554,21 @@ the two limiting cases \citet{2004bhwd.book.....S}, \citet{padm_vII}:
 \end{equation}
 \end{itemize}
 
-This kind of the equilibrium configurations such these are called polytropes. We can use Eq.\eqref{equ_1}, take the divergence of it and by using $\nabla^2\Phi = 4\pi G \rho$ in spehrically 
+This kind of equilibrium configurations such as these are called polytropes. We can use Eq.\eqref{equ_1}, take the divergence of it and by using $\nabla^2\Phi = 4\pi G \rho$ in spherically 
 symmetric case we get  
 \begin{equation}
 \label{pol_1}
  \frac{1}{r^2}\frac{\mathrm{d}}{\mathrm{d}r}\left ( \frac{r^2}{\rho}\frac{\mathrm{d}P}{\mathrm{d}r} \right ) = -4\pi G\rho .
 \end{equation}
-Using few trics, Eq.\eqref{pol_1} can be rewrite and reduce to dimension less form 
+Using few tricks, Eq.\eqref{pol_1} can be rewritten and reduced to the dimensionless form 
 \begin{equation}
  \label{pol_2}
-\frac{1}{\xi^2 }\frac{\mathrm{d}}{\mathrm{d}\xi}\xi^2\frac{\mathrm{d}\theta }{\mathrm{d}\xi } = -\theta^n 
+\frac{1}{\xi^2 }\frac{\mathrm{d}}{\mathrm{d}\xi}\xi^2\frac{\mathrm{d}\theta }{\mathrm{d}\xi } = -\theta^n \:, 
 \end{equation}
 
 
 
-use Eq.\eqref{adiab_1} with $\Gamma \equiv 1 + \frac{1}{n}$ where $n$ is called the polytropic index
+we use Eq.\eqref{adiab_1} with $\Gamma \equiv 1 + \frac{1}{n}$ where $n$ is called the polytropic index
 \begin{equation}
 \label{pol_3}
 \rho = \rho_c \theta^n  
@@ -537,8 +583,8 @@ a = \left [ \frac{\left ( n+1 \right ) K \rho_c^{\left ( 1/n-1 \right )} }{4\pi 
 \end{equation}
 where $\rho_c$ is the central density, $\rho_c = \rho$ when $r = 0$. 
 
-The Eq.\eqref{pol_2} is called the \textit{Lane-Emden equation} for the structure of $n$ index, the boundary 
-conditions at the center such polytropic white dwarf are
+The Eq.\eqref{pol_2} is called the \textit{Lane-Emden equation} for the structure of index $n$, the boundary 
+conditions at the center off such polytropic white dwarf are
 \begin{equation}
 \label{le1}
  \theta(0) = 1, 
@@ -547,34 +593,34 @@ conditions at the center such polytropic white dwarf are
 \label{le0}
  \theta'(0)= 0.
 \end{equation}
-The condition \eqref{le1} come dirrectly from Eq.\eqref{pol_3} and condition \eqref{le0} is derived from the fact 
+The condition \eqref{le1} comes directly from Eq.\eqref{pol_3} and the condition \eqref{le0} is derived from the fact 
 that near the center of the star is $m(r) \approx 4\pi \rho_c (r^3/3)$. If we use Eq.\eqref{eq1}, we get
 \begin{equation}
  \frac{\mathrm{d}P_{(\rho)}}{\mathrm{d}r} = \frac{\mathrm{d}\rho}{\mathrm{d}r} = 0 .
 \end{equation}
 
 If we numerically integrate Eq.\eqref{pol_2} using Eq.\eqref{le1} and Eq. \eqref{le0} as the boundary conditions, 
-starting at $\xi=0$. We will find that for $n<5$ $(\Gamma>6/5)$ this solution decrease monotonically with a zero 
-at finite value $\theta(\xi_1) = 0$, which corresponds to the star's surface where $P=\rho = 0$ and we get the 
-equation for white dwarf radius 
+starting at $\xi=0$, we will find that for $n<5$ $(\Gamma>6/5)$ this solution decrease monotonically with a zero 
+at a finite value $\theta(\xi_1) = 0$, which corresponds to the star's surface where $P=\rho = 0$ and we get the 
+equation for the white dwarf radius 
 \begin{equation}
  \label{radius1}
 R = a\xi_1 = \left[ \frac{(n+1)K}{4\pi G} \right]^{1/2}\rho_c^{\frac{1-n}{2n}}\xi_1.
 \end{equation}
 
-The mass of the WD can be find as follows
+The mass of the WD can be found as follows
 \begin{equation}
  \label{wdmass}
 \begin{split}
-M &= \int_{0}^{R} 4\pi r^2 \rho \mathrm{d}r \\
-  &= 4 \pi a^3 \rho_c \int_{0}^{\xi_1} \xi^2 \theta^n \mathrm{d}\xi \\
-  &= -4 \pi a^3 \rho_c \int_{0}^{\xi_1}\frac{\mathrm{d}}{\mathrm{d}\xi}\left( \xi^2 \frac{\mathrm{d}\theta}{\mathrm{d}\xi}\right)\mathrm{d}\xi \\
-  &= 4 \pi a^3 \rho_c \xi_1^2 \lvert \theta' (\xi_1) \lvert \\
-  & = 4 \pi \left[ \frac{(n+1)K}{4 \pi G}\right]^{3/2} \rho_c^{\frac{(3-n)}{2\pi}}\xi_1^2 \lvert \theta' (\xi_1)\lvert ,
+M &= \int_{0}^{R} 4\pi r^2 \rho \mathrm{d}r \:, \\
+  &= 4 \pi a^3 \rho_c \int_{0}^{\xi_1} \xi^2 \theta^n \mathrm{d}\xi\:, \\
+  &= -4 \pi a^3 \rho_c \int_{0}^{\xi_1}\frac{\mathrm{d}}{\mathrm{d}\xi}\left( \xi^2 \frac{\mathrm{d}\theta}{\mathrm{d}\xi}\right)\mathrm{d}\xi\:, \\
+  &= 4 \pi a^3 \rho_c \xi_1^2 \lvert \theta' (\xi_1) \lvert\:, \\
+  & = 4 \pi \left[ \frac{(n+1)K}{4 \pi G}\right]^{3/2} \rho_c^{\frac{(3-n)}{2\pi}}\xi_1^2 \lvert \theta' (\xi_1)\lvert \:,
 \end{split}
 \end{equation}
 then $\rho_c$ can by eliminated between Eq.\eqref{radius1} and Eq.\eqref{wdmass}, which gives the mass-radius relations 
-for polytropes \citet{2004bhwd.book.....S}:  
+for polytropes (\citet{2004bhwd.book.....S}):  
 \begin{equation}
 \label{mr_eq}
  M = 4 \pi R^{\frac{3-n}{t-n}}\left[ \frac{(n+1)K}{4 \pi G}\right]^{\frac{n}{n-1}}
@@ -583,12 +629,12 @@ for polytropes \citet{2004bhwd.book.....S}:
 
 \section{The Chandrasekhar limit}
 What will happen if $\rho_c \rightarrow \infty$? This is one of the most important questions in the universe. 
-Because how central density of WD increases by increase of the WD mass, the electrons become more and more 
-relativistic throughout the star. As $R\rightarrow 0 $ also the space for free electrons moving between atoms nuclei become
-smaller and smaller. With increasing mass must also increase the speed of electrons to support the degeneracy pressure.  
-While the mass of WD is larger the radius become smaller, mass-volume relations implies that $\rho\propto M_{WD}^2$. 
-But the electrons can't have speed larger than speed of light and in some point where $\rho \sim 10^9 \mathrm{g\:cm^{-3}}$ there 
-will be no space left for moving electrons and they will be press into the nuclei. This will leads to explosion of such WD. 
+Because as the central density of the WD increases with increasing of the WD mass, the electrons become more and more 
+relativistic throughout the star. As $R\rightarrow 0 $, the space for the free electrons moving between the atomi nuclei become
+smaller and smaller as well. With increasing mass there must also be an increase in the speed of electrons to support the degeneracy pressure.  
+While the mass of WD is larger, the radius becomes smaller, mass-volume relations implies that $\rho\propto M_{WD}^2$. 
+But the electrons can't have speed larger than the speed of light and in some point where $\rho \sim 10^9 \mathrm{g\:cm^{-3}}$ there 
+will be no space left for the electron movement and they will be press into the nuclei. This will lead to the explosion of a such WD. 
 
 \begin{figure}[hbt!]
 \centering
@@ -603,27 +649,27 @@ This all means, that there is a maximum mass for WDs. This mass is called \texti
 \footnote{Named after Indian physicist Subrahmanyan Chandrasekhar who received the Nobel Price in Physics in 1983 for his 
 work on stellar structure and evolution. Chandrasekhar made his great discovery at the age of 21 in the 1931.   } $M_{ch}$.  
 
-The classical theory of type 1A supernovae assumes explosions of such WDs reaching the $M_{ch}$, the very same 
-mass of the WDs when they explode makes Type 1A supernovae perfectly suitable objects for measuring the long range 
+The classical theory of type 1A supernovae assumes that the explosions of such WDs reaching the $M_{ch}$, 
+makes Type 1A supernovae perfectly suitable objects for measuring the long range 
 space distances. That's why they are so important objects for cosmology and astronomers called 
-them standard candles.
+them the standard candles.
 
-The Chandrasekhar limit for relativistic electron case is
+The Chandrasekhar limit for the relativistic electron case is
 \begin{equation}
  \label{chlim}
 M_{ch}=1.457\left ( \frac{2}{\mu_e} \right )^2 \mathrm{M_{\odot}} \:,
 \end{equation}
-where $\mu_e$ is the average molecular weight per electron, which depends on the chemical comsposition of the star and is typically sets 
+where $\mu_e$ is the average molecular weight per electron, which depends on the chemical comsposition of the star and is typically set 
 to $\mu_e = 2$. 
 
-The Eq.\eqref{chlim} can be obtained by solving Eq.\eqref{mr_eq} with parameters\footnote{Extensive list of polytropic parameters can be find in
+Eq.\eqref{chlim} can be obtained by solving Eq.\eqref{mr_eq} with parameters\footnote{Extensive list of polytropic parameters can be found in
 \citet{1939MNRAS..99..673C}}:
 \begin{equation}
 \Gamma = \frac{4}{3}\:,\:\: n =3 \:,\:\: \xi_1 = 6.89685 \:,\:\: \xi_1^2 \lvert \theta' (\xi_1) \lvert = 2.01824\:\:. 
 \end{equation}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-Another, ilustrativ aproach to estimating the Chandrasekhar limit is mention in \citet{2007ima..book.....C}. An approximate value for $\mathrm{M_{ch}}$ may by 
-obtain by setting the estimate of the central pressure
+Another, ilustrative aproach to estimate the Chandrasekhar limit is mentioned in \citet{2007ima..book.....C}. An approximate value for $\mathrm{M_{ch}}$ may be 
+obtained by setting the estimate of the central pressure
 \begin{equation}
  P_c \approx \frac{2}{3} \pi G \rho^2 R_{wd}^2 \qquad \text{with} \qquad \rho=M_{wd} / \frac{4}{3} \pi R_{wd}^3  
 \end{equation}
@@ -632,7 +678,7 @@ equal to electron degeneracy pressure equation
  \label{edegP}
 P = \frac{(3\pi^2)^{2/3}}{4} \hbar c \left[ \left( \frac{Z}{A}\right) \frac{\rho}{m_H}\right]^{4/3},
 \end{equation}
-with $Z/A=0.5$, the $R$ cancels from the equation leving for the greatest possible mass:
+with $Z/A=0.5$, the $R$ cancels from the equation leaving the greatest possible mass:
 \begin{equation}
  \label{chlim2}
 M_{ch} \sim \frac{3\sqrt{2\pi}}{8}\left ( \frac{\hbar c}{G} \right )^{3/2}\left [ \left ( \frac{Z}{A} \right ) \frac{1}{m_H} \right ]^2 M_\odot.  
@@ -642,16 +688,16 @@ relativity and Newtonian gravitation on the WD structure.
 
 The Chandrasekhar limit slightly depends upon the chemical composition \eqref{chlim}, but in the literature is well known as $M_{ch} = 1.44M_\odot$.    
   
-The similar limit exists for neutron stars, where pressure of degenerate neutron gas support the stars against it own gravity. 
-This limit is called Tolman --- Oppenheimer --- Volkoff limit (or TOV limit).But it is not so easy in neutron stars case. Their limit 
-mass depends strongly on type of matter in star center. The limit varies from $0.7 M_\odot$ up to $\sim 3M_\odot$ in extreme case, when inner section of 
-neutron star is partialy filled up by quark - gluon matter.     
+The similar limit exists for neutron stars, where the pressure of degenerate neutron gas support the stars against it own gravity. 
+This limit is called Tolman --- Oppenheimer --- Volkoff limit (or TOV limit).But it is not so easy in the neutron stars' case. Their limit 
+mass depends strongly on the type of matter in star center. The limit varies from $0.7 M_\odot$ up to $\sim 3M_\odot$ in the extreme case, when inner section of 
+the neutron star is partialy filled up by quark - gluon matter.     
 
 
 \section{White dwarfs classes}
-Previous sections describe interior and fundamental parameters of white dwarfs, but it also important to tell something about their classes.   
-WDs occupy narrow sliver line in the left bottom corner of H-R diagram fig.(\ref{hrd1}), slightly parallel with the main sequence.  
-Although WDs are typically whiter then normal stars, the name itself is not very comprehensive. WD in fact come in all colors with surface 
+Previous sections described the interior and fundamental parameters of white dwarfs, but it also important to tell something about their classes.   
+WDs occupy narrow sliver line in the left bottom corner of H-R diagram Fig.(\ref{hrd1}), almost parallel with the main sequence.  
+Although WDs are typically whiter then normal stars, the name itself is not very appropriate. WD in fact come in all colors with surface 
 temperatures from less than $4000K$ to even more than $80,000K$. The $D$ for \textit{dwarf} spectral type has several subdivisions:
 \begin{itemize}
  \item \textbf{DA} white dwarfs is the largest group $(\sim 60\%)$ including Sirius B, their spectra have only pressure-broadened hydrogen lines 
@@ -661,15 +707,16 @@ temperatures from less than $4000K$ to even more than $80,000K$. The $D$ for \te
  \item \textbf{DZ} white dwarfs show some evidence of metal lines
 \end{itemize}
 
-Very small radius makes WDs hard to observed in optical band. The brightest and also the most known WD is Sirius B with visual magnitude $\sim8.6$. 
-Unfortunately it is located only $8”$ from his companion Sirius A, the brightness star of the night sky. Although the WD are not common stars 
-on the  night sky, their are not rare in our Galaxy. From hundred closes stars to our Sun, eight of them are WDs.
+It is very small radius makes WDs hard to observe in optical band. The brightest and also the most well known WD is Sirius B with visual magnitude $\sim8.6$. 
+Unfortunately it is located only $8”$ from its companion Sirius A, the brightest star of the night sky. Although WDs are not common stars 
+of the  night sky, they are not rare in our Galaxy. From hundred closes stars to our Sun, eight of them are WDs.
 
-WDs usually have very strong magnetic field which comes from weak surface magnetic field of progenitor's star which lagre surface are conserved to their very 
-small surfaces. The magnetic field intensities vary from about $1000 \:\mathrm{G}$ up to $10^9 \:\mathrm{G}$ in extreme cases.    
+WDs usually have a very strong magnetic field which comes from a weak surface magnetic field of the progenitor's staras the magnetic 
+field is conserved and then amplified when the stars goes to wd stage.  
+The magnetic field intensities vary from about $1000 \:\mathrm{G}$ up to $10^9 \:\mathrm{G}$ in extreme cases.    
 
-WDs can by find alone in interstellar space, young ones can be find also in planetary nebulae, like one  in center of the Ring nebula 
-M57 or their can be find in cataclysmic variables.       
+WDs can by found alone in interstellar space, young ones can be found also in planetary nebulae, like the one in the center of the Ring nebula 
+M57 or they can be found in cataclysmic variables.       
  
 \begin{figure}[hbt!]
 \centering
@@ -682,111 +729,112 @@ sequence, which exactly means, they are very small (dwarf) stars with high surfa
 
 \chapter{Cataclysmic variable stars}
 
-Cataclysmic variable stars \textit{(CVs)} received their name for their cataclysmic events, like outbursts, novae and supernovae eruptions. 
-In this one name several very different mechanisms are used for creating the various cataclysmic events.         
-Dwarf novae are common for their increase of brightness by factor ten, classical novae are increasing their 
-brightness usually in factor $10^6$ and type 1A supernovae in factor $10^{12}$, typical visual absolute magnitude 
+Cataclysmic variable stars (CVs) received their name for their cataclysmic events, like outbursts, novae and supernovae eruptions. 
+Several disting mechanisms leading to cataclysmic events are responsible for the eye-cathing name given to these class of variables. 
+Dwarf novae comonly increases in brightness by a factor of ten, classical novae increases their 
+brightness usually by a factor of $10^6$ and type 1A supernovae by a factor of $10^{12}$, typical visual absolute magnitude 
 for them is $M_V = -19.3$\footnote{About $5\times10^9$ times brighter than the Sun}.  
 
-What is common for all the CVs types is their binary star character with mass transfer through Roche lobe to primary 
-companion, which is white dwarf star. Several thousands of CVs with even more candidates are known up to date. 
+What is common for all CVs types is that their binary star character, with mass transfer through the Roche lobe to a primary 
+companion, which is a white dwarf star. Several thousands of CVs, with even more candidates, are known up to date. 
 The mean mass of the primary star is $\sim 0.8 M_\odot$, which is larger than the average of $\sim 0.6 M_\odot$ for isolated, 
-forever alone WDs.
-The secondary star is a main-sequence low mass star of G or later type, but usualy with less mass then the primary WD.      
+solitary WDs.
+The secondary star is a main-sequence low mass star of G or later type, but usualy with less mass than the primary WD.      
 
-Configuration like this make stars orbit each other with periods from around 20 minutes up to several days, 
-however the vast majority of CVs have orbital periods from $1$ to $12$ hours\footnote{Interesting think is that there exists a "period gap" 
+The configuration like this makes stars orbit each other with periods from around 20 minutes up to several days, 
+however the vast majority of CVs have orbital periods from $1$ to $12$ hours\footnote{Interesting thing is that there exists a "period gap" 
 in CVs periods in range from 1.5 to 3.25 hours. The cause of this gap is not well understood yet. }.
 
-The various classifications and approaches to study the CVs exists. They mostly depends on the different wavelength in which the CVs are 
-observed. The biggest and also the well observed is optical band where we can see these types: 
+Various classifications and approaches to study the CVs exist. They mostly depend on different wavelengths in which CVs are 
+observed. The biggest and also the most well-observed is the optical band where we can see these types: 
 \begin{itemize}
- \item \textbf{Classical novae} are characterize by large outbursts couses by thermonucler exlosion of accreted material on WD's surface
- \item \textbf{Recurrent novae} have small outbursts repeating every few years, typical example is RS Oph
- \item \textbf{DN - dwarf novae} use to have several smaller outbursts, have several subclases \textit{(Z Cam, SU UMa, SS Cyg\footnote{SS Cygni had few 
-outbursts, but according to latest obervations, it seems to be more-likely intermediate polar})} 
+ \item \textbf{Classical novae} are characterized by large outbursts coused by thermonuclear exlosion of the accreted material on a WD's surface.
+ \item \textbf{Recurrent novae} have small outbursts repeating every few years, a typical example is RS Oph.
+ \item \textbf{DN - dwarf novae} have several smaller outbursts, they are devided into \textit{(Z Cam, SU UMa, SS Cyg\footnote{SS Cygni had a few 
+outbursts, but according to the latest observations, it is more-likely an intermediate polar})}. 
  \item \textbf{AM Canum Venaticorum} are extremely interesting space objects where the secondary star is also a compact object and the accretion 
-disk is mostly composed from helium and they could by source of strong gravitation waves 
- \item \textbf{Novae like systems} are possible nova remnants or stars with outburst behavior similar to novae but maybe miss-classify
- \item \textbf{Polars} are magnetic CVs with $B \sim 10^7 - 10^9 \:\mathrm{G}$, they got the name because of strong polarization of their light in optical and IR bands 
+disk is mostly composed from helium they could be a source of strong gravitation waves. 
+ \item \textbf{Novae like systems} are possible nova remnants or stars with outburst behavior similar to novae but maybe miss-classified.
+ \item \textbf{Polars} are magnetic CVs with $B \sim 10^7 - 10^9 \:\mathrm{G}$, they got their name because of strong polarization of their light in optical and IR bands 
  \item \textbf{IP intermediate polars} are magnetic CVs with $B$ less then polars $\sim10^6-10^7\: \mathrm{G}$ 
- \item \textbf{Type 1A supernova} is sub-class of supernovae which become a result of thermonuclear explosion of whole WD when it reaches the $M_{ch}$ limit  
+ \item \textbf{Type 1A supernova} is a sub-class of supernovae resulting from a thermonuclear explosion of a whole WD when it reaches the $M_{ch}$ limit.  
 \end{itemize}
 
-During last years CVs became more and more attractive target for modern astronomers mainly because of  
-the progress in detectors technology in different then optical band and also for their role as a 
-space laboratories for study accretion of matter on compact star, X-ray emission from shock regions, 
+During the last years, CVs became more and more attractive target for modern astronomers mainly because of  
+the progress in detectors technology in different than the optical band and also for their role as a 
+space laboratories for studying the accretion of matter onto a compact star, X-ray emission from the shock regions, 
 and even gravitation waves. 
 
-The CVs are complex and complicated space objects, for this reason is hard to make a good 
-classification. If we look inside \citet{warner:1}, we will find several fact which are not 
-consider as correct now. With new huge sky surveys as GAIA\footnote{Is space mission
-to chart a three-dimensional map of our Galaxy, will observed $\sim$ one billion stars. Launch is planned for 2013.} 
-or LSST\footnote{The Large Synoptic Survey Telescope (LSST) will be wide-field survey $8.4\: \mathrm{m}$ 
-telescope which will photograph the available sky every three nights from his place on the 
-El Peñón peak of Cerro Pachón, at 2682 m in Chile. } the new and even more 
+CVs are complex and complicated space objects, for this reason it is hard to make a good 
+classification. If we look inside \citet{warner:1}, we will find several facts which are not 
+consider correct now. With new huge sky surveys as GAIA\footnote{Is a space mission
+to chart a three-dimensional map of our Galaxy, will observe $\sim$ one billion stars. Launch is planned for 2013.} 
+or LSST\footnote{The Large Synoptic Survey Telescope (LSST) will be a wide-field survey $8.4\: \mathrm{m}$ 
+telescope which will photograph the available sky every three nights from its place on the 
+El Peñón peak of Cerro Pachón, at 2682 m in Chile. } a new and even more 
 complex classification will need to take place.    
-The number of known CVs systems will grow rapidly, also as the number of observations. Next decade 
+The number of known CVs systems will grow rapidly, also as the number of observations. The next decade 
 will be the gold era for new scientific approaches like data-mining in huge amount of data-sets.
 
-In following sections of this work we use the most broad CVs classification, for magnetic and non-magnetic
-systems. Because of the aim of this work on magnetic systems, we will take care of non-magnetic only  
-roughly. Please also note, that if we want to make a very good classification of CVs to many classes, 
-almost everyone of them will has its own class.  
+In the following sections of this work we use the most broad CVs classification, for magnetic and non-magnetic
+systems. Because of the aim of this work on magnetic systems, we will take care of non-magnetic ones only  
+roughly. Please also note, that if we want to make a very good classification of CVs into many classes, 
+almost every one of them will have its own class.  
 
 
   
 \section{Non magnetic cataclysmic variables} 
-The magnetic field plays essential role in all the CVs, even in non-magnetic ones, at-least weak 
-magnetic field provides viscosity in accretion disk. We will called non-magnetic CVs when 
-$B\lesssim10^5 \: \mathrm{m}$. 
-In such system is movement of gas from the secondary companion to the WD determined predominantly 
+The magnetic field plays essential role in all CVs, even in non-magnetic ones, even a weak 
+magnetic field provides viscosity in accretion disk. We will denote a system as non-magnetic when 
+$B\lesssim10^5 \: \mathrm{G}$. 
+In such system the movement of gas from the secondary companion to the WD is determined predominantly 
 by dynamical and hydro-dynamical flows \citet{warner:1}.
 
 \begin{figure}[hbt]
 \centering
 \includegraphics[totalheight=3cm]{plot/cv}
-\caption{The illustration of cataclysmic variable star, showing the normal, secondary star on the right, accretion stream meeting 
-the accretion disk and accretion disk itself around the white dwarf. }
+\caption{The illustration of a cataclysmic variable star, showing the normal, secondary star on the left, the accretion stream meeting 
+the accretion disk and the accretion disk itself around the white dwarf. }
 \label{cv1} 
 \end{figure}
 
-The non-magnetic CV could looks like fig.\ref{cv1} or the \textit{(A)} part of fig.\ref{all_typescv}. The secondary is a small main sequence star with mass about 
-half of the Sun mass which is filling out its Roche lobe. The mass transfers from secondary to primary
-through the Lagrangian point L1 and in some point its creates the accretion disk. Streaming mass meets the accretion disk and if the mass stream is big enough and disk is dense enough, so called 
-hot spot is created as we can see on fig.\ref{cv1}.  
+Non-magnetic CV could look like in Fig.\ref{cv1} or the \textit{(A)} part of Fig.\ref{all_typescv}. The secondary is a small main sequence star with mass about 
+a half of the Sun mass which is filling out its Roche lobe. The mass transfers from the secondary to the primary
+through the Lagrangian point L1 and in some point its creates the accretion disk. Streaming matter meets the accretion disk and if the matter stream is large enough and the 
+disk is dense enough, the so called 
+hot spot is created as we can see on Fig.\ref{cv1}.  
 
 \subsection{Orbital periods}
-Orbital period $P_{orb}$ is usually the most precisely know physical parameter of CV. Because of facts that the 
-CVs orbital periods are relatively short and to take enough data-sets to create a phase light curve 
-is then not that difficult task. $P_{orb}$ of the system reveals how big the CV systems are. The most of the 
+The orbital period $P_{orb}$ is usually the most precisely known physical parameter of A CV. Because of a fact that the 
+CVs orbital periods are relatively short taking enough data-sets to create a phase light curve 
+is then not that difficult task. $P_{orb}$ of the system reveals how big the CV systems are. Most of the 
 CVs with typical periods in range hours can fit inside Earth - Moon orbit. 
 
-Inspecting the Riter \& Kolb catalogue \citet{2003A&A...404..301R} within the orbital period range from 1 hour to 1 day, without the AM CVn systems, 
-it is found that almost half of all CVs in catalogue are the dwarf novae.
+Inspecting the Riter \& Kolb catalogue (\citet{2003A&A...404..301R}) within the orbital period range from 1 hour to 1 day, without the AM CVn systems, 
+it is found that almost half of all CVs in the catalogue are dwarf novae.
 \begin{itemize}
  \item 166 DNs $63\%$ have $P_{orb} < 2h$
  \item 26 DNs $10\%$ are found in the 2-3 h gap 
  \item 70 DNs $27\%$ are behind the gap with $P_{orb} > 3h$  
 \end{itemize}
 The conventional idea about where the gap comes from points to internal structure changing in the secondaries.   
-In some point of secondary star evolution it has a radius corresponds to its mass in excess of the equilibrium value. 
-This force secondary to detaches  from Roche lobe foe a while. The stellar wind is also very low during this period which cause disappearance of accretion disk.
-The period gap and the orbital period distribution per all the CVs and between the different CVs types is well shown on fig.\ref{cv_orb1}.  
+At some point of the secondary star evolution it has a radius corresponding to its mass deviates from its equilibrium value. 
+This forces the secondary to detach from the Roche lobe for a while. The stellar wind is also very low during this period which caus a disappearance of the accretion disk.
+The period gap and the orbital period distribution per all CVs and between the different CVs types is shown on Fig.\ref{cv_orb1}.  
 
 \begin{figure}[hbt!]
 \centering
 \includegraphics[totalheight=12.5cm]{plot/cv_orbper.png}
 \caption{\textit{Top panel}: the orbital period distribution of known CVs and dwarf novae from are shown in gray and 
-shade \citet{2003A&A...404..301R}. \textit{Bottom panel}: the period distribution of known dwarf novae according to their subtypes, U Gem (UG), 
+shade (\citet{2003A&A...404..301R}). \textit{Bottom panel}: the period distribution of known dwarf novae according to their subtypes, U Gem (UG), 
 Z Cam (ZC), SU UMa (SU), WZ Sge (WZ), ER UMa (ER), and unclassified subtype (XX). The dashed lines represent the conventional 
-2-3h period gap \citet{Aungwerojwit}.}
+2-3h period gap (\citet{Aungwerojwit}).}
 \label{cv_orb1} 
 \end{figure}
 
 \section{Magnetic cataclysmic variables}
-Magnetic CVs are these where the strong magnetic field significantly affects the accretion process. These systems are divided 
-according to strength of their magnetic field to two categories: 
+Magnetic CVs are systems where the strong magnetic field significantly affects the accretion process. These systems are divided 
+according to the strength of their magnetic field to two categories: 
 \begin{itemize}
  \item Polars, also called AM Herculis stars, $B_{wd} \sim 10^7 - 10^9\: \mathrm{G}$  
  \item Intermediate polars $B_{wd} \sim 10^6 - 10^7 \: \mathrm{G}$
@@ -796,33 +844,33 @@ according to strength of their magnetic field to two categories:
 \begin{figure}[hbt!]
 \centering
 \includegraphics[totalheight=5cm]{plot/binall}
-\caption{An illustration of difference between non-magnetic and magnetic CVs. \textit{(A)} is an illustration of non-magnetic 
-disk-type system, same as artist impression fig.\ref{cv1}. \textit{(B)} is a system with strongly magnetized WD called Polar 
-where magnetic field prevent creations of accretion disk and the in-falling material forms an accretion stream following the 
-magnetic field lines of WD.
-\textit{(C)} is intermediate case between \textit{(A)} and \textit{(B)}, the not such strongly magnetized WD as one in polars 
-destroying only inner part of accretion disk by his $B_{wd}$ creating accretion curtain following its magnetic field lines. }
+\caption{An illustration of difference between non-magnetic and magnetic CVs. \textit{(A)} is an illustration of a non-magnetic 
+disk-type system, same as the artist impression Fig.\ref{cv1}. \textit{(B)} is a system with a strongly magnetized WD called a Polar 
+where the magnetic field prevents acreation of an accretion disk and the in-falling material forms an accretion stream following the 
+magnetic field lines of a WD.
+\textit{(C)} is the intermediate case between \textit{(A)} and \textit{(B)}, the not such strongly magnetized WD as one in polars 
+destroying only the inner part of the accretion disk by its $B_{wd}$ creating an accretion curtain following its magnetic field lines. }
 \label{all_typescv} 
 \end{figure}
 
 \subsection{Polars}
-The \textit{(B)} part of fig.\ref{all_typescv} is how schematically polars looks like. The material from secondary is falling via 
-the inner Lagrangian point towards to the primary, which is the highly magnetized WD as was mention before. The gas in the
- stream is ionized by collisions and X-rays from the accretion region on the WD. In some point at the stream's trajectory 
+The \textit{(B)} part of Fig.\ref{all_typescv} is how schematically polars look like. The material from the secondary is falling via 
+the inner Lagrangian point towards to the primary, which is a highly magnetized WD as was mentioned before. The gas in the
+ stream is ionized by collisions and X-rays from the accretion region of the WD. At some point in the stream's trajectory 
 the magnetic energy density of the WD's field is sufficient to divert the stream from its free fall trajectory and force 
 it to follow the magnetic field lines. Accretion therefore occurs over a small area near both or one of the magnetic poles 
-of the WD. The magnetic field is assumed to be bipolar \citet{1990SSRv...54..195C}.
+of the WD. The magnetic field is assumed to be bipolar (\citet{1990SSRv...54..195C}).
 
-How material traveling at roughly the escape velocity of the WD it approaches to the surface of the WD a very strong shock 
-region is formed in accretion flow. The hard X-rays are emitted from post-shock region. Fraction of X-rays is reprocessed 
-by the surface of WD and re-emitted as the softer X-rays component. 
+As the material traveling at roughly the escape velocity of a WD approaches the surface of a WD a very strong shock 
+region is formed in the accretion flow. The hard X-rays are emitted from the post-shock region. A fraction of X-rays is reprocessed 
+by the surface of a WD and re-emitted as the softer X-rays component. 
 
-Free electrons close to the shock spiral around the magnetic field lines, therefore, emit strongly polarized 
-cyclotron radiation. The magnetic field of WD is such strength that the cyclotron radiation is emitted in optical and 
+The free electrons close to the shock spiral around the magnetic field lines, therefore, they emit strongly polarized 
+cyclotron radiation. The magnetic field of a WD is of a such strength that the cyclotron radiation is emitted in the optical and 
 near infra-red wavelengths.               
 
 In polars, the WD magnetic field is sufficiently strong to force the primary to rotate synchronously. The magnetic field 
-therefore always present the same section to the incoming accretion stream. This is the principal distinguishing feature 
+therefore always presents the same section to the incoming accretion stream. This is the principal distinguishing feature 
 for polars (intermediate polars rotates asynchronous).   
 
 The principal defining characteristic of the polar CVs class is their strongly and variably circularly 
@@ -831,15 +879,13 @@ luminosity and high excitation optical spectra with prominent He II 468.6 emissi
 or \citet{warner:1}.  
 
 \subsection{Intermediate polars}
-%\section{Galactic population of the cataclysmic variables}
-%\section{GXRE}
-The \textit{(C)} part of fig.\ref{all_typescv} illustrates how can be intermediate polars imagined. 
-They are CVs with not as strong magnetized WDs as in polars. This is causing a several important 
-differences between polars and IPs. In IPs the other part of accretion disk exists, but at some 
-distance of WD the kinetic energy density $\rho v^2$ of gas in accretion disk is locally exceeded by the
+The \textit{(C)} part of Fig.\ref{all_typescv} illustrates how can intermediate polars be imagined. 
+They are CVs with not as strong magnetized WDs as in polars. This is causing several important 
+differences between polars and IPs. In IPs the other part of the accretion disk exists, but at some 
+distance from a WD the kinetic energy density $\rho v^2$ of gas in the accretion disk is locally exceeded by the
  magnetic energy density $B^2/8\pi$ and within this radius the in-falling gas will be guided along magnetic 
-field lines to accrete radially onto the WD creating kind of accretion curtain.  
-For the spherical accretion is easy to calculate transition radius, because $v$ is simply the 
+field lines to accrete radially onto the WD creating a kind of an accretion curtain.  
+For the spherical accretion it is easy to calculate transition radius, because $v$ is simply the 
 free-fall velocity: $\sqrt{2MG/r}$, the radius is according \citet{1994PASP..106..209P}:
 \begin{equation}
 \label{ipra}
@@ -847,17 +893,17 @@ R_A = 3.7 \times 10^9 \dot{M}_{1}^{-2/7}M_{wd}^{-1/7}\mu_{32}^{4/7} \mathrm{cm},
 \end{equation}
 where $R_A$ is the \textit{Alfven radius}, $\dot{M}_{1}$ is the accretion rate in 
 units of $10^{17}\:\mathrm{g\:s^{-1}}$, $M_{wd}$ is the mass of WD in units $\mathrm{M_\odot}$ and $\mu_{32}$ is the magnetic moment 
-of the WD in units of $10^{32}\:\mathrm{G\:cm^3}$. For disk accretion, the magnetospheric radius should be slightly 
+of the WD in units of $10^{32}\:\mathrm{G\:cm^3}$. For the disk accretion, the magnetospheric radius should be slightly 
 smaller, theoretical estimates suggest $R_{mag} \approx 0.5R_A$ \citet{1994PASP..106..209P}.  
 
-As the gas almost freely fals onto WD channeled along magnetic field lines, in some distance near the 
+As the gas almost freely fals onto a WD channeled along magnetic field lines, in some distance near the 
 WD surface a stationary shock stands to convert the kinetic energy of the gas into thermal energy, 
 \citet{2010A&A...520A..25Y}.
 The temperature of such shock heated gas is typically over 10keV and the density is low. The hard X-rays 
 are emitted via optically thin thermal emission. Then the heated gas forms a post shock region (PSR) 
 with a temperature gradient. The gas descends while it is cooled via X-ray emission and finally hits 
-the surface of WD with small energy by emitting UV light \citet{1973PThPh..49.1184A_aizu}. 
-This property makes from IPs very good targets for hard X-ray space missions. The closer look to PSR 
+the surface of the WD with a low energy, emitting UV light (\citet{1973PThPh..49.1184A_aizu}). 
+This property makes IPs very good targets for hard X-ray space missions. The closer look at PSR 
 will be taken in the next chapter.   
 
 \begin{figure}[hbt]
@@ -917,25 +963,25 @@ for observations in this band. The large FOV allows a good coverage
 of the X-ray sky enabling long exposures covering multiple objects in this band.  
 
 \section{Post shock region}
-Reason why IPs are the most suitable for measurements of the mass of their WD companion then others CVs 
-is their magnetic field, which is not as low as in non-magnetic CVs $B<10^6$ but still weaker then in 
+The reason why IPs are the most suitable for measurements of the mass of their WD companion than other CVs 
+is their magnetic field, which is not as low as in non-magnetic CVs $B<10^6$ but still weaker than in 
 polars $B\gtrsim10^7$. 
-As was mentioned before, in IPs is the accretion disk destroyed in some distance from WD and accretion 
-continues through accretion curtain, where the gas follows magnetic force lines. 
-The resulting configuration is often know as an accretion column. 
-From theory of spherical accretion (\citet{accpower:1}) we expect that accreting matter to be highly 
+As it was mentioned before, in IPs, the accretion disk is destroyed at some distance from a WD and accretion 
+continues through the accretion curtain, where the gas follows the magnetic force lines. 
+The resulting configuration is often known as an accretion column. 
+From the theory of spherical accretion (\citet{accpower:1}) we expect the accreting matter to be highly 
 supersonic and therefore in free-fall above the WD's pole-caps. 
 
 The in-falling matter must be somehow decelerated to subsonic velocities in order to accrete, 
-therefore we expect strong shock-wave in matter stream where the kinetic energy of infall 
+therefore we expect a strong shock-wave in the matter stream where the kinetic energy of infall 
 \begin{equation}
 \frac{1}{2}\upsilon_{ff}^2 = GM_{wd}/R_{wd}, 
 \end{equation}
-will be turned into thermal energy. Because that $m_p \gg m_e$ the ions are these who brings the most of this kinetic energy supply. 
-The kinetic energy of ions must by emitted, absorbed or re-emitted by WD. The luminosity corresponding 
+will be turned into thermal energy. Because that $m_p \gg m_e$, the ions are the ones bringing the most of this kinetic energy supply. 
+The kinetic energy of ions must be emitted, absorbed or re-emitted by WD. The luminosity corresponding 
 to the typical accretion rate $\dot{M} \gtrsim 10^{16} \mathrm{g\:s^{-1}}$ will be of order 
 $10^{33} \mathrm{erg\:s^{-1}}$ which greatly exceed any intrinsic luminosity (typically 
-$\ll 10^{31} \mathrm{erg\:s^{-1}}$) that the WD may have as a result of left-over thermal energy in its 
+$\ll 10^{31} \mathrm{erg\:s^{-1}}$) that the WD may have as a result of a left-over thermal energy in its 
 degenerated core (\citet{accpower:1}).  
 
 The accretion luminosity is according to \citet{accpower:1}:
@@ -944,39 +990,39 @@ The accretion luminosity is according to \citet{accpower:1}:
 L_{acc} \lesssim 2 \times 10^{29}f_{-2}m_1^{18/7}R^{-1/7} \: \mathrm{erg \: s^{-1}},
 \end{equation}
 where $f_{-2} = 10^2 f$ and $f$ is a surface fraction.Which is much lower then the bolometric luminosities 
-of observed CVs. Therefore, we must conclude that the infaling matter goes through strong shock which 
+of observed CVs. Therefore, we must conclude that the infaling matter goes through a strong shock which 
 slows it down before reaching the WD surface.    
 
-Now we know that the shock gas is hot with characteristic (shock) temperature
+Now we know that the shock gas is hot with a characteristic (shock) temperature
 \begin{equation}
 \label{br_ts}
  T_s = \frac{3}{8}\frac{G M \mu m_H}{k R_{wd}}=3.7 \times 10^8 m_1 R^{-1} \mathrm{K}. 
 \end{equation}
 
-From previous chapters we already know that the main cooling mechanism is thermal bremsstrahlung, but 
+From the previous chapters we already know that the main cooling mechanism is thermal bremsstrahlung, but 
 lets try to determine this on our own a little bit. 
 
-In steady state in accretion column, the accretion energy released below the shock must be removed 
-from the post-shock column at the same rate in which it is deposited. Such removal must be effected 
+In a steady state in the accretion column, the accretion energy released below the shock must be removed 
+from the post-shock column at the same rate in which it is deposited. Such removal must be affected 
 by a combination of the cooling mechanisms such as radiation and particle transport processes. It is also 
-determined by distance of the shock-wave from WD surface. 
+determined by the distance of the shock-wave from WD surface. 
 
-If the cooling were inadequate the gas in PSR would simply expand adiabatically and raise 
-the shock. On the other hand, if cooling became too effective the shock would move in towards the 
+If the cooling were inadequate, the gas in PSR would simply expand adiabatically and raise 
+the shock. On the other hand, if the cooling became too effective the shock would move in towards the 
 WD surface, reducing the volume of the PSR cooling region (\citet{accpower:1}).  
 
 \begin{figure}[hbt]
 \centering
 \includegraphics[totalheight=5cm]{plot/psr2}
-\caption{Both images are showing the same accretion column geometry for a IP. The shown accretion column 
-is circular and accretion plasma is assume to be uniform across the column, image is from the \citet{krivonos_pres}. 
-\textit{The left} figure is showing
-3D illustration while \textit{the right} one shows the schematically the geometry of the PSR.}
+\caption{Both images are showing the same accretion column geometry for an IP. The shown accretion column 
+is circular and accreting plasma is assumes to be uniform across the column, image is from the \citet{krivonos_pres}. 
+\textit{The left} figure is showing a
+3D illustration while \textit{the right} one shows a scheme the geometry of the PSR.}
 \label{psr1} 
 \end{figure}
 
-For understanding and constructing appropriate accretion column model we must specify how the shock-heated 
-gas in PSR is cooled. The estimation of which cooling mechanisms is important in IPs should be based on 
+For understanding and constructing an appropriate accretion column model we must specify how the shock-heated 
+gas in PSR is cooled. The estimation of which cooling mechanisms is important in IPs should be based on the
 following ideas. 
 
 The gas velocity below the shock is according to \cite{accpower:1} 
@@ -995,36 +1041,36 @@ we can find a PSR gas density corresponding to the electron density
 N_e &= 5.9 \times 10^{14} \dot{M} f_{-2}^{-1}m_1^{-1/2}R^{-3/2} \: \mathrm{cm^{-3}} \:, 
 \end{split}
 \end{equation}
-assuming a fully ionized gas with standard cosmic abundance. 
-With characteristic PSR gas temperature $T_s$ is electron scattering only possible source of opacity. 
-The shock distance from WD surface is lower the $R_{wd}$. The results of this is that the horizontal optical 
+assuming a fully ionized gas with a standard cosmic abundance. 
+With characteristic PSR gas temperature $T_s$, the electron scattering is the only possible source of opacity. 
+The shock distance from the WD surface is lower than $R_{wd}$. The results of this is that the horizontal optical 
 depth is relatively low, therefore the radiative cooling will be optically thin (unless the accretion 
 rate per unit area will be extremely high).   
   
-Because of high $T_s$ (Eq.\eqref{br_ts}), radiative cooling of the PSR gas will be dominated by the 
+Because of high $T_s$ (Eq.\eqref{br_ts}), the radiative cooling of the PSR gas will be dominated by the 
 bremsstrahlung (free—free) emission. The volume emissivity is
 \begin{equation}
 4\pi j_{bremss} \cong 2 \times 10^{-27} N_e^2 T_e^{1/2} \mathrm{erg \:s^{-1} \: cm^{-3}}, 
 \end{equation}
-for a gas of cosmic abundance with electron temperature and density $T_e$, $N_e$.  
+for a gas of a cosmic abundance with electron temperature and density $T_e$, $N_e$.  
 
-The estimates from last paragraphs show that the PSR is hot, optically thin and that shock lies quite 
+The estimates from the previous last paragraphs show that the PSR is hot, optically thin and that shock lies quite 
 close to the WD surface. The falling gas is cooled by optically thin bremsstrahlung emission and then 
-it hits WD surface, with much lower than free-fall speed, where black-body emission will take place 
-with maximum in UV band.   
+it hits the WD surface, with much lower than a free-fall speed, where the black-body emission will be produced
+with a maximum in UV band.   
 
 We may briefly consider some of the extreme cases. If the WD is extremely massive close to the $M_{ch}$ 
-therefore with very low $R_{wd}$ and the accretion stream will be low, the Compton scattering will 
-become important as radiative cooling process. Also the cyclotron cooling, which is negligible in 
+therefore with very low $R_{wd}$, and the accretion stream will be low, the Compton scattering will 
+become important as the radiative cooling process. Also the cyclotron cooling, which is negligible in 
 IPs, will take place in case of low accretion stream and higher $B_{wd}$.   
 
 \subsection{Bremsstrahlung}
-Bremsstrahlung is a German word for breaking radiations, which is a radiations due to the acceleration 
-of a charge in the Coulomb field of another charge also called as free-free emission. A full 
+Bremsstrahlung is a German word for braking radiations, which is a type of radiation due to the acceleration 
+of a charge in the Coulomb field of another charge also called a free-free emission. A full 
 understanding of this process requires a quantum treatment, since photons of energies comparable 
-to that of the emitting particle can be produced, \citet{rybicki:1}.
+to that of an emitting particle can be produced, \citet{rybicki:1}.
 
-The electrostatic accelerations of the in its rest frame, parallel $a_{\parallel}$ and perpendicular 
+The electrostatic accelerations of the electron in its rest frame, parallel $a_{\parallel}$ and perpendicular 
 $a_\perp$ to its direction of motion are:        
 \begin{equation}
 \label{brem1}
@@ -1042,7 +1088,7 @@ Then we can take the Fourier transformation of the acceleration equations Eq.\eq
 \dot{\upsilon}_z(\omega) = \frac{1}{(2\pi)^{1/2}}\int_{-\infty }^{\infty} \frac{\gamma Ze^2b}{4\pi \varepsilon_0 m_e \left [ b^2 + \left ( \gamma \upsilon t \right )^2 \right ]^{2/3} } \mathrm{exp}\left ( \mathrm{i} \omega t \right )\mathrm{d} t.
 \end{split}
 \end{equation}
-Changing variables to $x = \gamma \upsilon t / b$ will leads to:
+Changing variables to $x = \gamma \upsilon t / b$ will lead to:
 \begin{equation}
  \label{brem3}
 \begin{split}
@@ -1056,7 +1102,7 @@ where $y = \omega b / \gamma \upsilon$. The integrals $I_1(y)$ and $I_2(y)$ are
 I_1(y) = 2 \mathrm{i} y K_0 (y), \qquad I_2(y) = 2y K_1 (y)
 \end{equation}
 where $K_0$ and $K_1$ are modified Bessel functions of order zero and one, \citet{longair:1}.
-The radiation spectrum of the electron encountering a charged nucleus therefore looks like: 
+The radiation spectrum of the electron encountering a charged nucleus therefore look like: 
 \begin{equation}
  \label{rad_spec_brem}
 \begin{split}
@@ -1067,9 +1113,9 @@ I(\omega) &= \frac{e^2}{3\pi \varepsilon_0 c^3}\left [ \left | a_\parallel (\ome
 where $b$ is the collision parameter. 
 
 The radiation spectrum showing both parallel and perpendicular accelerations to the motion 
-direction of the electron is shown in fig.\ref{jackson_brem}. The perpendicular impulse 
-has higher contribution, even in non-relativistic case, where $\gamma = 1$.  In addition, 
-this component cause significant radiation at low frequencies.   
+direction of the electron is shown in Fig.\ref{jackson_brem}. The perpendicular impulse 
+has a higher contribution, even in a non-relativistic case, where $\gamma = 1$.  In addition, 
+this component causes significant radiation at a low frequencies.   
 
 It is very useful to examine the behavior of the asymptotic limits of $K_0(y)$ and $K_1(y)$: 
 \begin{equation}
@@ -1088,25 +1134,25 @@ I(\omega) = \frac{Z^2 e^6}{48 \pi^3 \varepsilon_0^3 c^3 m_e^2 \upsilon^2 } \frac
 because of the duration of the relativistic collision, 
 which is roughtly $\tau = 2b / \gamma \upsilon$. According to this, the dominant Fourier corresponds to 
 $\upsilon \approx 1/ \tau = \gamma \upsilon / 2b$ and therefore to $\omega \approx \pi \upsilon \gamma / b$. 
-Because $\omega \approx \gamma \upsilon / b$ there is only a little power emitted at grater frequencies 
-then $\omega$. 
+Because $\omega \approx \gamma \upsilon / b$ there is only a little power emitted at greater frequencies 
+than $\omega$. 
 
 The low frequency spectrum has the form: 
 \begin{equation}
  \label{low_f}
 I(\omega) = \frac{Z^2 e^6}{24 \pi^4 \varepsilon_0^3 c^3 m_e^2 \upsilon^2 } \frac{1}{b^2} \left [ 1 + \frac{1}{\gamma^2} \left ( \frac{\omega b}{\gamma \upsilon} \right )^2 \mathrm{ln}^2 \left ( \frac{\omega b}{\gamma \upsilon} \right ) \right ],
 \end{equation}
-In the limit case $\omega b / \gamma \upsilon \ll 1$, the second term in square brackets of Eq.\eqref{low_f} 
+In the limit case $\omega b / \gamma \upsilon \ll 1$, the second term in the square brackets of Eq.\eqref{low_f} 
 is negligible and hence the good approximation for low frequency intensity spectrum is 
 \begin{equation}
  \label{low_f2}
 I(\omega) = \frac{Z^2 e^6}{24 \pi^4 \varepsilon_0^3 c^3 m_e^2 \upsilon^2 } = K.
 \end{equation}
 
-We could guessed that the low frequency bremsstrahlung spectrum would be flat if we consider that the 
-momentum impulse is a delta function, thus the collision duration is much less then the waves period. 
+We could have guessed that the low frequency bremsstrahlung spectrum would be flat if we consider that the 
+momentum impulse is a delta function, thus the collision duration is much less than the waves period. 
 The Fourier transform of a delta function is the flat spectrum $I(\omega) = \mathrm{constant}$. 
-The spectrum will be flat approximation up to the frequency $\omega = \gamma \upsilon /b$, above this, 
+The spectrum will be a flat approximation up to the frequency $\omega = \gamma \upsilon /b$, above this, 
 it will falls of exponentially. 
 Note also that $\gamma$ disappeared from Eq.\eqref{low_f2}, even in the relativistic case. 
 This means that the momentum impulse is the same in the relativistic and non-relativistic cases, 
@@ -1130,20 +1176,20 @@ note that if the electron is moving by relativistic speed, because of the relati
 it observed more nuclei enhanced by a factor $\gamma$. $N' = \gamma N$, where $N$ is nuclear density .   
 
 \subsection{Thermal bremsstrahlung}
-In previous sub-section we derive the breaking radiation spectrum for one electron, but in real plasma 
-at temperature T is necessary to integrate single partition spectrum over the collision parameters 
+In the previous sub-section we derives the breaking radiation spectrum for one electron, but in the real plasma 
+at a temperature $T_s$ it is necessary to integrates single partition spectrum over the collision parameters 
 and over the Maxwell distribution of electron velocities 
 \begin{equation}
 \label{them_brems}
-N_e(\upsilon)\mathrm{d}\upsilon = 4 \pi N_e \left ( \frac{m_e}{2 \pi k T} \right )^{2/3}\upsilon^2 \mathrm{exp}\left ( -\frac{m_e \upsilon^2}{2kT} \right ) \mathrm{d}\upsilon . 
+N_e(\upsilon)\mathrm{d}\upsilon = 4 \pi N_e \left ( \frac{m_e}{2 \pi k T_s} \right )^{2/3}\upsilon^2 \mathrm{exp}\left ( -\frac{m_e \upsilon^2}{2kT_s} \right ) \mathrm{d}\upsilon . 
 \end{equation}
 The approximate expression for the spectral emissivity of a plasma of electron density $N_e$ in the low 
 frequency limit is 
 \begin{equation}
  \label{low_f_tbrem}
-I(\omega)\approx \frac{Z^2e^6NN_e}{12\sqrt{3}\pi^3\varepsilon_0^3c^3m_e^2}\left ( \frac{m_e}{kT} \right )^{1/2} \: g(\omega,T),
+I(\omega)\approx \frac{Z^2e^6NN_e}{12\sqrt{3}\pi^3\varepsilon_0^3c^3m_e^2}\left ( \frac{m_e}{kT_s} \right )^{1/2} \: g(\omega,T_s),
 \end{equation}
-where $g(\omega , T)$ is known as Gaunt factor.
+where $g(\omega , T_s)$ is known as Gaunt factor.
 It is important to realize that the low frequency thermal bremsstrahlung spectrum is almost independent of 
 frequency, the only dependence upon $\omega$ comes from the slightly varying function in the Gaunt factor. 
 
@@ -1152,14 +1198,14 @@ $\mathrm{exp}(-\hbar \omega / kT)$. This behavior is reflecting the exponential 
 electrons population in hard energy tail of Maxwell distribution. 
 
 Finally, we can get the total energy loss by the plasma by integrating the spectral emissivity over 
-all possible frequencies, because of the exponential cut-off, the integration should be helds from $0$ to 
+all possible frequencies, because of the exponential cut-off, the integration should be held from $0$ to 
 $\omega = kT/ \hbar$ which leads to 
 \begin{equation}
  \label{brem4}
 -\frac{\mathrm{d}E}{\mathrm{d}t} = \mathrm{(constant)} \: Z^2T^{1/2}\bar{g}N N_e .
 \end{equation}
 
-Detailed calculations give the following results, int terms of frequency $\upsilon$ rather then the angular
+Detailed calculations give the following results, in terms of frequency $\upsilon$ rather than the angular
 frequency $\omega$. The spectral plasma emissivity according to \citet{longair:1} is
 \begin{equation}
  \label{tbremss1}
@@ -1168,7 +1214,7 @@ frequency $\omega$. The spectral plasma emissivity according to \citet{longair:1
  & = 6.8 \times 10^{-51} Z^2 T^{-1/2} N N_e g(\upsilon, T) \mathrm{exp}\left ( - \frac{h \upsilon}{kT} \right ) \mathrm{W\,m^{-3}\,Hz^{-1}},     
 \end{split}
 \end{equation}
-where both: densities of electrons $N_e$ and of nuclei $N$ are in barticles per $\mathrm{m^3}$. At frequencies 
+where both: densities of electrons $N_e$ and of nuclei $N$ are in particles per $\mathrm{m^3}$. At frequencies 
 $h \upsilon \ll kT$, the Gaunt factor has only a logarithmic dependence on the frequency.  
 Therefore for radio and X-ray wavelengths are suitable following forms:
 \begin{equation}
@@ -1187,7 +1233,7 @@ The total loss rate of the plasma is
 \end{equation}
 Detailed calculation show that the average value of the Gaunt factor $\bar{g}$ lies in the range 
 $1.1 - 1.5$, then $\bar{g} = 1.2$ will be a good approximation (\citet{longair:1}).  
-To apply a suitable Gaunt factors in the thermal bremsstrahlung formula is nontrivial and complex task.
+To apply a suitable Gaunt factors in the thermal bremsstrahlung formula is a nontrivial and complex task.
 Several useful papers about suitable Gaunt factors were published. One of the more recent is that from 
 \citet{1998MNRAS.300..321S}.
 
@@ -1196,9 +1242,9 @@ Several useful papers about suitable Gaunt factors were published. One of the mo
 By using previous results and assumptions, we can now find an explicit column solution. We specified 
 that the cooling process in PSR is thermal bremsstrahlung and also that other mechanisms such Compton 
 and cyclotron cooling are negligible in IPs case. We know that the electron and ion temperature will 
-remain very stable. We also expect, that shock height (see fig. \ref{psr1} where $z_0 – R_{wd} = D$ 
+remain very stable. We also expect, that shock height (see Fig. \ref{psr1} where $z_0 – R_{wd} = D$ 
 is shock distance from WD surface) is $D < R_{wd}$, therefore we can adopt one dimensional geometry 
-with vertical coordinate $z$ as is showed on the fig. \ref{psr1}.
+with vertical coordinate $z$ as is showed on the Fig. \ref{psr1}.
 
 The structure of the stationary PSR in plane--parallel one--dimensional geometry is described
 (see e.g. \citet{2005A&A...435..191S}, \citet{1999MNRAS.306..684C} or \citet{accpower:1}) by the
@@ -1222,7 +1268,7 @@ and also by the ideal gas law:
  \label{ideal_gas_l}
 P = \frac{\rho k T}{\mu m_H}   \:.
 \end{equation}
-where $z$ is a spatial coordninate (see fig.\ref{psr1}), $\upsilon$ is the gas velocity, $\rho$ is the gas 
+where $z$ is a spatial coordninate (see Fig.\ref{psr1}), $\upsilon$ is the gas velocity, $\rho$ is the gas 
 density, $T$ is the temperature, $P$ is the gas pressure, $\mu=0.62$ is the mean molecular weight of the fully
 ionized solar composition matter and $\gamma = 5/3$ is the adiabatic index. $\Lambda$ is the cooling rate:
 \begin{equation}
@@ -1232,16 +1278,16 @@ ionized solar composition matter and $\gamma = 5/3$ is the adiabatic index. $\La
 where the cooling function $\Lambda_N(T)$ for low densities plasma with $\mu=0.62$ is 
 tabulated by \citet{1993ApJS...88..253S}.
 
-The Eq.\eqref{mas_con} can be interested with result:
+The Eq.\eqref{mas_con} can be integrated with result:
 \begin{equation}
  \label{res_int_mas_con}
 \rho \upsilon = a,
 \end{equation}
-where tha $a$ is local mass accretion rate of dimension $\mathrm{g\:cm^{-2}\:s^{-1}}$
+where $a$ is local mass accretion rate of dimension $\mathrm{g\:cm^{-2}\:s^{-1}}$
 This is the free parameter of the model, but according to \citet{2005A&A...435..191S} the spectrum of 
 emergent radiation in PSR is rather insensitive to this parameter with reasonable limits.     
 
-By using the substitution $z' = z_0 - z$ where $z_0$ is the shock--wave coordinate (see fig. \ref{psr1}),
+By using the substitution $z' = z_0 - z$ where $z_0$ is the shock--wave coordinate (see Fig. \ref{psr1}),
 and with $g(z') = (GM_{wd})/(z_0 - z')^2$ we should rewrite the Eq.\eqref{momentum_eq} and Eq.\eqref{ener_eq} 
 with knowledge of Eq.\eqref{res_int_mas_con}:
 \begin{equation}
@@ -1265,7 +1311,7 @@ P_0 &= 3a\upsilon_0\:,\\
 T_0 &= 3\frac{\mu m_H}{k}\upsilon_0^2\:. 
 \end{split}
 \end{equation}
-The equation which ties up the $R_{wd}$ and $M_{wd}$ is typically used that one from 
+The equation which ties up $R_{wd}$ and $M_{wd}$ typically used is that one from 
 the \citet{1972ApJ...175..417N} article:
 \begin{equation}
  \label{rwd_mwd}
@@ -1289,7 +1335,7 @@ T(z) &= T_0 \left( \frac{z - R_{wd}}{z_0 - R_{wd}}\right)^{2/5}\:,\\
 parameters for script was: $M_{wd} = 0.7\mathrm{M_\odot}$ and shock distance from WD 
 surface $0.013 R_{wd}$, $a = 1.0 \mathrm{cm^{-2}\:s^{-1}}$, The coresponding WD radius is $\sim$ 7797km, while the 
 resulting $kT_{max} = 29.71\mathrm{\:keV}$.
-\textit{Bottom:} the emergent model spectru calculated by suming of the local bremsstrahlung spectra.}
+\textit{Bottom:} the emergent model spectrum calculated by suming of the local bremsstrahlung spectra.}
 \label{koc_mod} 
 \end{figure}
 
@@ -1322,15 +1368,15 @@ us to calculate the mass of the WD from the PSR temperature:
 
 
 \chapter{Data reduction and analysis}
-In this chapter we describe the results and data analyze threads for both XMM--Newton and INTEGRAL data. 
-All data, software and online utilities necessary to finding the data, download and analyze are free 
-and runs under \textit{Linux}.  
+In this chapter we describe the results and data analysis threads for both XMM--Newton and INTEGRAL data. 
+All the data, software and online utilities necessary for finding the data, downloading and analyzing are free 
+and run under GNU \textit{Linux}.  
 
 \section{INTEGRAL}
 INTErnational Gamma-Ray Astrophysics Laboratory (INTEGRAL) is the European Space Agency's satellite, 
-launched in 2002 from Baikonur Cosmodrome on-board Proton-K launcher. INTEGRAL lies on orbit with 
-period 72 hours where the large fraction of its orbit is behind radiation belts. The INTEGRAL service 
-module is clone of the XMM-Newton one which significantly reduced construction costs. 
+launched in 2002 from Baikonur Cosmodrome on-board Proton-K launcher. INTEGRAL lies on orbit with a  
+period of 72 hours where the large fraction of its orbit is behind the radiation belts. The INTEGRAL service 
+module is a clone of the XMM-Newton one which significantly reduced the construction costs. 
 INTEGRAL has four scientific instruments on-board, the IBIS/ISGRI is used in this work. 
 \begin{itemize}
  \item \textbf{IBIS} (Imager on-Board the INTEGRAL Satellite) observes in broad band $15\:\mathrm{keV} -
@@ -1349,10 +1395,10 @@ also ACS (AntiCoincidence Shield).
 \end{figure}
 
 \subsection{IBIS/ISGRI}
-IBIS is a coded mask gamma ray telescope operating in very broad energy range, from the hard X-rays to 
+IBIS is a coded mask gamma ray telescope operating in a very broad energy range, from the hard X-rays to 
 gamma-rays, however its sensitivity strongly decreases with the increasing energy bands. It is an 
-imaging detector which uses coded mask. The mask itself its a special coded pattern, that chosen for 
-the IBIS detector is based of a cyclic replication of MURA (Modified Uniform Redundant Array) of order 
+imaging detector which uses a coded mask. The mask itself is a special coded pattern, that chosen for 
+the IBIS detector is based on a cyclic replication of MURA (Modified Uniform Redundant Array) of order 
 53, this detection technology is describes in \citet{mask1}.
 
 \begin{table}[hbt!]\footnotesize
@@ -1392,34 +1438,34 @@ Absolute timing accuracy $(3 \sigma)$& ISGRI: $61 \:\mathrm{\mu s}$\\
 \end{center}
 \end{table}
 
-The IBIS is two layers detector, where the first layer is called ISGRI and second PICsIT. ISGRI is based 
-on the cadmium telluride (CdTe), which is semiconductor operating at normal temperatures. The detector 
-layer is made of 8 MDUs /footnote{Modular Detector Unit} each having $32\times64$ pixels. The lower 
+The IBIS is a two layers detector, where the first layer is called ISGRI and second PICsIT. ISGRI is based 
+on the cadmium telluride (CdTe), which is a semiconductor operating at normal temperatures. The detector 
+layer is made of 8 MDUs \footnote{Modular Detector Unit} each having $32\times64$ pixels. The lower 
 detector, PICsIT is based on cesium iodide (CsI) crystals. 
 
-The coded mask produced a shadowgram, the photon from the image are distributed across the entire detector, 
-but cross-correlation techniques are used for taking a full reconstructed image in fully coded FOV. 
-For reconstruct the image in partially coded FOV is necessary to use special cleaning techniques.
+The coded mask produces a shadowgram, the photons from the image are distributed across the entire detector, 
+but the cross-correlation techniques are used to take a full, reconstructed image in a fully coded FOV. 
+For the image reconstruction in partially coded FOV it is necessary to use special cleaning techniques.
 
 \subsection{Data reduction}
 For the IBIS/ISGRI data reduction we used the 64-bit version of the Off-line Science Analysis (OSA 9.0) 
 software which can be downloaded from INTEGRAL Science Data Center web-pages\footnote{http://www.isdc.unige.ch/integral/}. 
-It is necessary to download also the instrument calibration and response data and the latest 
+It is necessary download to also the instrument calibration and response data and the latest 
 objects reference catalogue.
-For suitable data analysis in high energy astrophysics is necessary to use also several 
-typical software packages as: ds9, fv, FTOOLS\footnote{See http://heasarc.nasa.gov/lheasoft/}.       
-For the reduction itself we used following set of commands in the sequence:
+For a suitable data analysis in a high energy astrophysics it is necessary to use several 
+typical software packages as: ds9, fv, FTOOLS\footnote{See http://heasarc.nasa.gov/lheasoft/} as well.       
+For the reduction itself we used the following set of commands in the sequence:
 
 \begin{enumerate}
- \item \verb rbnrmf  was used for creating a rebinning responce matrix for 10 spectral bins in 20--100 keV
- \item \verb og_create  was used for creating observation groups
- \item \verb ibis_science_analysis  package was used for image reconstruction and creating mosaics
+ \item \verb rbnrmf  was used for creating a rebinning response matrix for 10 spectral bins in 20--100 keV
+ \item \verb og_create  was used to create observation groups
+ \item \verb ibis_science_analysis  package was used for the image reconstruction and creating mosaics
  \item \verb mosaic_spec  was used for the spectral extraction from the final mosaics
 \end{enumerate}
 
 
 \section{XMM-Newton}
-The European Space Agency's (ESA) X-ray Multi-Mirror Mission (XMM-Newton) was launched by an Ariane 504 
+The European Space Agency's (ESA) X-ray Multi-Mirror Mission (XMM-Newton) was launched by Ariane 504 
 on December 10th 1999. The XMM weighs 3.8 tons and caries three X-ray telescopes each contains 58 Wolter I 
 grazing -- incidence mirrors. The instruments on-board are three European Photon Imaging Cameras (EPIC) 
 and two Reflection Grating Spectrometers (RGS).
@@ -1427,15 +1473,15 @@ and two Reflection Grating Spectrometers (RGS).
 \begin{figure}[!hbt]
 \centering
 \includegraphics[totalheight=6cm]{XMM}
-\caption{The XMM-Newton (X-ray Multi-Mirror Mission) is one off the most successful space mission of all time.}
+\caption{The XMM-Newton (X-ray Multi-Mirror Mission) is one of the most successful space mission of all time.}
 \label{xmmn1} 
 \end{figure}
 
-Two of the cameras are Metal Oxide Semi-conductor (MOS) CCD arrays. Third camera is pn CCD camera. 
+Two of the cameras are Metal Oxide Semi-conductor (MOS) CCD arrays. Third camera is a pn CCD camera. 
 There is also an optical telescope on-board, the 30 cm diameter Ritchey---Chretien observing in the
 UV/optical band.  
 
-In each MOS there area seven EEV type 22 front illuminated CCDs. The six surrounding CCDs are 
+In each MOS there are seven EEV type 22 front illuminated CCDs. The six surrounding CCDs are 
 stepped towards because of the focal plane curvature while the middle one is at the focal point of 
 the X-ray telescope. The MOS cameras are sensitive in the energy range 0.2 to 10 keV.All the EPIC CCDs 
 operate in photon counting mode. In the case of MOS cameras, the central CCD can be operated separately. 
@@ -1450,13 +1496,13 @@ operate in photon counting mode. In the case of MOS cameras, the central CCD can
 
 
 \subsection{Data reduction}
-For the data acquisition was used XMM-Newton Science Archive (XSA)\footnote{http://xmm.esac.esa.int/xsa/} and
-candidates was selected from the Koji Mukai online catalog of IPs and IP candidates\footnote{http://asd.gsfc.nasa.gov/Koji.Mukai/iphome/catalog/alpha.html}.
-From the catalogue of 92 IPs/IP candidates and 33 others systems was selected only strongly confirmed 
+For the data acquisition XMM-Newton Science Archive (XSA)\footnote{http://xmm.esac.esa.int/xsa/} was used and
+candidates were selected from the Koji Mukai online catalog of IPs and IP candidates\footnote{http://asd.gsfc.nasa.gov/Koji.Mukai/iphome/catalog/alpha.html}.
+From the catalogue of 92 IPs/IP candidates and 33 others systems were selected only strongly confirmed 
 (in catalogue marked as $^{\bigstar \bigstar \bigstar \bigstar \bigstar}$) 
-and confirmed (marked as $^{\bigstar \bigstar \bigstar \bigstar}$) systems. 
+and confirmed (marked as $^{\bigstar \bigstar \bigstar \bigstar}$) systems were included.
 
-This leads to selection of 25 sources:
+This leads to the selection of 25 sources:
 
 \begin{footnotesize} 
 \begin{tabular}{l l l }\footnotesize
@@ -1472,9 +1518,9 @@ XY Ari & &  \\
 \end{tabular}
 \end{footnotesize}
 
-For all the public available pointings for all the 25 sources the following data reduction procedures 
+For all the public available pointings for all 25 sources the following data reduction procedures 
 took place. The XMM-Newton Science Analysis System (SAS) version 11.0.0 for Feora 32-bit Linux 
-was used and executed by simple bash skript: 
+was used and executed by a simple bash skript: 
 \begin{tiny}
 \begin{verbatim}
 #!/bin/bash
@@ -1517,17 +1563,17 @@ done
 \end{verbatim}
 \end{tiny}
 
-In the next step of the analysis thread was checked which of the 25 IPs observed by XMM has been also 
+In the next step of the analysis thread it was checked which of the 25 IPs observed by XMM have also been 
 observed by INTEGRAL and have enough exposures for necessary spectral extraction. The seven sources 
-was been selected for spectral extraction.   
+have been selected for a spectral extraction.   
 
-The spectra from all suitable MOS observations was taken by standard SAS data product extraction. The 
-following commands took place:
+The spectra from all suitable MOS observations were taken by standard SAS data product extraction. The 
+following commands were executed:
 \begin{enumerate}
  \item \verb evselect   was used for extraction of the source and background spectrum.
  \item \verb rmfgen   was used for creating a redistribution matrix for the previously extracted spectrum.
- \item \verb arfgen  was used for genarate an ancillary file.
- \item \verb specgroup  was used for rebinig  the spectrum and link associated files.
+ \item \verb arfgen  was used to genarate an ancillary file.
+ \item \verb specgroup  was used for rebining  the spectrum and linking the associated files.
 \end{enumerate}
 
 \section{Spectral analysis and results}
